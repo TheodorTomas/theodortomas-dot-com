@@ -3,4 +3,4 @@
 
 Repository for personal website. Coming soon.
 
-Live upload
+git push live master
