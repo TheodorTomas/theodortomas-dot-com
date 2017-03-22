@@ -3,10 +3,6 @@
 
 	Coming soon
 
-## Kanban board
-
-	www.trello.com/b/RQSZLW1k/www-theodortomas-com
-
 ## Commands
 
 npm start
