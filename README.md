@@ -5,7 +5,7 @@
 
 ## Kanban board
 
-	https://trello.com/b/RQSZLW1k/www-theodortomas-com
+	www.trello.com/b/RQSZLW1k/www-theodortomas-com
 
 ## Commands
 
