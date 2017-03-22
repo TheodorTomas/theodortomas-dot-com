@@ -1,17 +1,18 @@
 
 ## www.theodortomas.com
 
-Coming soon.
+	Coming soon
 
 ## Kanban board
 
-https://trello.com/b/RQSZLW1k/www-theodortomas-com
+	https://trello.com/b/RQSZLW1k/www-theodortomas-com
 
 ## Commands
 
 npm start
-	-- developer env
+
+	 developer env
 
 git push live master
 
-	-- push master to live server
+	 push master to live server
