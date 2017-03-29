@@ -11,6 +11,7 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
       <div>
         <NavBar>
           <HeaderLink to="/about">
+          <span className="glyphicon glyphicon-search" aria-hidden="false"></span>
             <FormattedMessage {...messages.about} />
           </HeaderLink>
           <HeaderLink to="/tech">
