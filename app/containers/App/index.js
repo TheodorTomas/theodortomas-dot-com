@@ -13,6 +13,22 @@
 
 import React from 'react';
 
+import Helmet from 'react-helmet';
+import styled from 'styled-components';
+
+import Header from 'components/Header';
+import Footer from 'components/Footer';
+
+const AppWrapper = styled.div`
+  max-width: calc(768px + 16px * 2);
+  margin: 0 auto;
+  display: flex;
+  min-height: 100%;
+  padding: 0 16px;
+  flex-direction: column;
+  background-color: deeppink;
+`;
+
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
 
   static propTypes = {
@@ -21,9 +37,18 @@ export default class App extends React.PureComponent { // eslint-disable-line re
 
   render() {
     return (
-      <div>
+      <AppWrapper>
+        <Helmet
+          titleTemplate="%s - Theodor Tomas | Web Developer"
+          defaultTitle="Theodor Tomas | Web Developer"
+          meta={[
+            { name: 'description', content: 'Professional Web Developer bio, skills and contact information.' },
+          ]}
+        />
+        <Header />
         {React.Children.toArray(this.props.children)}
-      </div>
+        <Footer />
+      </AppWrapper>
     );
   }
 }

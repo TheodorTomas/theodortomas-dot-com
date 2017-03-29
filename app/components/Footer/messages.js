@@ -6,8 +6,8 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  header: {
-    id: 'app.components.Footer.header',
-    defaultMessage: 'This is the Footer component !',
+  defaultMessage: {
+    id: 'app.components.Footer.defaultMessage',
+    defaultMessage: 'Contact information',
   },
 });
