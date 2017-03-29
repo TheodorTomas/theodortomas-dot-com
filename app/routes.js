@@ -12,13 +12,12 @@ const loadModule = (cb) => (componentModule) => {
   cb(null, componentModule.default);
 };
 
-export default function createRoutes(store) {
+const mapPathsToContent = (store, paths) => {
   // Create reusable async injectors using getAsyncInjectors factory
   const { injectReducer, injectSagas } = getAsyncInjectors(store); // eslint-disable-line no-unused-vars
-
-  return [
-    {
-      path: '/',
+  return paths.map((str) => {
+    return {
+      path: str,
       name: 'content',
       getComponent(nextState, cb) {
         const importModules = Promise.all([
@@ -37,7 +36,14 @@ export default function createRoutes(store) {
 
         importModules.catch(errorLoading);
       },
-    }, {
+    };
+  });
+};
+
+export default function createRoutes(store) {
+  return [
+    ...mapPathsToContent(store, ['/', 'about', 'tech', 'contact'])
+    , {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {
