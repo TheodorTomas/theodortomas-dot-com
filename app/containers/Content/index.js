@@ -1,6 +1,6 @@
 /*
  *
- * Contact
+ * Content
  *
  */
 
@@ -9,17 +9,17 @@ import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 import { FormattedMessage } from 'react-intl';
 import { createStructuredSelector } from 'reselect';
-import makeSelectContact from './selectors';
+import makeSelectContent from './selectors';
 import messages from './messages';
 
-export class Contact extends React.Component { // eslint-disable-line react/prefer-stateless-function
+export class Content extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
       <div>
         <Helmet
-          title="Contact"
+          title="Content"
           meta={[
-            { name: 'description', content: 'Description of Contact' },
+            { name: 'description', content: 'Description of Content' },
           ]}
         />
         <FormattedMessage {...messages.header} />
@@ -28,12 +28,12 @@ export class Contact extends React.Component { // eslint-disable-line react/pref
   }
 }
 
-Contact.propTypes = {
+Content.propTypes = {
   dispatch: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = createStructuredSelector({
-  Contact: makeSelectContact(),
+  Content: makeSelectContent(),
 });
 
 function mapDispatchToProps(dispatch) {
@@ -42,4 +42,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Contact);
+export default connect(mapStateToProps, mapDispatchToProps)(Content);

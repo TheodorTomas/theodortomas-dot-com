@@ -1,6 +1,6 @@
 /*
  *
- * Tech reducer
+ * Content reducer
  *
  */
 
@@ -11,7 +11,7 @@ import {
 
 const initialState = fromJS({});
 
-function techReducer(state = initialState, action) {
+function contentReducer(state = initialState, action) {
   switch (action.type) {
     case DEFAULT_ACTION:
       return state;
@@ -20,4 +20,4 @@ function techReducer(state = initialState, action) {
   }
 }
 
-export default techReducer;
+export default contentReducer;

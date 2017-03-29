@@ -1,6 +1,6 @@
 /*
  *
- * Home actions
+ * Content actions
  *
  */
 

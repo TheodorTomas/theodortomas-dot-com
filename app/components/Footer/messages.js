@@ -8,6 +8,6 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   defaultMessage: {
     id: 'app.components.Footer.defaultMessage',
-    defaultMessage: 'Contact information',
+    defaultMessage: 'Footer message',
   },
 });
