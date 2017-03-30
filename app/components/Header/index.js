@@ -1,14 +1,14 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 
-import Wrapper from './Wrapper';
 import messages from './messages';
+import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <Wrapper>
+      <NavBar>
         <HeaderLink to="/about">
           <FormattedMessage {...messages.about} />
         </HeaderLink>
@@ -18,7 +18,20 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
         <HeaderLink to="/contact">
           <FormattedMessage {...messages.contact} />
         </HeaderLink>
-      </Wrapper>
+        <HeaderLink href="https://www.linkedin.com/in/theodortomas" target="_blank" >
+          <span>in</span>
+        </HeaderLink>
+        <HeaderLink href="https://github.com/TheodorTomas" target="_blank" >
+          <span>git</span>
+        </HeaderLink>
+        <HeaderLink
+          href="http://www.twitter.com/TheodorTomas"
+          target="_blank"
+          className="icoTwitter"
+          title="Twitter">
+            <i className="fa fa-twitter">twit</i>
+        </HeaderLink>
+      </NavBar>
     );
   }
 }
