@@ -91,7 +91,7 @@ function dependencyHandlers() {
    * Reminder: You need to exclude any server side dependencies by listing them in dllConfig.exclude
    */
   if (!dllPlugin.dlls) {
-    const manifestPath = path.resolve(dllPath, 'reactBoilerplateDeps.json');
+    const manifestPath = path.resolve(dllPath, 'dependencies.json');
 
     if (!fs.existsSync(manifestPath)) {
       logger.error('The DLL manifest is missing. Please run `npm run build:dll`');
@@ -140,7 +140,7 @@ function templateContent() {
 
   const doc = cheerio(html);
   const body = doc.find('body');
-  const dllNames = !dllPlugin.dlls ? ['reactBoilerplateDeps'] : Object.keys(dllPlugin.dlls);
+  const dllNames = !dllPlugin.dlls ? ['dependencies'] : Object.keys(dllPlugin.dlls);
 
   dllNames.forEach((dllName) => body.append(`<script data-dll='true' src='/${dllName}.dll.js'></script>`));
 
