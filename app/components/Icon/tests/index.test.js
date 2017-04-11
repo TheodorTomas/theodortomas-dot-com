@@ -5,26 +5,29 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import I from '../I';
+import Icon from '../index';
 
-const href = 'http://mxstbr.com/';
 const children = (<h1>Test</h1>);
 const renderComponent = (props = {}) => shallow(
-  <I href={href} {...props}>
+  <Icon {...props}>
     {children}
-  </I>
+  </Icon>
 );
 
-describe('<I />', () => {
+describe('<Icon />', () => {
   it('should render an <i> tag', () => {
     const renderedComponent = renderComponent();
     expect(renderedComponent.type()).toEqual('i');
+  });
+
+  it('should have children', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.contains(children)).toEqual(true);
   });
 
   it('should have a className attribute', () => {
     const className = 'test';
     const renderedComponent = renderComponent({ className });
     expect(renderedComponent.find('i').hasClass(className)).toEqual(true);
-  });
-
+  })
 });

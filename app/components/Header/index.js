@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 import HeaderLink from './HeaderLink';
 import Button from './Button';
 import A from '../A';
-import I from '../I';
+import Icon from '../Icon';
 
 
 class Header extends React.Component { // eslint-disable-line react/prefer-stateless-function
@@ -29,13 +29,13 @@ class Header extends React.Component { // eslint-disable-line react/prefer-state
           </HeaderLink>
         </Button>
         <Button>
-          <A href="https://linkedin.com/in/TheodorTomas" target="_blank" title="Linkedin"><I className="fa fa-linkedin"></I></A>
+          <A href="https://linkedin.com/in/TheodorTomas" target="_blank" title="Linkedin"><Icon className="fa fa-linkedin"></Icon></A>
         </Button>
         <Button>
-          <A href="https://github.com/TheodorTomas" target="_blank" title="Github"><I className="fa fa-github"></I></A>
+          <A href="https://github.com/TheodorTomas" target="_blank" title="Github"><Icon className="fa fa-github"></Icon></A>
         </Button>
         <Button>
-          <A href="https://twitter.com/TheodorTomas" target="_blank" title="Twitter"><I className="fa fa-twitter"></I></A>
+          <A href="https://twitter.com/TheodorTomas" target="_blank" title="Twitter"><Icon className="fa fa-twitter"></Icon></A>
         </Button>
       </NavBar>
     );

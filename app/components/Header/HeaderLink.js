@@ -5,6 +5,7 @@ export default styled(Link)`
   text-decoration: none !important;
   font-weight: 700;
   text-transform: uppercase;
+  line-height: 20px;
 
   color: #777;
 

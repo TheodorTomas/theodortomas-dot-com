@@ -12,6 +12,9 @@ import { createStructuredSelector } from 'reselect';
 import makeSelectContent from './selectors';
 import messages from './messages';
 
+import Welcome from '../Welcome';
+import About from '../About';
+
 export class Content extends React.Component { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
@@ -22,7 +25,8 @@ export class Content extends React.Component { // eslint-disable-line react/pref
             { name: 'description', content: 'Description of Content' },
           ]}
         />
-        <FormattedMessage {...messages.header} />
+        <Welcome />
+        <About />
       </div>
     );
   }
