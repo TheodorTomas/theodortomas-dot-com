@@ -8,6 +8,7 @@ export default styled(Link)`
   line-height: 20px;
 
   color: #777;
+  opacity: 1 !important;
 
   &:link {
     color: #777;

@@ -14,7 +14,7 @@ import PhotoContainer from './PhotoContainer';
 import TextContainer from './TextContainer';
 import ProfilePhoto from './ProfilePhoto.jpg'
 import Img from '../../components/Img';
-import Canvas from '../../components/Canvas';
+import Dots from '../../components/Dots';
 import Header from './Header';
 import Intro from './Intro';
 
@@ -60,6 +60,7 @@ export class Welcome extends React.PureComponent { // eslint-disable-line react/
             <FormattedMessage {...messages.intro} />
           </Intro>
         </TextContainer>
+        <Dots />
       </WelcomeWrapper>
     );
   }

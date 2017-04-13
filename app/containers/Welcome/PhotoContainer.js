@@ -5,9 +5,9 @@
 import styled from 'styled-components';
 
 const PhotoContainer = styled.div`
-  transform: scale(0.8, 0.8);
-  -ms-transform: scale(0.8, 0.8);
-  -webkit-transform: scale(0.8, 0.8);
+  transform: scale(0.7, 0.7);
+  -ms-transform: scale(0.7, 0.7);
+  -webkit-transform: scale(0.7, 0.7);
 
   align-self: center;
 

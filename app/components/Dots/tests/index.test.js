@@ -5,16 +5,16 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import Canvas from '../index';
+import Dots from '../index';
 
 const children = (<h1>Test</h1>);
 const renderComponent = (props = {}) => shallow(
-  <Canvas {...props}>
+  <Dots {...props}>
     {children}
-  </Canvas>
+  </Dots>
 );
 
-describe('<Canvas />', () => {
+describe('<Dots />', () => {
   it('should render an <canvas> tag', () => {
     const renderedComponent = renderComponent();
     expect(renderedComponent.type()).toEqual('canvas');
@@ -25,9 +25,4 @@ describe('<Canvas />', () => {
     expect(renderedComponent.contains(children)).toEqual(true);
   });
 
-  it('should have a className attribute', () => {
-    const className = 'test';
-    const renderedComponent = renderComponent({ className });
-    expect(renderedComponent.find('canvas').hasClass(id)).toEqual(true);
-  })
 });
