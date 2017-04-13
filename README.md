@@ -5,10 +5,6 @@
 
 ## Commands
 
-npm start
-
-	 developer env
-
-git push live master
-
-	 push master to live server
+npm install
+npm run start
+http://localhost:3000/
