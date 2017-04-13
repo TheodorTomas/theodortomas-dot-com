@@ -8,7 +8,6 @@ const I = styled.i`
   text-decoration: none !important;
   display: flex;
   justify-content: flex-end;
-  background-color: black;
   text-decoration: none !important;
   color: #777;
   font-size: 18px;

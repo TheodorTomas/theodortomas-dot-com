@@ -16,13 +16,13 @@ const Canvas = styled.canvas`
 class Dots extends React.Component { // eslint-disable-line react/prefer-stateless-function
   constructor(props) {
     super(props);
-    this.setState({
+    this.state = {
       canvas: null,
       ctx: null,
       width: null,
       height: null,
       points: null
-    });
+    };
   }
 
   componentDidMount() {
