@@ -2,10 +2,9 @@
  * Renders a canvas with dots, enforcing the usage of the id="" tag
  */
 
-import React, { PropTypes } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import styled from 'styled-components';
-import GSAP from 'react-gsap-enhancer'
+import GSAP from 'react-gsap-enhancer';
 
 const Canvas = styled.canvas`
   border: solid yellow  5px;
@@ -21,7 +20,7 @@ class Dots extends React.Component { // eslint-disable-line react/prefer-statele
       ctx: null,
       width: null,
       height: null,
-      points: null
+      points: null,
     };
   }
 
@@ -30,9 +29,9 @@ class Dots extends React.Component { // eslint-disable-line react/prefer-statele
 
   render() {
     return (
-      <Canvas ref='dotCanvas' id={'dotCanvas'} />
+      <Canvas id={'dotCanvas'} />
     );
   }
 }
 
-export default Dots;
+export default GSAP()(Dots);

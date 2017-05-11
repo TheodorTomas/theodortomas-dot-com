@@ -29,5 +29,5 @@ describe('<Icon />', () => {
     const className = 'test';
     const renderedComponent = renderComponent({ className });
     expect(renderedComponent.find('i').hasClass(className)).toEqual(true);
-  })
+  });
 });

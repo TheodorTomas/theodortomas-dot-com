@@ -42,8 +42,8 @@ const mapPathsToContent = (store, paths) => {
 
 export default function createRoutes(store) {
   return [
-    ...mapPathsToContent(store, ['/', 'about', 'tech', 'contact'])
-    , {
+    ...mapPathsToContent(store, ['/', 'about', 'tech', 'contact']),
+    {
       path: '*',
       name: 'notfound',
       getComponent(nextState, cb) {

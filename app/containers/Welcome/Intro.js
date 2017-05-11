@@ -8,5 +8,4 @@ const Intro = styled.div`
   font-size: 1.5em;
 `;
 
-
 export default Intro;

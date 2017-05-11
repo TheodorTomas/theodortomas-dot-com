@@ -24,5 +24,4 @@ describe('<Dots />', () => {
     const renderedComponent = renderComponent();
     expect(renderedComponent.contains(children)).toEqual(true);
   });
-
 });
