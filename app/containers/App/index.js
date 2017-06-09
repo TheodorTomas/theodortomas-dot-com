@@ -22,7 +22,6 @@ const AppWrapper = styled.div`
   display: flex;
   min-height: 100%;
   flex-direction: column;
-  background-color: deeppink;
 `;
 
 export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
@@ -35,10 +34,10 @@ export default class App extends React.PureComponent { // eslint-disable-line re
     return (
       <AppWrapper>
         <Helmet
-          titleTemplate="%s - Theodor Tomas | Web Developer"
-          defaultTitle="Theodor Tomas | Web Developer"
+          titleTemplate="%s - Theodor Tomas | Software Developer"
+          defaultTitle="Theodor Tomas | Software Developer"
           meta={[
-            { name: 'description', content: 'Professional Web Developer bio, skills and contact information.' },
+            { name: 'description', content: 'Professional Software Developer bio, skills and contact information.' },
           ]}
         />
         <Header />

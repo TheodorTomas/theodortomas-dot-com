@@ -13,15 +13,14 @@ import AboutWrapper from './AboutWrapper';
 export class About extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
     return (
-      <div>
+      <AboutWrapper>
         <Helmet
           title="About"
           meta={[
             { name: 'description', content: 'Description of About' },
           ]}
         />
-        <AboutWrapper />
-      </div>
+      </AboutWrapper>
     );
   }
 }
