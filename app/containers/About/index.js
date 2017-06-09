@@ -8,7 +8,7 @@ import React, { PropTypes } from 'react';
 import { connect } from 'react-redux';
 import Helmet from 'react-helmet';
 
-import Container from './Container';
+import AboutWrapper from './AboutWrapper';
 
 export class About extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
   render() {
@@ -20,7 +20,7 @@ export class About extends React.PureComponent { // eslint-disable-line react/pr
             { name: 'description', content: 'Description of About' },
           ]}
         />
-        <Container />
+        <AboutWrapper />
       </div>
     );
   }

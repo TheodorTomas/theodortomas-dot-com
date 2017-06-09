@@ -12,33 +12,31 @@ const loadModule = (cb) => (componentModule) => {
   cb(null, componentModule.default);
 };
 
-const mapPathsToContent = (store, paths) => {
+function mapPathsToContent(store, paths) {
   // Create reusable async injectors using getAsyncInjectors factory
   const { injectReducer, injectSagas } = getAsyncInjectors(store); // eslint-disable-line no-unused-vars
-  return paths.map((str) => {
-    return {
-      path: str,
-      name: 'content',
-      getComponent(nextState, cb) {
-        const importModules = Promise.all([
-          import('containers/Content/reducer'),
-          import('containers/Content/sagas'),
-          import('containers/Content'),
-        ]);
+  return paths.map((str) => ({
+    path: str,
+    name: 'content',
+    getComponent(nextState, cb) {
+      const importModules = Promise.all([
+        import('containers/Content/reducer'),
+        import('containers/Content/sagas'),
+        import('containers/Content'),
+      ]);
 
-        const renderRoute = loadModule(cb);
+      const renderRoute = loadModule(cb);
 
-        importModules.then(([reducer, sagas, component]) => {
-          injectReducer('content', reducer.default);
-          injectSagas(sagas.default);
-          renderRoute(component);
-        });
+      importModules.then(([reducer, sagas, component]) => {
+        injectReducer('content', reducer.default);
+        injectSagas(sagas.default);
+        renderRoute(component);
+      });
 
-        importModules.catch(errorLoading);
-      },
-    };
-  });
-};
+      importModules.catch(errorLoading);
+    },
+  }));
+}
 
 export default function createRoutes(store) {
   return [
