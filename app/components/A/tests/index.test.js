@@ -1,13 +1,15 @@
 /**
- * Testing our link component
+ * Testing our A component
  */
 
 import React from 'react';
-import { shallow } from 'enzyme';
-
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import A from '../index';
 
-const href = 'http://mxstbr.com/';
+configure({ adapter: new Adapter() });
+
+const href = 'https://theodortomas.com/';
 const children = (<h1>Test</h1>);
 const renderComponent = (props = {}) => shallow(
   <A href={href} {...props}>

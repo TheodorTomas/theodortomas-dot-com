@@ -1,13 +1,16 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { FormattedMessage, defineMessages } from 'react-intl';
 import { Provider } from 'react-redux';
-import { browserHistory } from 'react-router';
+import createHistory from 'history/createBrowserHistory';
 
 import ConnectedLanguageProvider, { LanguageProvider } from '../index';
-import configureStore from '../../../store';
-
+import configureStore from '../../../configureStore';
 import { translationMessages } from '../../../i18n';
+
+Enzyme.configure({ adapter: new Adapter() });
+const history = createHistory();
 
 const messages = defineMessages({
   someMessage: {
@@ -33,7 +36,7 @@ describe('<ConnectedLanguageProvider />', () => {
   let store;
 
   beforeAll(() => {
-    store = configureStore({}, browserHistory);
+    store = configureStore({}, history);
   });
 
   it('should render the default language messages', () => {

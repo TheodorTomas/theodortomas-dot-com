@@ -1,33 +1,34 @@
 /**
- * Testing our link component
+ * Testing our Icon and I component
  */
 
 import React from 'react';
-import { shallow } from 'enzyme';
-
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import Icon from '../index';
+import I from '../I';
 
-const children = (<h1>Test</h1>);
-const renderComponent = (props = {}) => shallow(
-  <Icon {...props}>
-    {children}
-  </Icon>
-);
+configure({ adapter: new Adapter() }); // configure Enzyme with ES16 Adapter
 
 describe('<Icon />', () => {
-  it('should render an <i> tag', () => {
+  const renderComponent = (props = { className: 'default' }) => shallow(<Icon {...props} />);
+  it('should render an <I> component', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.type()).toEqual('i');
-  });
-
-  it('should have children', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(children)).toEqual(true);
+    expect(renderedComponent.type()).toEqual(I);
   });
 
   it('should have a className attribute', () => {
     const className = 'test';
     const renderedComponent = renderComponent({ className });
-    expect(renderedComponent.find('i').hasClass(className)).toEqual(true);
+    expect(renderedComponent.hasClass(className)).toEqual(true);
+  });
+});
+
+describe('<I />', () => {
+  const renderComponent = (props = {}) => shallow(<I {...props} />);
+
+  it('should render an <i> tag', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.type()).toEqual('i');
   });
 });

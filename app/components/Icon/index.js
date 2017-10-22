@@ -2,17 +2,14 @@
  * Renders an icon, enforcing the usage of the className="" tag
  */
 
-import React, { PropTypes } from 'react';
-import StyledIcon from './StyledIcon';
+import React from 'react';
+import PropTypes from 'prop-types';
+import I from './I';
 
-function Icon(props) {
-  return (
-    <StyledIcon className={props.className} />
-  );
-}
+const Icon = ({ className }) => <I className={className} />;
 
 Icon.propTypes = {
-  className: PropTypes.string,
+  className: PropTypes.string.isRequired,
 };
 
 export default Icon;

@@ -1,16 +1,36 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { Route } from 'react-router-dom';
+import Helmet from 'react-helmet';
+import { configure, shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
+import GATracker from 'components/GATracker';
+import NavBar from 'components/NavBar';
+import Profile from 'containers/Profile';
 import App from '../index';
 
+configure({ adapter: new Adapter() }); // configure Enzyme with ES16 Adapter
+
 describe('<App />', () => {
-  it('should render its children', () => {
-    const children = (<h1>Test</h1>);
-    const renderedComponent = shallow(
-      <App>
-        {children}
-      </App>
-    );
-    expect(renderedComponent.contains(children)).toBe(true);
+  const renderComponent = (props = {}) => shallow(<App {...props} />);
+
+  it('should contain a <Helmet> component', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.find(Helmet).length).toBe(1);
+  });
+
+  it('should contain a <GATracker> component', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.contains(<GATracker />)).toBe(true);
+  });
+
+  it('should contain a <NavBar> component', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.contains(<NavBar />)).toBe(true);
+  });
+
+  it('should contain a <Route> component to the profile component', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.contains(<Route component={Profile} />)).toBe(true);
   });
 });

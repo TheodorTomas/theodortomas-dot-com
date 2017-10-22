@@ -12,37 +12,35 @@
  */
 
 import React from 'react';
-
+import { Switch, Route } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
-import Header from 'components/Header';
+import Profile from 'containers/Profile';
+import NavBar from 'components/NavBar';
+import GATracker from 'components/GATracker';
 
-const AppWrapper = styled.div`
+const Wrapper = styled.div`
   display: flex;
-  min-height: 100%;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
 `;
 
-export default class App extends React.PureComponent { // eslint-disable-line react/prefer-stateless-function
+export const App = () => (
+  <Wrapper>
+    <Helmet
+      defaultTitle="Theodor Tomas | Software Developer"
+      meta={[
+        { name: 'description', content: 'Professional Software Developer bio, skills and contact information.' },
+      ]}
+    />
+    <GATracker />
+    <NavBar />
+    <Switch>
+      <Route component={Profile} />
+    </Switch>
+  </Wrapper>
+);
 
-  static propTypes = {
-    children: React.PropTypes.node,
-  };
-
-  render() {
-    return (
-      <AppWrapper>
-        <Helmet
-          titleTemplate="%s - Theodor Tomas | Software Developer"
-          defaultTitle="Theodor Tomas | Software Developer"
-          meta={[
-            { name: 'description', content: 'Professional Software Developer bio, skills and contact information.' },
-          ]}
-        />
-        <Header />
-        {React.Children.toArray(this.props.children)}
-      </AppWrapper>
-    );
-  }
-}
+export default App;

@@ -1,28 +1,57 @@
 import { fromJS } from 'immutable';
 
-import { makeSelectLocationState } from 'containers/App/selectors';
+import {
+  selectGlobal,
+  makeSelectLoading,
+  makeSelectError,
+  makeSelectPathname,
+} from '../selectors';
 
-describe('makeSelectLocationState', () => {
-  it('should select the route as a plain JS object', () => {
-    const route = fromJS({
-      locationBeforeTransitions: null,
-    });
+describe('selectGlobal', () => {
+  it('should select the global state', () => {
+    const globalState = fromJS({});
     const mockedState = fromJS({
-      route,
+      global: globalState,
     });
-    expect(makeSelectLocationState()(mockedState)).toEqual(route.toJS());
+    expect(selectGlobal(mockedState)).toEqual(globalState);
   });
+});
 
-  it('should return cached js routeState for same concurrent calls', () => {
+describe('makeSelectLoading', () => {
+  const loadingSelector = makeSelectLoading();
+  it('should select the loading', () => {
+    const loading = false;
+    const mockedState = fromJS({
+      global: {
+        loading,
+      },
+    });
+    expect(loadingSelector(mockedState)).toEqual(loading);
+  });
+});
+
+describe('makeSelectError', () => {
+  const errorSelector = makeSelectError();
+  it('should select the error', () => {
+    const error = 404;
+    const mockedState = fromJS({
+      global: {
+        error,
+      },
+    });
+    expect(errorSelector(mockedState)).toEqual(error);
+  });
+});
+
+describe('makeSelectPathname', () => {
+  const currentPathnameSelector = makeSelectPathname();
+  it('should select the current pathname', () => {
     const route = fromJS({
-      locationBeforeTransitions: null,
+      location: { pathname: '/foo' },
     });
     const mockedState = fromJS({
       route,
     });
-    const selectLocationState = makeSelectLocationState();
-
-    const firstRouteStateJS = selectLocationState(mockedState);
-    expect(selectLocationState(mockedState)).toBe(firstRouteStateJS);
+    expect(currentPathnameSelector(mockedState)).toEqual(route.getIn(['location', 'pathname']));
   });
 });

@@ -10,7 +10,7 @@ export default styled.div`
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
 
-  padding: 1em 1em;
+  padding: 1em;
   margin: 0.1em;
   font-weight: 700;
 

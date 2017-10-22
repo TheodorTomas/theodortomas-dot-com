@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const WelcomeWrapper = styled.div`
+const Wrapper = styled.div`
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;
   font-family: 'Montserrat', sans-serif;
@@ -18,4 +18,4 @@ const WelcomeWrapper = styled.div`
   padding-top: 50px;
 `;
 
-export default WelcomeWrapper;
+export default Wrapper;

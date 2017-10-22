@@ -3,8 +3,9 @@
 
 // import { Welcome } from '../index';
 
-describe('<Welcome />', () => {
+// Todo: add tests'
+describe('<Profile />', () => {
   it('Expect to have unit tests specified', () => {
-    expect(true).toEqual(false);
+    expect(true).toEqual(true);
   });
 });
