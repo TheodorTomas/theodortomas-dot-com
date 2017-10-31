@@ -1,33 +1,30 @@
 /*
  *
- * Welcome
+ * ProfilePage
  *
  */
 
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import H1 from 'components/H1';
-// import Dots from 'components/Dots';
+import H2 from 'components/H2';
 
 import Wrapper from './Wrapper';
 import Photo from './Photo';
 import TextContainer from './TextContainer';
 import ProfilePhoto from './ProfilePhoto.jpg';
-import Intro from './Intro';
 import messages from './messages';
 
 const Profile = () => (
   <Wrapper>
     <Photo src={ProfilePhoto} alt="Profile Photo" />
-    {/* <Dots /> */}
-
     <TextContainer>
       <H1>
-        <FormattedMessage {...messages.header} />
+        <FormattedMessage {...messages.hello} />
       </H1>
-      <Intro>
+      <H2>
         <FormattedMessage {...messages.intro} />
-      </Intro>
+      </H2>
     </TextContainer>
   </Wrapper>
 );

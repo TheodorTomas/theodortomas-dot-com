@@ -1,17 +1,17 @@
 /*
- * Test Messages
+ * ProfilePage Messages
  *
- * This contains all the text for the Welcome component.
+ * This contains all the text for the ProfilePage container.
  */
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  header: {
-    id: 'app.containers.Welcome.header',
-    defaultMessage: 'Theodór Tómas',
+  hello: {
+    id: 'app.containers.ProfilePage.hello',
+    defaultMessage: 'Hello!',
   },
   intro: {
-    id: 'app.containers.Welcome.header',
-    defaultMessage: 'Web Developer',
+    id: 'app.containers.ProfilePage.intro',
+    defaultMessage: 'My name is Theodór Tómas',
   },
 });

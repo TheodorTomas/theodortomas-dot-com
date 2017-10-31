@@ -32,6 +32,9 @@ import '!file-loader?name=[name].[ext]!./manifest.json';
 import 'file-loader?name=[name].[ext]!./.htaccess';
 /* eslint-enable import/no-unresolved, import/extensions */
 
+// import Background canvas animation
+import '../internals/BackgroundEffect/BackgroundEffect';
+
 import configureStore from './configureStore';
 
 // Import i18n messages

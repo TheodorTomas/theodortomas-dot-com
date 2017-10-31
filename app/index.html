@@ -12,22 +12,26 @@
 
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script>
-      window.addEventListener("load", function(){
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": {
-              "background": "#D8D8D8",
-              "text": "#939291"
-            },
-            "button": {
-              "background": "#fff",
-              "text": "#939291"
-            }
-          },
-          "theme": "classic"
-        })});
-    </script>
+    <!-- Dot canvas animation dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.4/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js"></script>
+    <!-- TODO: Style cookie popup -->
+    <!--<script>-->
+      <!--window.addEventListener("load", function(){-->
+        <!--window.cookieconsent.initialise({-->
+          <!--"palette": {-->
+            <!--"popup": {-->
+              <!--"background": "#D8D8D8",-->
+              <!--"text": "#939291"-->
+            <!--},-->
+            <!--"button": {-->
+              <!--"background": "#fff",-->
+              <!--"text": "#939291"-->
+            <!--}-->
+          <!--},-->
+          <!--"theme": "classic"-->
+        <!--})});-->
+    <!--</script>-->
   </head>
   <body>
     <!-- Display a message if JS has been disabled on the browser. -->
@@ -36,6 +40,8 @@
     I regret to inform you but this website is not currently supported in Internet Explorer version 8 and below. Please update your browser to view this page.
     <![endif]-->
     <!-- The app hooks into this div -->
+    <canvas id="dot-canvas" style="position:absolute;"></canvas>
     <div id="app"></div>
+    <!--<script src="../internals/BackgroundEffect"></script>-->
   </body>
 </html>

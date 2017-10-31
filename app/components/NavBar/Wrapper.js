@@ -4,9 +4,10 @@ const NavBar = styled.header`
   display: flex;
   justify-content: flex-end;
   position: fixed;
-  width: 100%;
-  height: 50px;
   z-index: 1;
+  
+  width: 100%;
+  height: 3em;
 `;
 
 export default NavBar;
