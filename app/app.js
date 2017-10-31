@@ -1,7 +1,7 @@
 /**
  * app.js
  *
- * This is the entry file for the application, only setup and vote4fan
+ * This is the entry file for the application, only setup and theodortomas.com
  * code.
  */
 

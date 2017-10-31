@@ -1,8 +1,6 @@
 
 ## www.theodortomas.com
 
-	Coming soon
-
 ## Commands
 
 npm install

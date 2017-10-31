@@ -7,6 +7,7 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import H1 from 'components/H1';
+// import Dots from 'components/Dots';
 
 import Wrapper from './Wrapper';
 import Photo from './Photo';
@@ -18,6 +19,7 @@ import messages from './messages';
 const Profile = () => (
   <Wrapper>
     <Photo src={ProfilePhoto} alt="Profile Photo" />
+    {/* <Dots /> */}
 
     <TextContainer>
       <H1>

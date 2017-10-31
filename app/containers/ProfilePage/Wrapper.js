@@ -4,7 +4,7 @@ const Wrapper = styled.div`
   -webkit-font-smoothing: antialiased;
   -webkit-touch-callout: none;
   font-family: 'Montserrat', sans-serif;
-  background-color: black;
+  background-color: #ededed;
 
   display: flex;
   flex-direction: row;
