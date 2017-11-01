@@ -7,7 +7,6 @@ const Wrapper = styled.div`
   z-index: 1;
   
   margin: auto;
-  border: 1px solid blue;
 
   height: 100vh;
   width: 100vw;

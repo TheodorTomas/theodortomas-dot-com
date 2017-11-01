@@ -2,25 +2,23 @@
 import styled from 'styled-components';
 
 const I = styled.i`
-  display: flex;
-  justify-content: flex-end;
-  color: #777;
+  color: #95A3B3;
   font-size: 2em;
   
   &:link {
-    color: #777;
+    color: #95A3B3;
   }
   
   &:visited {
-    color: #777;
+    color: #95A3B3;
   }
   
   &:hover {
-    color: white;
+    color: #84DCC6;
   }
   
   &:active {
-    color: white;
+    color: #84DCC6;
   }
 `;
 
