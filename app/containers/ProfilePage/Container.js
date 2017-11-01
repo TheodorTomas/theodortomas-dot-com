@@ -3,7 +3,7 @@
  */
 import styled from 'styled-components';
 
-const TextContainer = styled.div`
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,4 +12,4 @@ const TextContainer = styled.div`
   margin: auto;
 `;
 
-export default TextContainer;
+export default Container;

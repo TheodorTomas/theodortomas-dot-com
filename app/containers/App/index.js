@@ -13,7 +13,6 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import ProfilePage from 'containers/ProfilePage';
-import NavBar from 'components/NavBar';
 import GATracker from 'components/GATracker';
 
 const Wrapper = styled.div`
@@ -31,7 +30,6 @@ export const App = () => (
       ]}
     />
     <GATracker />
-    <NavBar />
     <Switch>
       <Route component={ProfilePage} />
     </Switch>

@@ -8,7 +8,7 @@ import Img from 'components/Img';
 const PhotoContainer = styled(Img)`
   border-radius: 50%;
   
-  width: 35%;
+  width: 25%;
   height: auto;
   margin: auto;
   

@@ -1,18 +1,36 @@
 /**
- * Renders an IconLink, enforcing the usage of the className, href and title tag
- * with a default target of _blank. Depends on title to find the hover and active colors.
+ * Renders the list of icons as IconLinks mapping their
+ * href, title, className and color values accordingly.
  */
 import React from 'react';
-
-import Wrapper from './Wrapper';
+import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import IconLink from './IconLink';
 
-const IconBar = () => (
+const Wrapper = styled.div`
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  
+  width: 100%;
+`;
+
+const IconBar = ({ icons }) => (
   <Wrapper>
-    <IconLink href="https://linkedin.com/in/TheodorTomas" title="Linkedin" className="fa fa-linkedin" />
-    <IconLink href="https://github.com/TheodorTomas" title="Github" className="fa fa-github" />
-    <IconLink href="https://twitter.com/TheodorTomas" title="Twitter" className="fa fa-twitter" />
+    {icons.map((icon) => (
+      <IconLink
+        key={`icon-link-${icon.title}`}
+        href={icon.href}
+        title={icon.title}
+        className={icon.className}
+        hoverColor={icon.hoverColor}
+      />)
+    )}
   </Wrapper>
 );
+
+IconBar.propTypes = {
+  icons: PropTypes.array.isRequired,
+};
 
 export default IconBar;
