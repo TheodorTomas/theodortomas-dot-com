@@ -5,14 +5,11 @@ import styled from 'styled-components';
 
 const TextContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-self: center;
-  flex-direction: column;
   
   margin: auto;
-  
-  text-align: center;
-  color: white;
 `;
 
 export default TextContainer;
