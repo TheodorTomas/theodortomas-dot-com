@@ -18,7 +18,6 @@ import GATracker from 'components/GATracker';
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  z-index: 1;
 `;
 
 export const App = () => (

@@ -11,8 +11,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;
-  
-  width: 100%;
 `;
 
 const IconBar = ({ icons }) => (

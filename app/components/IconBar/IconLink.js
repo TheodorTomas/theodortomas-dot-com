@@ -13,7 +13,7 @@ const Link = styled(A)`
   i {
     transition: color 0.25s ease-in-out;
     color: #95A3B3;
-    font-size: 1.5em;
+    font-size: 1.75em;
   }
 
   i:link {

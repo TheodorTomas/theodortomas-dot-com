@@ -4,27 +4,31 @@
  *
  */
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import H1 from 'components/H1';
-import H2 from 'components/H2';
+import styled from 'styled-components';
 import IconBar from 'components/IconBar';
-
-import Wrapper from './Wrapper';
 import Photo from './Photo';
 import Container from './Container';
+import Welcome from './Welcome';
 import ProfilePhoto from './ProfilePhoto.jpg';
 import messages from './messages';
 
-const Profile = () => (
+const Wrapper = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+
+  height: 100vh;
+  width: 100vw;
+  
+  z-index: 1;
+`;
+
+const ProfilePage = () => (
   <Wrapper>
     <Photo src={ProfilePhoto} alt="Profile Photo" />
     <Container>
-      <H1>
-        <FormattedMessage {...messages.hello} />
-      </H1>
-      <H2>
-        <FormattedMessage {...messages.intro} />
-      </H2>
+      <Welcome h1={messages.hello} h2={messages.intro} />
       <IconBar
         icons={[
           { href: 'https://linkedin.com/in/TheodorTomas', title: 'Linkedin', className: 'fa fa-linkedin', hoverColor: '#0077b5' },
@@ -36,4 +40,4 @@ const Profile = () => (
   </Wrapper>
 );
 
-export default Profile;
+export default ProfilePage;

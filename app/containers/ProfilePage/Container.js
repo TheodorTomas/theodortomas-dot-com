@@ -4,12 +4,13 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-self: center;
   
-  margin: auto;
+  max-width: 25%;
+  min-width: 16em;
+  
+  margin: auto 0;
+  padding: 1em;
 `;
 
 export default Container;
