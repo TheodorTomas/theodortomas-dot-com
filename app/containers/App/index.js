@@ -28,9 +28,9 @@ const Wrapper = styled.div`
 export const App = () => (
   <Wrapper>
     <Helmet
-      defaultTitle="Theodór Tómas | Software Developer"
+      defaultTitle="Theodór Tómas | Software Engineer"
       meta={[
-        { name: 'description', content: 'Theodór Tómas Theodórsson(Theodor Tomas Theodorsson) Professional Software Developer, Software Engineer and Computer Scientist bio and contact information.' },
+        { name: 'description', content: 'Theodór Tómas Theodórsson(Theodor Tomas Theodorsson) Professional Software Engineer, Software Developer and Computer Scientist bio and contact information.' },
       ]}
     />
     <GATracker />

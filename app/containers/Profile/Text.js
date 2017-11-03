@@ -1,5 +1,5 @@
 /**
- * Text renders the messages passed to H1 and H2.
+ * Text renders the messages passed to H1, H2 and H3.
  */
 import React from 'react';
 import PropTypes from 'prop-types';
@@ -7,12 +7,31 @@ import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 
 const Wrapper = styled.header`
+  // Font
   text-align: center;
-  color: #D3D3D3;
-  line-height: 1.5em;
+  font-weight: normal;
+  
+  // Sizing
+  padding: 1em 0;
+  
+  h1,
+  h2 {
+    color: #78C8B4;
+    margin: 0;
+  }
+  
+  h1 {
+    font-size: 2em;
+    line-height: 2em;
+  }
+  
+  h2 {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
 `;
 
-const Text = ({ h1, h2, h3 }) => (
+const Text = ({ h1, h2 }) => (
   <Wrapper>
     <h1>
       <FormattedMessage {...h1} />
@@ -20,16 +39,12 @@ const Text = ({ h1, h2, h3 }) => (
     <h2>
       <FormattedMessage {...h2} />
     </h2>
-    <h3>
-      <FormattedMessage {...h3} />
-    </h3>
   </Wrapper>
 );
 
 Text.propTypes = {
   h1: PropTypes.object.isRequired,
   h2: PropTypes.object.isRequired,
-  h3: PropTypes.object.isRequired,
 };
 
 export default Text;

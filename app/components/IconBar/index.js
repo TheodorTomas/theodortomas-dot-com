@@ -7,22 +7,40 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import IconLink from './IconLink';
 
-const Wrapper = styled.section`
+const Wrapper = styled.ul`
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-around;
+  
+  // Sizing
+  padding: 1em 0;
+  
+  // List items
+  &,
+  li{
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0 1em;
+  }
+  
+  li:first-child {
+    margin: 0 1em 0 auto;
+  }
+  
+  li:last-child{
+    margin: 0 auto 0 1em;
+  }
 `;
 
 const IconBar = ({ icons }) => (
   <Wrapper>
     {icons.map((icon) => (
-      <IconLink
+      <li><IconLink
         key={`icon-link-${icon.title}`}
         href={icon.href}
         title={icon.title}
         className={icon.className}
         hoverColor={icon.hoverColor}
-      />)
+      /></li>)
     )}
   </Wrapper>
 );

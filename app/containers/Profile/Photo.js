@@ -9,8 +9,8 @@ const Photo = styled(Img)`
   // Sizing
   max-width: 20vw;
   min-width: 16em;
-  height: auto;
-  margin: 2.5em;
+  min-height: 16em;
+  margin: 2.5em 0;
   
   // Misc
   border: 1px solid #95A3B3;

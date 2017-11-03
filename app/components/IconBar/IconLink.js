@@ -9,8 +9,6 @@ import styled from 'styled-components';
 import A from '../A';
 
 const Wrapper = styled(A)`
-  margin: 1em;
-  
   i,
   i:link,
   i:visited {

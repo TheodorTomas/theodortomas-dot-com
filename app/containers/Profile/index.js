@@ -14,7 +14,7 @@ import photo from './photo.jpg';
 const Wrapper = styled.article`
   // Flex-box
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
   
@@ -50,7 +50,7 @@ const Profile = () => (
   <Wrapper>
     <Photo src={photo} alt="Profile Photo" />
     <Container>
-      <Text h1={messages.hello} h2={messages.intro} h3={messages.title} />
+      <Text h1={messages.hello} h2={messages.title} />
       <Bio bio={bio} />
       <IconBar icons={icons} />
     </Container>

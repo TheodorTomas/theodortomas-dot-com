@@ -8,11 +8,7 @@ import { defineMessages } from 'react-intl';
 export default defineMessages({
   hello: {
     id: 'app.containers.ProfilePage.hello',
-    defaultMessage: 'Hello!',
-  },
-  intro: {
-    id: 'app.containers.ProfilePage.intro',
-    defaultMessage: 'My name is Theodór Tómas',
+    defaultMessage: 'Hello! My name is Theodór Tómas.',
   },
   title: {
     id: 'app.containers.ProfilePage.title',
