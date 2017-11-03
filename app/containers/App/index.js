@@ -21,8 +21,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   
   // Sizing
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 `;
 
 export const App = () => (
