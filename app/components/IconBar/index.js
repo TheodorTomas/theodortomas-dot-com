@@ -34,14 +34,15 @@ const Wrapper = styled.ul`
 const IconBar = ({ icons }) => (
   <Wrapper>
     {icons.map((icon) => (
-      <li><IconLink
-        key={`icon-link-${icon.title}`}
-        href={icon.href}
-        title={icon.title}
-        className={icon.className}
-        hoverColor={icon.hoverColor}
-      /></li>)
-    )}
+      <li key={`icon-link-${icon.title}`}>
+        <IconLink
+          href={icon.href}
+          title={icon.title}
+          className={icon.className}
+          hoverColor={icon.hoverColor}
+        />
+      </li>
+    ))}
   </Wrapper>
 );
 
