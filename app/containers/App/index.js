@@ -12,25 +12,30 @@ import { Switch, Route } from 'react-router-dom';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
-import ProfilePage from 'containers/ProfilePage';
+import Profile from 'containers/Profile';
 import GATracker from 'components/GATracker';
 
 const Wrapper = styled.div`
+  // Flex
   display: flex;
   flex-direction: column;
+  
+  // Sizing
+  width: 100%;
+  height: 100%;
 `;
 
 export const App = () => (
   <Wrapper>
     <Helmet
-      defaultTitle="Theodor Tomas | Software Developer"
+      defaultTitle="Theodór Tómas | Software Developer"
       meta={[
-        { name: 'description', content: 'Professional Software Developer bio, skills and contact information.' },
+        { name: 'description', content: 'Theodór Tómas Theodórsson(Theodor Tomas Theodorsson) Professional Software Developer, Software Engineer and Computer Scientist bio and contact information.' },
       ]}
     />
     <GATracker />
     <Switch>
-      <Route component={ProfilePage} />
+      <Route component={Profile} />
     </Switch>
   </Wrapper>
 );

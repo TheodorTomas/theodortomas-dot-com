@@ -5,18 +5,17 @@
 import styled from 'styled-components';
 import Img from 'components/Img';
 
-const PhotoContainer = styled(Img)`
-  flex-grow: 1;
-  border-radius: 50%;
-  
-  max-width: 25%;
+const Photo = styled(Img)`
+  // Sizing
+  max-width: 20vw;
   min-width: 16em;
   height: auto;
+  margin: 2.5em;
   
-  margin: auto 0;
-  padding: 1em;
-  
+  // Misc
+  border: 1px solid #95A3B3;
+  border-radius: 50%;
   overflow: hidden;
 `;
 
-export default PhotoContainer;
+export default Photo;

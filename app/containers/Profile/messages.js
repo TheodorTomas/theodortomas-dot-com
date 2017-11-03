@@ -14,4 +14,8 @@ export default defineMessages({
     id: 'app.containers.ProfilePage.intro',
     defaultMessage: 'My name is Theodór Tómas',
   },
+  title: {
+    id: 'app.containers.ProfilePage.title',
+    defaultMessage: 'Software Engineer',
+  },
 });

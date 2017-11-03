@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import IconLink from './IconLink';
 
-const Wrapper = styled.div`
+const Wrapper = styled.section`
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-around;

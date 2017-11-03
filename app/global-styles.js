@@ -9,6 +9,7 @@ injectGlobal`
   }
 
   body {
+    background-color: #4A4A4A;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
@@ -17,7 +18,6 @@ injectGlobal`
   }
 
   #app {
-    background-color: #4A4A4A;
     min-height: 100%;
     min-width: 100%;
   }

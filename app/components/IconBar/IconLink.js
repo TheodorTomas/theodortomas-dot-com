@@ -8,20 +8,16 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import A from '../A';
 
-const Link = styled(A)`
-  cursor: pointer;
-  i {
+const Wrapper = styled(A)`
+  margin: 1em;
+  
+  i,
+  i:link,
+  i:visited {
     transition: color 0.25s ease-in-out;
     color: #95A3B3;
     font-size: 1.75em;
-  }
-
-  i:link {
-    color: #95A3B3;
-  }
-
-  i:visited {
-    color: #95A3B3;
+    cursor: pointer;
   }
 
   i:hover,
@@ -31,9 +27,9 @@ const Link = styled(A)`
 `;
 
 const IconLink = ({ className, href, title, hoverColor }) => (
-  <Link href={href} title={title} hoverColor={hoverColor} target="_blank">
+  <Wrapper href={href} title={title} hoverColor={hoverColor} target="_blank">
     <i className={className} />
-  </Link>
+  </Wrapper>
 );
 
 IconLink.propTypes = {
