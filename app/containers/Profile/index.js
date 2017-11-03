@@ -57,7 +57,7 @@ const Profile = () => (
   <Wrapper>
     <Photo src={photo} alt="Profile Photo" />
     <Container>
-      <Text h1={messages.hello} h2={messages.title} />
+      <Text h1={messages.h1} h2={messages.h2} title="Click me" />
       <Bio bio={bio} />
       <IconBar icons={icons} />
       <EmailLink {...contactInfo} />

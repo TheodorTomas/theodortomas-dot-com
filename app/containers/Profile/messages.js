@@ -6,12 +6,12 @@
 import { defineMessages } from 'react-intl';
 
 export default defineMessages({
-  hello: {
-    id: 'app.containers.ProfilePage.hello',
+  h1: {
+    id: 'app.containers.ProfilePage.h1',
     defaultMessage: 'Hello! My name is Theodór Tómas.',
   },
-  title: {
-    id: 'app.containers.ProfilePage.title',
+  h2: {
+    id: 'app.containers.ProfilePage.h2',
     defaultMessage: 'Software Engineer',
   },
 });
