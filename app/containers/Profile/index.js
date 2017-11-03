@@ -8,6 +8,7 @@ import Photo from './Photo';
 import Container from './Container';
 import Text from './Text';
 import Bio from './Bio';
+import EmailLink from './EmailLink';
 import messages from './messages';
 import photo from './photo.jpg';
 
@@ -46,6 +47,12 @@ const icons = [
   { href: 'https://twitter.com/TheodorTomas', title: 'Twitter', className: 'fa fa-twitter', hoverColor: '#1da1f2' },
 ];
 
+const contactInfo = {
+  href: 'mailto:theodortomas@gmail.com',
+  title: 'Contact me',
+  text: 'theodortomas@gmail.com',
+};
+
 const Profile = () => (
   <Wrapper>
     <Photo src={photo} alt="Profile Photo" />
@@ -53,6 +60,7 @@ const Profile = () => (
       <Text h1={messages.hello} h2={messages.title} />
       <Bio bio={bio} />
       <IconBar icons={icons} />
+      <EmailLink {...contactInfo} />
     </Container>
   </Wrapper>
 );

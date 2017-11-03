@@ -1,14 +1,13 @@
 /**
  * Renders a IconLink(<i> wrapped in a <a> tag, enforcing the usage of the className,
- * href and title tag with a default target of _blank. Also uses the hoverColor to set
+ * href and title attributes with a default target of _blank. Also uses the hoverColor to set
  * the icon hover and active color.
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import A from '../A';
 
-const Wrapper = styled(A)`
+const Wrapper = styled.a`
   i,
   i:link,
   i:visited {
