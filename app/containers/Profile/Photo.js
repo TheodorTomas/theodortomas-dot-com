@@ -5,6 +5,7 @@
 import styled from 'styled-components';
 import Img from 'components/Img';
 import { COLORS } from 'containers/App/constants';
+const { blueGrey } = COLORS; // forcing the green parameter to exist.
 
 const Photo = styled(Img)`
   /* Sizing */
@@ -14,7 +15,7 @@ const Photo = styled(Img)`
   margin: 2.5em 0;
   
   /* Misc */
-  border: 1px solid ${COLORS.blueGrey};
+  border: 1px solid ${blueGrey};
   border-radius: 50%;
   overflow: hidden;
 `;

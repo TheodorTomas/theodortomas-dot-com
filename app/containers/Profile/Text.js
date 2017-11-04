@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
 import { COLORS } from 'containers/App/constants';
+const { green } = COLORS; // forcing the green parameter to exist.
 
 const Wrapper = styled.header`
   /* Font */
@@ -17,7 +18,7 @@ const Wrapper = styled.header`
   
   h1,
   h2 {
-    color: ${COLORS.green};
+    color: ${(green)};
     margin: 0;
   }
   

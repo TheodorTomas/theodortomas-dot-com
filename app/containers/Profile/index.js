@@ -12,6 +12,7 @@ import Bio from './Bio';
 import EmailLink from './EmailLink';
 import messages from './messages';
 import photo from './photo.jpg';
+const { blueGrey } = COLORS; // forcing the green parameter to exist.
 
 const Wrapper = Styled.article`
   /* Flex-box */
@@ -31,7 +32,7 @@ const Wrapper = Styled.article`
   /* Misc */
   z-index: 1;
   background-color: rgba(106, 106, 106, 0.9);
-  border: 1px solid ${COLORS.blueGrey};
+  border: 1px solid ${blueGrey};
   border-radius: 0.125em;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;

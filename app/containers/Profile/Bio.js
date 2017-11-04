@@ -5,10 +5,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { COLORS } from 'containers/App/constants';
+const { lightGrey } = COLORS; // forcing the existence of parameters.
 
 const Wrapper = styled.ul`
   /* Font */
-  color: ${COLORS.lightGrey};
+  color: ${lightGrey};
   line-height: 1em;
   font-size: 1em;
   font-family: 'Raleway', sans-serif;

@@ -7,6 +7,7 @@ import PropTypes from 'prop-types';
 import Styled from 'styled-components';
 import ReactGA from 'react-ga';
 import { COLORS } from 'containers/App/constants';
+const { blueGrey, green } = COLORS; // forcing the parameters to exist.
 
 const Wrapper = Styled.a`
   font-family: 'Raleway', sans-serif;
@@ -16,14 +17,14 @@ const Wrapper = Styled.a`
   &:link,
   &:visited {
     transition: color 0.25s ease-in-out;
-    color: ${COLORS.blueGrey};
+    color: ${blueGrey};
     font-size: 1em;
     cursor: pointer;
   }
 
   &:hover,
   &:active {
-    color: ${COLORS.green};
+    color: ${green};
   }
 `;
 
