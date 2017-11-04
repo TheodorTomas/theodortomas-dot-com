@@ -6,6 +6,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import ReactGA from 'react-ga';
 import { COLORS } from 'containers/App/constants';
 
 const Wrapper = styled.a`
@@ -24,8 +25,10 @@ const Wrapper = styled.a`
   }
 `;
 
+const trackAnalytics = (title) => ReactGA.event({ category: 'Icon Link', action: 'Click', label: title });
+
 const IconLink = ({ className, href, title, hoverColor }) => (
-  <Wrapper href={href} title={title} hoverColor={hoverColor} target="_blank">
+  <Wrapper href={href} title={title} hoverColor={hoverColor} target="_blank" onClick={() => trackAnalytics(title)}>
     <i className={className} />
   </Wrapper>
 );

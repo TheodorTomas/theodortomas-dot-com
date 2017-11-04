@@ -4,10 +4,11 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components';
+import Styled from 'styled-components';
+import ReactGA from 'react-ga';
 import { COLORS } from 'containers/App/constants';
 
-const Wrapper = styled.a`
+const Wrapper = Styled.a`
   margin: auto;
   
   &,
@@ -25,8 +26,10 @@ const Wrapper = styled.a`
   }
 `;
 
+const trackAnalytics = () => ReactGA.event({ category: 'Email Link', action: 'Click' });
+
 const EmailLink = ({ href, title, text }) => (
-  <Wrapper href={href} title={title} target="_blank">
+  <Wrapper href={href} title={title} target="_blank" onClick={trackAnalytics}>
     {text}
   </Wrapper>
 );

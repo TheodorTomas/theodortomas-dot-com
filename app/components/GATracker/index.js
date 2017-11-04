@@ -1,9 +1,7 @@
 /**
-*
 * NOTE: GATracker This is a workaround due to react-ga depending on onUpdate in redux-router before React v16
 * Should possibly be replaced when react-ga has updated their package.
 * Initializes Google analytics and sends a tracker on page view changes.
-*
 */
 
 import React from 'react';
