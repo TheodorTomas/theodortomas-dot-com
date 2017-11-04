@@ -2,7 +2,7 @@
  * Profile container, containing what data should be used with which components.
  */
 import React from 'react';
-import styled from 'styled-components';
+import Styled from 'styled-components';
 import { COLORS } from 'containers/App/constants';
 import IconBar from 'components/IconBar';
 import Photo from './Photo';
@@ -13,7 +13,7 @@ import EmailLink from './EmailLink';
 import messages from './messages';
 import photo from './photo.jpg';
 
-const Wrapper = styled.article`
+const Wrapper = Styled.article`
   /* Flex-box */
   display: flex;
   flex-flow: column nowrap;

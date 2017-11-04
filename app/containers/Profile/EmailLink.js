@@ -9,6 +9,7 @@ import ReactGA from 'react-ga';
 import { COLORS } from 'containers/App/constants';
 
 const Wrapper = Styled.a`
+  font-family: 'Raleway', sans-serif;
   margin: auto;
   
   &,

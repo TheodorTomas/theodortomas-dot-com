@@ -7,14 +7,19 @@ injectGlobal`
   #app {
     height: 100%;
     width: 100%;
+    background-color: #4a4a4a;
   }
 
   body {
-    background-color: #4A4A4A;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Raleway', sans-serif;
+  }
+  
+  h1,
+  h1 {
+    font-family: 'Lobster', cursive;
   }
 `;
