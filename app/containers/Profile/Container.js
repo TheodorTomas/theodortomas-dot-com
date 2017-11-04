@@ -4,11 +4,11 @@
 import styled from 'styled-components';
 
 const Container = styled.div`
-  // Flex-box
+  /* Flex-box */
   display: flex;
   flex-direction: column;
   
-  // Sizing
+  /* Sizing */
   min-width: 20em;
 `;
 

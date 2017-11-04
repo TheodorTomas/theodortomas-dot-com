@@ -16,11 +16,11 @@ import Profile from 'containers/Profile';
 import GATracker from 'components/GATracker';
 
 const Wrapper = styled.div`
-  // Flex
+  /* Flex */
   display: flex;
   flex-direction: column;
   
-  // Sizing
+  /* Sizing */
   width: 100vw;
   height: 100vh;
 `;

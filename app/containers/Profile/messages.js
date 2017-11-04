@@ -1,4 +1,4 @@
-/*
+/**
  * ProfilePage Messages
  *
  * This contains all the text for the ProfilePage container.

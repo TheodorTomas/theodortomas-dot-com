@@ -5,21 +5,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { COLORS } from 'containers/App/constants';
 
 const Wrapper = styled.a`
   margin: auto;
+  
   &,
   &:link,
   &:visited {
     transition: color 0.25s ease-in-out;
-    color: #95A3B3;
+    color: ${COLORS.blueGrey};
     font-size: 1em;
     cursor: pointer;
   }
 
   &:hover,
   &:active {
-    color: #78C8B4;
+    color: ${COLORS.green};
   }
 `;
 

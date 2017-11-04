@@ -5,18 +5,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage } from 'react-intl';
 import styled from 'styled-components';
+import { COLORS } from 'containers/App/constants';
 
 const Wrapper = styled.header`
-  // Font
+  /* Font */
   text-align: center;
   font-weight: normal;
   
-  // Sizing
+  /* Sizing */
   padding: 1em 0;
   
   h1,
   h2 {
-    color: #78C8B4;
+    color: ${COLORS.green};
     margin: 0;
   }
   

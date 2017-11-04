@@ -3,6 +3,7 @@
  */
 import React from 'react';
 import styled from 'styled-components';
+import { COLORS } from 'containers/App/constants';
 import IconBar from 'components/IconBar';
 import Photo from './Photo';
 import Container from './Container';
@@ -13,13 +14,13 @@ import messages from './messages';
 import photo from './photo.jpg';
 
 const Wrapper = styled.article`
-  // Flex-box
+  /* Flex-box */
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
   align-items: center;
   
-  // Sizing
+  /* Sizing */
   width: 60vw;
   min-width: 21em;
   max-width: 90vw;
@@ -27,10 +28,10 @@ const Wrapper = styled.article`
   padding: 2.5em;
   margin: auto;
   
-  // Misc
+  /* Misc */
   z-index: 1;
   background-color: rgba(106, 106, 106, 0.9);
-  border: 1px solid #95A3B3;
+  border: 1px solid ${COLORS.blueGrey};
   border-radius: 0.125em;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;

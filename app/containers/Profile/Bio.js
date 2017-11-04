@@ -4,19 +4,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { COLORS } from 'containers/App/constants';
 
 const Wrapper = styled.ul`
-  // Font
-  color: #D3D3D3;
+  /* Font */
+  color: ${COLORS.lightGrey};
   line-height: 1em;
   font-size: 1em;
   
-  // Sizing
+  /* Sizing */
   padding: 0.5em 0;
   
-  // List items
+  /* List items */
   &,
-  li{
+  li {
     display: inline-flex;
     list-style-type: none;
     margin: 0 0.5em;
@@ -30,7 +31,7 @@ const Wrapper = styled.ul`
     margin: 0 0.5em 0 auto;
   }
   
-  li:last-child{
+  li:last-child {
     margin: 0 auto 0 0.5em;
   }
 `;

@@ -11,12 +11,12 @@ const Wrapper = styled.ul`
   display: flex;
   flex-flow: row nowrap;
   
-  // Sizing
+  /* Sizing */
   padding: 1em 0;
   
-  // List items
+  /* List items */
   &,
-  li{
+  li {
     display: inline-flex;
     list-style-type: none;
     margin: 0 1em;
@@ -26,7 +26,7 @@ const Wrapper = styled.ul`
     margin: 0 1em 0 auto;
   }
   
-  li:last-child{
+  li:last-child {
     margin: 0 auto 0 1em;
   }
 `;

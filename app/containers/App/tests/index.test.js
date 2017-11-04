@@ -5,7 +5,6 @@ import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 import GATracker from 'components/GATracker';
-import NavBar from 'components/NavBar';
 import Profile from 'containers/Profile';
 import App from '../index';
 
@@ -22,11 +21,6 @@ describe('<App />', () => {
   it('should contain a <GATracker> component', () => {
     const renderedComponent = renderComponent();
     expect(renderedComponent.contains(<GATracker />)).toBe(true);
-  });
-
-  it('should contain a <NavBar> component', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(<NavBar />)).toBe(true);
   });
 
   it('should contain a <Route> component to the profile component', () => {
