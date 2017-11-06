@@ -1,8 +1,8 @@
 import React from 'react';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import IconLink from 'components/IconLink';
 import IconBar from '../index';
-import IconLink from '../IconLink';
 
 configure({ adapter: new Adapter() }); // configure Enzyme with ES16 Adapter
 
@@ -15,7 +15,8 @@ describe('<IconBar />', () => {
       hoverColor: 'test-hover-color',
     }],
   };
-  const renderComponent = (props = defaultProps) => shallow(<IconBar {...props} />);
+  const renderComponent = (props = defaultProps) => shallow(<IconBar {...props} />).dive();
+
   it('should render the given icon in props as a <IconLink>', () => {
     const renderedComponent = renderComponent();
     expect(renderedComponent.contains(
@@ -25,19 +26,5 @@ describe('<IconBar />', () => {
         title={defaultProps.icons[0].title}
         hoverColor={defaultProps.icons[0].hoverColor}
       />)).toBe(true);
-  });
-});
-
-describe('<IconLink />', () => {
-  const defaultProps = {
-    className: 'test-class-name',
-    href: 'www.theodortomas.com',
-    title: 'test title',
-    hoverColor: '#ffffff',
-  };
-  const renderComponent = (props = defaultProps) => shallow(<IconLink {...props} />);
-  it('should render a i with a className attribute', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(<i className={defaultProps.className} />)).toEqual(true);
   });
 });

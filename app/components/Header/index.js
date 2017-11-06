@@ -33,8 +33,8 @@ const Wrapper = styled.header`
   }
 `;
 
-const Text = ({ h1, h2, title }) => (
-  <Wrapper title={title}>
+const Header = ({ h1, h2 }) => (
+  <Wrapper>
     <h1>
       <FormattedMessage {...h1} />
     </h1>
@@ -44,10 +44,9 @@ const Text = ({ h1, h2, title }) => (
   </Wrapper>
 );
 
-Text.propTypes = {
+Header.propTypes = {
   h1: PropTypes.object.isRequired,
   h2: PropTypes.object.isRequired,
-  title: PropTypes.string.isRequired,
 };
 
-export default Text;
+export default Header;

@@ -5,13 +5,15 @@ import React from 'react';
 import Styled from 'styled-components';
 import { COLORS } from 'containers/App/constants';
 import IconBar from 'components/IconBar';
+import Bio from 'components/Bio';
+import Header from 'components/Header';
+import EmailLink from 'components/EmailLink';
 import Photo from './Photo';
 import Container from './Container';
-import Text from './Text';
-import Bio from './Bio';
-import EmailLink from './EmailLink';
 import messages from './messages';
 import photo from './photo.jpg';
+import { bio, icons, contactInfo } from './constants';
+
 const { blueGrey } = COLORS; // forcing the green parameter to exist.
 
 const Wrapper = Styled.article`
@@ -37,29 +39,11 @@ const Wrapper = Styled.article`
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;
 
-const bio = [
-  { title: 'Frontend', items: ['React', 'Angular'] },
-  { title: 'Backend', items: ['Node'] },
-  { title: 'Mobile', items: ['Ionic'] },
-];
-
-const icons = [
-  { href: 'https://linkedin.com/in/TheodorTomas', title: 'www.linkedin.com/TheodorTomas', className: 'fa fa-linkedin', hoverColor: '#0077b5' },
-  { href: 'https://github.com/TheodorTomas', title: 'www.github.com/TheodorTomas', className: 'fa fa-github', hoverColor: '#6cc644' },
-  { href: 'https://twitter.com/TheodorTomas', title: 'www.twitter.com/TheodorTomas', className: 'fa fa-twitter', hoverColor: '#1da1f2' },
-];
-
-const contactInfo = {
-  href: 'mailto:theodortomas@gmail.com',
-  title: 'Contact me',
-  text: 'theodortomas@gmail.com',
-};
-
 const Profile = () => (
   <Wrapper>
     <Photo src={photo} alt="Profile Photo" />
     <Container>
-      <Text h1={messages.h1} h2={messages.h2} title="Click me" />
+      <Header h1={messages.h1} h2={messages.h2} />
       <Bio bio={bio} />
       <IconBar icons={icons} />
       <EmailLink {...contactInfo} />

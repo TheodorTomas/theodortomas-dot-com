@@ -1,11 +1,17 @@
-/**
- * ProfileConstants
- * Each action has a corresponding type, which the reducer knows and picks up on.
- * To avoid weird typos between the reducer and the actions, we save them as
- * constants here. We prefix them with 'yourproject/YourComponent' so we avoid
- * reducers accidentally picking up actions they shouldn't.
- *
- * Follow this format:
- * export const YOUR_ACTION_CONSTANT = 'theodortomas/Container_NAME/ACTION_CONSTANT_NAME';
- */
-export const FINISH_INIT_LOAD = 'theodortomas/Profile/FINISH_INIT_LOAD';
+export const bio = [
+  { title: 'Frontend', items: ['React', 'Angular'] },
+  { title: 'Backend', items: ['Node'] },
+  { title: 'Mobile', items: ['Ionic'] },
+];
+
+export const icons = [
+  { href: 'https://linkedin.com/in/TheodorTomas', title: 'www.linkedin.com/TheodorTomas', className: 'fa fa-linkedin', hoverColor: '#0077b5' },
+  { href: 'https://github.com/TheodorTomas', title: 'www.github.com/TheodorTomas', className: 'fa fa-github', hoverColor: '#6cc644' },
+  { href: 'https://twitter.com/TheodorTomas', title: 'www.twitter.com/TheodorTomas', className: 'fa fa-twitter', hoverColor: '#1da1f2' },
+];
+
+export const contactInfo = {
+  href: 'mailto:theodortomas@gmail.com',
+  title: 'Contact me',
+  text: 'theodortomas@gmail.com',
+};
