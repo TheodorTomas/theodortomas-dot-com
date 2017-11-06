@@ -11,11 +11,8 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  }
-
-  body.fontLoaded {
     font-family: 'Raleway', sans-serif;
+    font-weight: bold;
   }
   
   h1,

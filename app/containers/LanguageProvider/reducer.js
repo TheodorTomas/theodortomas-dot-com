@@ -1,7 +1,5 @@
-/*
- *
+/**
  * LanguageProvider reducer
- *
  */
 
 import { fromJS } from 'immutable';

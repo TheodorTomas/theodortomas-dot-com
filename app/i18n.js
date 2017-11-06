@@ -9,7 +9,7 @@ import enLocaleData from 'react-intl/locale-data/en';
 import isLocaleData from 'react-intl/locale-data/is';
 import daLocaleData from 'react-intl/locale-data/da';
 
-import { DEFAULT_LOCALE } from './containers/App/constants'; // eslint-disable-line
+import { DEFAULT_LOCALE } from 'containers/App/constants';
 import enTranslationMessages from './translations/en.json';
 import isTranslationMessages from './translations/is.json';
 import daTranslationMessages from './translations/da.json';
