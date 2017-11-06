@@ -17,22 +17,25 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway" rel="stylesheet">
     <!-- TODO: Style cookie popup -->
-    <!--<script>-->
-      <!--window.addEventListener("load", function(){-->
-        <!--window.cookieconsent.initialise({-->
-          <!--"palette": {-->
-            <!--"popup": {-->
-              <!--"background": "#D8D8D8",-->
-              <!--"text": "#939291"-->
-            <!--},-->
-            <!--"button": {-->
-              <!--"background": "#fff",-->
-              <!--"text": "#939291"-->
-            <!--}-->
-          <!--},-->
-          <!--"theme": "classic"-->
-        <!--})});-->
-    <!--</script>-->
+    <script>
+      window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#676767",
+              "text": "#d3d3d3"
+            },
+            "button": {
+              "background": "#95a3b3",
+              "text": "#d3d3d3"
+            }
+          },
+          "content": {
+            "message": 'This website uses cookies to ensure you get the best experience on my website.'
+          },
+          "theme": "classic"
+        })});
+    </script>
   </head>
   <body>
     <!-- Display a message if JS has been disabled on the browser. -->
