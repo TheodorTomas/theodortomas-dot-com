@@ -9,7 +9,6 @@ import EmailLink from '../index';
 
 configure({ adapter: new Adapter() }); // configure Enzyme with ES16 Adapter
 
-
 describe('<EmailLink />', () => {
   const renderComponent = (props = contactInfo) => shallow(<EmailLink {...props} />).dive();
 
