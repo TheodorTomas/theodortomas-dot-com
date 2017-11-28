@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo 'Installing...'
                 sh 'npm run preinstall'
-                sh 'npm run install'
+                sh 'npm install'
                 sh 'npm run postinstall'
             }
         }
