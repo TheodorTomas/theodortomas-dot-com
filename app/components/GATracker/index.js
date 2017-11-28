@@ -3,7 +3,6 @@
 * Should possibly be replaced when react-ga has updated their package.
 * Initializes Google analytics and sends a tracker on page view changes.
 */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import GoogleAnalytics from 'react-ga';

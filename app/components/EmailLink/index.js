@@ -31,7 +31,7 @@ const Wrapper = Styled.a`
 const trackAnalytics = () => ReactGA.event({ category: 'Email Link', action: 'Click' });
 
 const EmailLink = ({ href, title, text }) => (
-  <Wrapper href={href} title={title} target="_blank" onClick={trackAnalytics}>
+  <Wrapper href={href} title={title} target="_self" onClick={trackAnalytics}>
     {text}
   </Wrapper>
 );

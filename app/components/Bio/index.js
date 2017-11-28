@@ -41,10 +41,9 @@ const Wrapper = styled.ul`
 const Bio = ({ bio }) => (
   <Wrapper>
     {bio.map((field) =>
-      field.items.map((item) => {
-        console.log('item: ', item);
-        return (<li key={`bio-${field.title}-${item}`}>{item}</li>);
-      })
+      field.items.map((item) =>
+        (<li key={`bio-${field.title}-${item}`}>{item}</li>)
+      )
     )}
   </Wrapper>
 );

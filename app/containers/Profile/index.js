@@ -14,7 +14,7 @@ import messages from './messages';
 import photo from './photo.jpg';
 import { bio, icons, contactInfo } from './constants';
 
-const { blueGrey } = COLORS; // forcing the green parameter to exist.
+const { blueGrey } = COLORS; // forces the color to exist.
 
 const Wrapper = Styled.article`
   /* Flex-box */

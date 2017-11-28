@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ReactGA from 'react-ga';
 import { COLORS } from 'containers/App/constants';
-const { blueGrey } = COLORS; // forcing the green parameter to exist.
+const { blueGrey } = COLORS; // forces the green parameter to exist.
 
 const Wrapper = styled.a`
   i,

@@ -11,10 +11,7 @@ configure({ adapter: new Adapter() }); // configure Enzyme with ES16 Adapter
 
 
 describe('<EmailLink />', () => {
-  const defaultProps = {
-    contactInfo,
-  };
-  const renderComponent = (props = defaultProps) => shallow(<EmailLink {...props} />).dive();
+  const renderComponent = (props = contactInfo) => shallow(<EmailLink {...props} />).dive();
 
   it('should render an <a> tag', () => {
     const renderedComponent = renderComponent();
@@ -52,7 +49,7 @@ describe('<EmailLink />', () => {
     sinon.spy(ReactGA, 'event');
     const mountComponent = mount(
       <IntlProvider locale="en">
-        <EmailLink {...defaultProps} />
+        <EmailLink {...contactInfo} />
       </IntlProvider>
     );
     mountComponent.find('a').simulate('click');

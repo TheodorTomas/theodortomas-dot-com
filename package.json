@@ -289,6 +289,7 @@
     "stylelint": "^8.2.0",
     "stylelint-config-standard": "^17.0.0",
     "stylelint-config-styled-components": "^0.1.1",
+    "stylelint-config-styled-components-processor": "^0.1.1",
     "stylelint-processor-styled-components": "^1.0.0",
     "typescript": "^2.5.3",
     "url-loader": "0.5.8",
