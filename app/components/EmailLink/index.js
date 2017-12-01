@@ -10,15 +10,18 @@ import { COLORS } from 'containers/App/constants';
 const { blueGrey, green } = COLORS; // forcing the parameters to exist.
 
 const Wrapper = Styled.a`
-  font-family: 'Raleway', sans-serif;
-  margin: auto;
-  
-  &,
   &:link,
   &:visited {
-    transition: color 0.25s ease-in-out;
-    color: ${blueGrey};
+    /* Font */
+    font-family: 'Raleway', sans-serif;
     font-size: 1em;
+    color: ${blueGrey};
+    transition: color 0.25s ease-in-out;
+    
+    /* Sizing */
+    margin: auto;
+    
+    /* Misc */
     cursor: pointer;
   }
 

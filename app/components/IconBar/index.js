@@ -8,7 +8,6 @@ import styled from 'styled-components';
 import IconLink from 'components/IconLink';
 
 const Wrapper = styled.ul`
-  display: flex;
   flex-flow: row nowrap;
   
   /* Sizing */
