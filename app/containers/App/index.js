@@ -12,7 +12,7 @@ import Helmet from 'react-helmet';
 import styled from 'styled-components';
 
 import Profile from 'containers/Profile';
-import GATracker from 'components/GATracker';
+import GATracker from 'containers/GATracker';
 
 const Wrapper = styled.div`
   /* Flex */
