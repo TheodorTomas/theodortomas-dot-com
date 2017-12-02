@@ -4,7 +4,7 @@ pipeline {
 
     agent {
         docker {
-            image 'theodortomas.com/ubuntu-nodejs'
+            image 'node'
             args '-u root'
         }
     }
