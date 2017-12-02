@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import { configure, shallow } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import GATracker from 'components/GATracker';
+import GATracker from 'containers/GATracker';
 import Profile from 'containers/Profile';
 import App from '../index';
 
