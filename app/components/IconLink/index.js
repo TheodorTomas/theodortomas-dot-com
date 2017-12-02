@@ -13,6 +13,7 @@ const { blueGrey } = COLORS; // forces the green parameter to exist.
 const Wrapper = styled.a`
   color: ${blueGrey};
   font-size: 1.75em;
+  
   i,
   i:link,
   i:visited {
