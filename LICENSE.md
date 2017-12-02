@@ -1,3 +1,6 @@
+This project theodortomas.com and www.theodortomas.com have been build using
+react-boilerplate extending the license on the following license: 
+
 The MIT License (MIT)
 
 Copyright (c) 2017 Maximilian Stoiber
