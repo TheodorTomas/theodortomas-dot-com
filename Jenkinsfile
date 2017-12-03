@@ -26,9 +26,6 @@ pipeline {
             }
         }
         stage('Build') {
-            environment {
-                GA_TRACKER_ID = ${params.GA_TRACKER_ID}
-            }
             steps {
                 echo 'Building...'
                 sh 'npm run prebuild'

@@ -42,7 +42,7 @@ npm install
 ```
 
 ## Running the application
-Run node server to serve application on http://localhost:3000.
+##### Run node server to serve application on http://localhost:3000.
 ```
 npm run start
 ```
@@ -63,7 +63,7 @@ npm run start:production
 ```
 
 ## Running the tests
-Runs all tests' using enzyme, jest, sinon, eslint and stylelint.
+##### Runs all tests' using enzyme, jest, sinon, eslint and stylelint.
 ```
 npm test
 ```
