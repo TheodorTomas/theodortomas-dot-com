@@ -32,11 +32,5 @@ pipeline {
                 sh 'npm run build'
             }
         }
-        stage('Reloading Nginx') {
-            steps {
-                echo 'Setting and reloading Nginx...'
-                sh 'systemctl reload nginx'
-            }
-        }
     }
 }
