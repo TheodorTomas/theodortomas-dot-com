@@ -13,7 +13,7 @@ import TRACKING_ID from './trackingId';
 
 export class GATracker extends React.Component {
   componentDidMount() {
-    GoogleAnalytics.initialize(TRACKING_ID, { debug: true });
+    GoogleAnalytics.initialize(TRACKING_ID, { debug: false });
     this.track(this.props.pathname);
   }
 
