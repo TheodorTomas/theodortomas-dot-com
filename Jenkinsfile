@@ -26,6 +26,9 @@ pipeline {
             }
         }
         stage('Build') {
+            environment {
+                GA_TRACKER_ID = credentials('f74f96cf-1711-4e90-b04b-e1318c3831ea')
+            }
             steps {
                 echo 'Building...'
                 sh 'npm run prebuild'
