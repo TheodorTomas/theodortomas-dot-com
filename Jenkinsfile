@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Build') {
             environment {
-              GA_TRACKER_ID = credentials('GA_TRACKER_ID')
+                GA_TRACKER_ID = ${GA_TRACKER_ID}
             }
             steps {
                 echo 'Building...'
