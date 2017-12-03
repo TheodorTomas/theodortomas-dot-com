@@ -90,22 +90,12 @@ npm run lint:css
 
 ## Deployment
 
-Jenkins is setup to test and build project while nginx serves the application.
+Jenkins is setup to test and build the project in a node docker container
+while nginx serves the application.
 
-### Jenkins
-The build is described in [Jenkinsfile](/Jenkinsfile). If changed run the follow command.
-website can located at [jenkins.theodortomas.com](https://jenkins.theodortomas.com)
-```
-systemctl reload jenkins
-``` 
+The build is described in [Jenkinsfile](/Jenkinsfile). Website can located at
+[jenkins.theodortomas.com](https://jenkins.theodortomas.com)
 
-### Nginx
-Config files are located in [/nginx](/internals/nginx). Run the follow if changes are
-made to the configuration.
-```
-cp -f internals/nginx/ /etc/nginx/
-systemctl reload nginx
-```
 
 ## License
 
