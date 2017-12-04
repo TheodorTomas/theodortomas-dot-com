@@ -9,11 +9,11 @@ import GoogleAnalytics from 'react-ga';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { makeSelectPathname } from 'containers/App/selectors';
-import TRACKING_ID from './trackingId';
+import getTrackerId from './trackerId';
 
 export class GATracker extends React.Component {
   componentDidMount() {
-    GoogleAnalytics.initialize(TRACKING_ID, { debug: false });
+    GoogleAnalytics.initialize(getTrackerId(), { debug: false });
     this.track(this.props.pathname);
   }
 

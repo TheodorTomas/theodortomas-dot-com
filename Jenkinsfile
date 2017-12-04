@@ -10,13 +10,23 @@ pipeline {
     }
 
     stages {
-        stage('Build') {
-            environment {
-                GA_TRACKER_ID = credentials('GA_TRACKER_ID')
-                echo credentials('GA_TRACKER_ID')
-            }
+        stage('Install') {
             steps {
-                echo params.GA_TRACKER_ID
+                echo 'Installing...'
+                sh 'npm run preinstall'
+                sh 'npm install'
+                sh 'npm run postinstall'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing...'
+                sh 'npm run pretest'
+                sh 'npm run test'
+            }
+        }
+        stage('Build') {
+            steps {
                 echo 'Building...'
                 sh 'npm run prebuild'
                 sh 'npm run build'
