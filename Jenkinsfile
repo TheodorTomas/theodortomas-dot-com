@@ -27,7 +27,7 @@ pipeline {
         }
         stage('Build') {
             environment {
-                GA_TRACKER_ID = credentials('f74f96cf-1711-4e90-b04b-e1318c3831ea')
+                GA_TRACKER_ID = params.GA_TRACKER_ID
             }
             steps {
                 echo params.GA_TRACKER_ID
