@@ -30,7 +30,7 @@ pipeline {
                 GA_TRACKER_ID = credentials('f74f96cf-1711-4e90-b04b-e1318c3831ea')
             }
             steps {
-                echo ${GA_TRACKER_ID}
+                echo params.GA_TRACKER_ID
                 echo 'Building...'
                 sh 'npm run prebuild'
                 sh 'npm run build'
