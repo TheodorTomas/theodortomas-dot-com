@@ -1,9 +1,10 @@
 www.theodortomas.com
 ======
+
+Professional website containing a small bio, links and contact info. Written using ES6, React, Redux, Webpack, Babel amongst other things.
+
 [![Build Status](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com)](https://jenkins.theodortomas.com/job/theodortomas.com/)
-
-Professional website bio containing a small bio, social media links and contact info.
-
+[url](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com)
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
