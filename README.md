@@ -1,4 +1,5 @@
 www.theodortomas.com
+<a href='https://jenkins.theodortomas.com/job/theodortomas.com/'><img src='https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com?style=flat'></a>
 ======
 
 Professional website bio containing a small bio, social media links and contact info.
