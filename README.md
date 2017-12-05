@@ -1,13 +1,15 @@
-# theodortomas.com
-
-[![Build Status](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com&.png?style=flat)](https://jenkins.theodortomas.com/job/theodortomas.com/)
+theodortomas.com
 ======
 
-Professional website containing a small bio, links and contact info. Written using ES6, React, Redux, Webpack, Babel amongst other things.
+[![Build Status](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com&.png?style=flat)](https://jenkins.theodortomas.com/job/theodortomas.com/)
+
+Professional website containing a small bio, links and contact info. Written using ES6, React, Redux, Webpack, Babel 
+amongst other technologies. Powered by Nginx and Node.js. Continuous deployment implemented with Jenkins and Docker.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get you a copy of the project up and running on your local machine for development and testing 
+purposes. See deployment for notes on how to deploy the project on a live system.
 
 ##### Clone project.
 
@@ -20,7 +22,7 @@ git clone https://github.com/TheodorTomas/theodortomas.com.git
 
 #### Prerequisites
 
-Install homebrew(macOsS) to enable installing npm via brew.
+Install homebrew(OS X) to enable installing npm via brew.
 ```
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
@@ -44,7 +46,7 @@ npm install
 ```
 
 ## Running the application
-##### Run node server to serve application on http://localhost:3000.
+##### Run node server to serve application on: http://localhost:3000
 ```
 npm run start
 ```
@@ -70,22 +72,22 @@ npm run start:production
 npm test
 ```
 
-Navigate to test coverage
+Navigate to test coverage.
 ```
 open coverage/lcov-report/index.html
 ```
 
-Run lint testing javascript and css styling
+Run lint testing javascript and css styling.
 ```
 npm run lint
 ```
 
-Run eslint testing javascript styling - see [package.json](/package.json) for config
+Run eslint testing javascript styling - see [package.json](/package.json) for config.
 ```
 npm run lint:eslint
 ```
 
-Run stylelint testing css styling - see [stylelintrc](/.stylelintrc) for config
+Run stylelint testing css styling - see [stylelintrc](/.stylelintrc) for config.
 ```
 npm run lint:css
 ```
@@ -95,13 +97,13 @@ npm run lint:css
 Jenkins is setup to test and build the project in a node docker container
 while nginx serves the application.
 
-The build is described in [Jenkinsfile](/Jenkinsfile). Website can located at
+The build is described in [Jenkinsfile](/Jenkinsfile). Website can located at:
 [jenkins.theodortomas.com](https://jenkins.theodortomas.com)
 
 
 ## License
 
-This project has been built using react-boilerplate - see the [LICENSE.md](LICENSE.md) file for details
+This project has been built using react-boilerplate - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
