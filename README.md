@@ -1,6 +1,6 @@
 www.theodortomas.com
-[![Build Status](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com)](https://jenkins.theodortomas.com/job/theodortomas.com/)
 ======
+[![Build Status](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com)](https://jenkins.theodortomas.com/job/theodortomas.com/)
 
 Professional website bio containing a small bio, social media links and contact info.
 
