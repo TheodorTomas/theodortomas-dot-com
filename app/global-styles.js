@@ -26,13 +26,14 @@ injectGlobal`
   
   .cc-compliance a,
   .cc-compliance a:link,
-  .cc-compliance a:visited,
+  .cc-compliance a:visited {
+    transition: background-color 0.25s ease-in-out;
+    color: #d3d3d3;
+  }
   .cc-compliance a:hover,
   .cc-compliance a:active {
-    transition: color 0.25s ease-in-out;
     cursor: pointer;
-    color: #78c8b4;
-    background-color: #95a3b3 !important;
+    background-color: #78c8b4 !important;
   }
   
   .cc-link,
