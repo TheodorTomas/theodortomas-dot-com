@@ -10,7 +10,6 @@
     || window[vendors[x]+'CancelRequestAnimationFrame'];
   }
   if (!window.requestAnimationFrame) {
-    console.log('overiding window.requestAnimationFrame');
     window.requestAnimationFrame = function (callback, element) {
       var currTime = new Date().getTime();
       var timeToCall = Math.max(0, 16 - (currTime - lastTime));
@@ -36,14 +35,12 @@
 
     // Main
     setTimeout(function () {
-      console.log('tiiimoue');
       initHeader();
       initAnimation();
       addListeners();
     }, 0);
 
     function initHeader() {
-        console.log(document.getElementById('app').offsetHeight);
         width = document.getElementById('app').offsetWidth || window.innerWidth;
         height = document.getElementById('app').offsetHeight || window.innerHeight;
         target = {x: width/2, y: height/2};

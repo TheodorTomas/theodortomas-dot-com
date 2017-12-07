@@ -29,7 +29,7 @@ const Wrapper = Styled.article`
   z-index: 1;
   background-color: rgba(74, 74, 74, 0.75);
   border: 1px solid rgba(74, 74, 74, 0.75);
-  border-radius: 0.125em;
+  border-radius: 0.25em;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;
 

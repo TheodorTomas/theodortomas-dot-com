@@ -24,7 +24,7 @@ const Wrapper = styled.header`
   
   h1 {
     font-size: 2em;
-    line-height: 2em;
+    line-height: 1.25em;
   }
   
   h2 {
