@@ -3,7 +3,6 @@
  */
 import React from 'react';
 import Styled from 'styled-components';
-import { COLORS } from 'containers/App/constants';
 import IconBar from 'components/IconBar';
 import Bio from 'components/Bio';
 import Header from 'components/Header';
@@ -14,26 +13,23 @@ import messages from './messages';
 import photo from './photo.jpg';
 import { bio, icons, contactInfo } from './constants';
 
-const { blueGrey } = COLORS; // forces the color to exist.
-
 const Wrapper = Styled.article`
   /* Flex-box */
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
-  align-content: space-around;
   align-items: center;
   
   /* Sizing */
   width: 50%;
-  min-width: 20em;
-  margin: 10vh auto auto;
+  min-width: calc(200px + (2 * 2em) + 10vw);
+  margin: auto;
   padding: 2em;
   
   /* Misc */
+  position: relative;
   z-index: 1;
-  background-color: rgba(106, 106, 106, 0.9);
-  border: 1px solid ${blueGrey};
+  background-color: rgba(74, 74, 74, 0.75);
+  border: 1px solid rgba(74, 74, 74, 0.75);
   border-radius: 0.125em;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
 `;

@@ -7,22 +7,32 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Helmet from 'react-helmet';
+import styled from 'styled-components';
 
 import Profile from 'containers/Profile';
 import GATracker from 'containers/GATracker';
 
-export const App = () => ([
-  <Helmet
-    key={'app-helmet'}
-    defaultTitle="Theodór Tómas | Software Engineer"
-    meta={[
-      { name: 'description', content: 'Theodór Tómas Theodórsson(Theodor Tomas Theodorsson) Professional Software Engineer, Software Developer and Computer Scientist bio and contact information.' },
-    ]}
-  />,
-  <GATracker key={'app-ga-tracker'} />,
-  <Switch key={'app-switch-route'}>
-    <Route component={Profile} />
-  </Switch>,
-]);
+const Wrapper = styled.div`
+  /* Flex */
+  display: flex;
+  
+  /* Sizing */
+  height: 100vh;
+`;
+
+export const App = () => (
+  <Wrapper>
+    <Helmet
+      defaultTitle="Theodór Tómas | Software Engineer"
+      meta={[
+        { name: 'description', content: 'Theodór Tómas Theodórsson(Theodor Tomas Theodorsson) Professional Software Engineer, Software Developer and Computer Scientist bio and contact information.' },
+      ]}
+    />
+    <GATracker />
+    <Switch>
+      <Route component={Profile} />
+    </Switch>
+  </Wrapper>
+);
 
 export default App;

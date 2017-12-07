@@ -9,6 +9,7 @@
  * export const YOUR_ACTION_CONSTANT = 'theodortomas/Container_NAME/ACTION_CONSTANT_NAME';
  */
 
+// todo: move this constant
 export const DEFAULT_LOCALE = 'en';
 
 export const COLORS = {

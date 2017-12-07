@@ -5,7 +5,7 @@ injectGlobal`
   html,
   body,
   #app {
-    background-color: #4a4a4a;
+    background-color: rgba(152, 163, 177, 0.5);
     width: 100vw;
     height: 100vh;
   }
