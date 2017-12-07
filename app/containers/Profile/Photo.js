@@ -9,10 +9,12 @@ const { blueGrey } = COLORS; // forcing the green parameter to exist.
 
 const Photo = styled(Img)`
   /* Sizing */
-  max-width: 20vw;
-  min-width: 18em;
-  min-height: 18em;
-  margin: 2.5em 0;
+  width: 40%;
+  height: auto;
+  min-width: 200px;
+  min-height: 200px;
+  max-width: 90%;
+  margin: auto;
   
   /* Misc */
   border: 1px solid ${blueGrey};

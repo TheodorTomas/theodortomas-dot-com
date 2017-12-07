@@ -21,15 +21,14 @@ const Wrapper = Styled.article`
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-around;
+  align-content: space-around;
   align-items: center;
   
   /* Sizing */
-  width: 60vw;
-  min-width: 21em;
-  max-width: 90vw;
-  min-height: 50vh;
-  padding: 2.5em;
-  margin: auto;
+  width: 50%;
+  min-width: 20em;
+  margin: 10vh auto auto;
+  padding: 2em;
   
   /* Misc */
   z-index: 1;

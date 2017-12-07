@@ -11,6 +11,7 @@ import { COLORS } from 'containers/App/constants';
 const { blueGrey } = COLORS; // forces the green parameter to exist.
 
 const Wrapper = styled.a`
+  /* Font */
   color: ${blueGrey};
   font-size: 1.75em;
   
