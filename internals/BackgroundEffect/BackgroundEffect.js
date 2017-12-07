@@ -180,7 +180,7 @@
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(152, 163, 177, '+ p.active + ')';
+            ctx.strokeStyle = 'rgba(120, 200, 180, '+ (p.active * 1) + ')';
             ctx.stroke();
         }
     }

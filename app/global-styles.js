@@ -5,15 +5,14 @@ injectGlobal`
   html,
   body,
   #app {
-    background-color: rgba(152, 163, 177, 0.5);
-    width: 100%;
-    min-width: 100vw;
-    height: 100%;
-    min-height: 100vh;
+    background-color: rgba(152, 163, 177, 1);
   }
 
+  #app {
+    overflow: scroll;
+  }
+  
   body {
-    background-color: rgba(152, 163, 177, 0.5);
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
   }

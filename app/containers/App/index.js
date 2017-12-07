@@ -17,7 +17,8 @@ const Wrapper = styled.div`
   display: flex;
   
   /* Sizing */
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2em 0;
 `;
 
 export const App = () => (
