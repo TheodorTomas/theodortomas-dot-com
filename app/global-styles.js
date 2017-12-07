@@ -5,7 +5,7 @@ injectGlobal`
   html,
   body,
   #app {
-    background-color: rgba(152, 163, 177, 1);
+    background-color: rgba(74, 74, 74, 0.5);
   }
 
   #app {

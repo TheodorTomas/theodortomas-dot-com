@@ -180,7 +180,7 @@
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(120, 200, 180, '+ (p.active * 1) + ')';
+            ctx.strokeStyle = 'rgba(120, 200, 180, '+ (p.active * 0.5) + ')';
             ctx.stroke();
         }
     }
@@ -199,7 +199,7 @@
             if(!_this.active) return;
             ctx.beginPath();
             ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-            ctx.fillStyle = 'rgba(74, 74, 74,'+ (_this.active * 0.5 ) + ')';
+            ctx.fillStyle = 'rgba(120, 200, 180,'+ (_this.active * 0.75 ) + ')';
             ctx.fill();
         };
     }
