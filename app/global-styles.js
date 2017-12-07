@@ -6,11 +6,14 @@ injectGlobal`
   body,
   #app {
     background-color: rgba(152, 163, 177, 0.5);
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-width: 100vw;
+    height: 100%;
+    min-height: 100vh;
   }
 
   body {
+    background-color: rgba(152, 163, 177, 0.5);
     font-family: 'Raleway', sans-serif;
     font-weight: bold;
   }
