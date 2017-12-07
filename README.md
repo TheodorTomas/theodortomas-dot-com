@@ -1,10 +1,9 @@
-theodortomas.com
+[theodortomas.com](https://theodortomas.com)
 ======
-
 [![Build Status](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com&.png?style=flat)](https://jenkins.theodortomas.com/job/theodortomas.com/)
 
 Professional website containing a small bio, links and contact info. Written using ES6, React, Redux, Webpack, Babel 
-amongst other technologies. Powered by Nginx and Node.js. Continuous deployment implemented with Jenkins and Docker.
+amongst other technologies. Powered by Nginx, Node.js and NPM. Continuous deployment implemented with Jenkins and Docker.
 
 ## Getting Started
 
@@ -46,12 +45,12 @@ npm install
 ```
 
 ## Running the application
-##### Run node server to serve application on: http://localhost:3000
+##### Run application on: http://localhost:3000
 ```
 npm run start
 ```
 
-Navigate to http://localhost:3000 in web browser.
+Open in browser.
 ```
 open http://localhost:3000
 ```
@@ -97,7 +96,7 @@ npm run lint:css
 Jenkins is setup to test and build the project in a node docker container
 while nginx serves the application.
 
-The build is described in [Jenkinsfile](/Jenkinsfile). Website can located at:
+The build is described in [Jenkinsfile](/Jenkinsfile). Website can be located at:
 [jenkins.theodortomas.com](https://jenkins.theodortomas.com)
 
 
