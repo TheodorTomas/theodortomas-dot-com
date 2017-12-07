@@ -1,3 +1,4 @@
+// Note this animation was taken from a public source. link coming in readme.md
 // TODO: Rewrite as react component
 /* eslint-disable */
 (function() {
@@ -34,13 +35,17 @@
     var width, height, canvas, ctx, points, target = true;
 
     // Main
-    initHeader();
-    initAnimation();
-    addListeners();
+    setTimeout(function () {
+      console.log('tiiimoue');
+      initHeader();
+      initAnimation();
+      addListeners();
+    }, 0);
 
     function initHeader() {
-        width = window.innerWidth;
-        height = window.innerHeight;
+        console.log(document.getElementById('app').offsetHeight);
+        width = document.getElementById('app').offsetWidth || window.innerWidth;
+        height = document.getElementById('app').offsetHeight || window.innerHeight;
         target = {x: width/2, y: height/2};
 
         canvas = document.getElementById('dot-canvas');
@@ -119,10 +124,10 @@
     }
 
     function resize() {
-        width = window.innerWidth;
-        height = window.innerHeight;
-        canvas.width = width;
-        canvas.height = height;
+      width = document.getElementById('app').offsetWidth || window.innerWidth;
+      height = document.getElementById('app').offsetHeight || window.innerHeight;
+      canvas.width = width;
+      canvas.height = height;
     }
 
     // animation
