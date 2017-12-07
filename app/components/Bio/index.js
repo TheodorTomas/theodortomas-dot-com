@@ -7,34 +7,20 @@ import styled from 'styled-components';
 import { COLORS } from 'containers/App/constants';
 const { lightGrey } = COLORS; // forcing the existence of parameters.
 
-const Wrapper = styled.ul`
+const Wrapper = styled.div`
+  /* Flex-box */
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  
   /* Font */
   color: ${lightGrey};
   line-height: 1em;
   font-size: 1em;
   font-family: 'Raleway', sans-serif;
   
-  /* Sizing */
-  padding: 0.5em 0;
-  
-  /* List items */
-  &,
-  li {
-    display: inline-flex;
-    list-style-type: none;
-    margin: 0 0.5em;
-  }
-  
-  li::before {
-    content: "~/";
-  }
-  
-  li:first-child {
-    margin: 0 0.5em 0 auto;
-  }
-  
-  li:last-child {
-    margin: 0 auto 0 0.5em;
+  span {
+    padding: 0.25em;
   }
 `;
 
@@ -42,7 +28,7 @@ const Bio = ({ bio }) => (
   <Wrapper>
     {bio.map((field) =>
       field.items.map((item) =>
-        (<li key={`bio-${field.title}-${item}`}>{item}</li>)
+        (<span key={`bio-${field.title}-${item}`}>~/{item}</span>)
       )
     )}
   </Wrapper>
