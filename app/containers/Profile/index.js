@@ -8,7 +8,6 @@ import Bio from 'components/Bio';
 import Header from 'components/Header';
 import EmailLink from 'components/EmailLink';
 import Photo from './Photo';
-import Container from './Container';
 import messages from './messages';
 import photo from './photo.jpg';
 import { bio, icons, contactInfo } from './constants';
@@ -37,12 +36,10 @@ const Wrapper = Styled.article`
 const Profile = () => (
   <Wrapper>
     <Photo src={photo} alt="Profile Photo" />
-    <Container>
-      <Header h1={messages.h1} h2={messages.h2} />
-      <Bio bio={bio} />
-      <IconBar icons={icons} />
-      <EmailLink {...contactInfo} />
-    </Container>
+    <Header h1={messages.h1} h2={messages.h2} />
+    <Bio bio={bio} />
+    <IconBar icons={icons} />
+    <EmailLink {...contactInfo} />
   </Wrapper>
 );
 
