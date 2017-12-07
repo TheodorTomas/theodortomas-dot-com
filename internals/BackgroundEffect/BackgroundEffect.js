@@ -124,10 +124,12 @@
     }
 
     function resize() {
-      width = document.getElementById('app').offsetWidth || window.innerWidth;
-      height = document.getElementById('app').offsetHeight || window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
+      setTimeout(function() {
+        width = document.getElementById('app').offsetWidth || window.innerWidth;
+        height = document.getElementById('app').offsetHeight || window.innerHeight;
+        canvas.width = width;
+        canvas.height = height;
+      }, 0);
     }
 
     // animation
