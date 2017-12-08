@@ -23,7 +23,7 @@ describe('<Bio />', () => {
   it('should render the item with correct keys as a <span> adding "~/" to each', () => {
     const renderedComponent = renderComponent();
     const expectedKey = `bio-${bio[0]}`;
-    const expectedItem = bio[0].items[0];
+    const expectedItem = bio[0];
     expect(renderedComponent.contains(
       <span key={expectedKey}>~/{expectedItem}</span>)
     ).toEqual(true);
