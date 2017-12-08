@@ -6,7 +6,6 @@ import Bio from 'components/Bio';
 import IconBar from 'components/IconBar';
 import EmailLink from 'components/EmailLink';
 import Photo from '../Photo';
-import Container from '../Container';
 import Profile from '../index';
 
 configure({ adapter: new Adapter() }); // configure Enzyme with ES16 Adapter
@@ -22,11 +21,6 @@ describe('<Profile />', () => {
   it('should contain a  <Photo>', () => {
     const renderedComponent = renderComponent();
     expect(renderedComponent.find(Photo).length).toEqual(1);
-  });
-
-  it('should contain a  <Container>', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.find(Container).length).toEqual(1);
   });
 
   it('should contain a  <Header>', () => {

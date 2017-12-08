@@ -28,7 +28,7 @@ const Bio = ({ bio }) => (
   <Wrapper>
     {bio.map((field) =>
       field.items.map((item) =>
-        (<span key={`bio-${field.title}-${item}`}>~/{item}</span>)
+        <span key={`bio-${field.title}-${item}`}>~/{item}</span>
       )
     )}
   </Wrapper>
