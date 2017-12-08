@@ -1,8 +1,4 @@
-export const bio = [
-  { title: 'Frontend', items: ['React', 'Angular'] },
-  { title: 'Backend', items: ['Node'] },
-  { title: 'Mobile', items: ['Ionic'] },
-];
+export const bio = ['JavaScript', 'HTML5', 'CSS3', 'React', 'Angular', 'Node', 'Ionic'];
 
 export const icons = [
   { href: 'https://linkedin.com/in/TheodorTomas', title: 'www.linkedin.com/TheodorTomas', className: 'fa fa-linkedin', hoverColor: '#0077b5' },

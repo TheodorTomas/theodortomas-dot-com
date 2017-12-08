@@ -13,7 +13,7 @@ injectGlobal`
   }
   
   body {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-weight: bold;
   }
   
@@ -23,7 +23,7 @@ injectGlobal`
   }
   
   .cc-window {
-    font-family: 'Raleway', sans-serif !important;
+    font-family: 'Lato', sans-serif !important;
   }
   
   .cc-compliance a,

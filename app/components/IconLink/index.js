@@ -32,7 +32,7 @@ const trackAnalytics = (title) => ReactGA.event({ category: 'Icon Link', action:
 
 const IconLink = ({ className, href, title, hoverColor }) => (
   <Wrapper href={href} title={title} hoverColor={hoverColor} target="_blank" onClick={() => trackAnalytics(title)}>
-    <i className={className} />
+    <i className={className} aria-hidden="true" />
   </Wrapper>
 );
 

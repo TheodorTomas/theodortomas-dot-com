@@ -13,7 +13,7 @@ const Wrapper = Styled.a`
   &:link,
   &:visited {
     /* Font */
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Lato', sans-serif;
     font-size: 1em;
     color: ${blueGrey};
     transition: color 0.25s ease-in-out;

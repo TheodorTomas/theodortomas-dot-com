@@ -49,9 +49,9 @@ describe('<IconLink />', () => {
     });
   });
 
-  it('should render a i with a className attribute', () => {
+  it('should render a i with a className attribute and aria-hidden', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(<i className={defaultProps.className} />)).toEqual(true);
+    expect(renderedComponent.contains(<i className={defaultProps.className} aria-hidden="true" />)).toEqual(true);
   });
 
   it('should send Google Analytics event on click', () => {

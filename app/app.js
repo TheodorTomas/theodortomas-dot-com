@@ -14,8 +14,11 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory';
+
+// Import third party css
 import 'cookieconsent/build/cookieconsent.min.css';
 import 'cookieconsent/build/cookieconsent.min';
+import 'font-awesome/css/font-awesome.min.css';
 import 'sanitize.css/sanitize.css';
 
 // Import root app

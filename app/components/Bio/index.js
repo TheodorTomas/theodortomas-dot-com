@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   color: ${lightGrey};
   line-height: 1em;
   font-size: 1em;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Lato', sans-serif;
   
   span {
     padding: 0.25em;
@@ -26,10 +26,8 @@ const Wrapper = styled.div`
 
 const Bio = ({ bio }) => (
   <Wrapper>
-    {bio.map((field) =>
-      field.items.map((item) =>
-        <span key={`bio-${field.title}-${item}`}>~/{item}</span>
-      )
+    {bio.map((item) =>
+      <span key={`bio-${item}`}>~/{item}</span>
     )}
   </Wrapper>
 );

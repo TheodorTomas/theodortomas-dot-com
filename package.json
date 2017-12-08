@@ -206,6 +206,7 @@
     "cookieconsent": "^3.0.4",
     "cross-env": "5.0.0",
     "express": "4.15.3",
+    "font-awesome": "^4.7.0",
     "fontfaceobserver": "2.0.9",
     "history": "^4.6.3",
     "hoist-non-react-statics": "2.1.1",

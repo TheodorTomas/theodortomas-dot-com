@@ -17,12 +17,12 @@ describe('<Bio />', () => {
 
   it('should render all bio items in bio to <span>', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.find('span').length).toEqual(4);
+    expect(renderedComponent.find('span').length).toEqual(7);
   });
 
   it('should render the item with correct keys as a <span> adding "~/" to each', () => {
     const renderedComponent = renderComponent();
-    const expectedKey = `bio-field-${bio[0].title}-${bio[0].items[0]}`;
+    const expectedKey = `bio-${bio[0]}`;
     const expectedItem = bio[0].items[0];
     expect(renderedComponent.contains(
       <span key={expectedKey}>~/{expectedItem}</span>)
