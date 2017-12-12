@@ -12,16 +12,6 @@ injectGlobal`
     overflow: scroll;
   }
   
-  body {
-    font-family: 'Lato', sans-serif;
-    font-weight: bold;
-  }
-  
-  h1,
-  h1 {
-    font-family: 'Lobster', cursive;
-  }
-  
   .cc-window {
     font-family: 'Lato', sans-serif !important;
   }
