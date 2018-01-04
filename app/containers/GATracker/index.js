@@ -5,7 +5,7 @@
 */
 import React from 'react';
 import PropTypes from 'prop-types';
-import GoogleAnalytics from 'react-ga';
+import ReactGA from 'react-ga';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import { makeSelectPathname } from 'containers/App/selectors';
@@ -13,7 +13,7 @@ import getTrackerId from './trackerId';
 
 export class GATracker extends React.Component {
   componentDidMount() {
-    GoogleAnalytics.initialize(getTrackerId(), { debug: false });
+    ReactGA.initialize(getTrackerId(), { debug: false });
     this.track(this.props.pathname);
   }
 
@@ -27,8 +27,8 @@ export class GATracker extends React.Component {
   }
 
   track(pathname) {
-    GoogleAnalytics.set({ pathname });
-    GoogleAnalytics.pageview(pathname);
+    ReactGA.set({ pathname });
+    ReactGA.pageview(pathname);
   }
 
   render() {

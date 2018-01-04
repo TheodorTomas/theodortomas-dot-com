@@ -2,12 +2,15 @@ import React from 'react';
 import { configure, shallow, mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import sinon from 'sinon';
-import ReactGA from 'react-ga'; // Google analytics
 import { IntlProvider } from 'react-intl';
+import ReactGA from 'react-ga'; // Google analytics
+import getTrackerId from 'containers/GATracker/trackerId';
 import { contactInfo } from 'containers/Profile/constants';
 import EmailLink from '../index';
 
 configure({ adapter: new Adapter() }); // configure Enzyme with ES16 Adapter
+jest.mock('react-ga');
+ReactGA.initialize(getTrackerId(), { debug: false });
 
 describe('<EmailLink />', () => {
   const renderComponent = (props = contactInfo) => shallow(<EmailLink {...props} />).dive();

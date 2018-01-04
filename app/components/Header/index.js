@@ -23,7 +23,7 @@ const Wrapper = styled.header`
   }
   
   h1 {
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster', sans-serif;
     font-size: 2em;
     line-height: 1.25em;
   }

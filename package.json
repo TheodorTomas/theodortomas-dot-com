@@ -197,6 +197,9 @@
       ".*\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/internals/mocks/image.js"
     },
     "setupTestFrameworkScriptFile": "<rootDir>/internals/testing/test-bundler.js",
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
     "testRegex": "tests/.*\\.test\\.js$"
   },
   "dependencies": {
@@ -258,6 +261,7 @@
     "css-loader": "0.28.4",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.0.2",
+    "enzyme-to-json": "^3.3.0",
     "eslint": "3.19.0",
     "eslint-config-airbnb": "15.0.1",
     "eslint-config-airbnb-base": "11.2.0",
@@ -274,6 +278,7 @@
     "image-webpack-loader": "2.0.0",
     "imports-loader": "0.7.1",
     "jest-cli": "20.0.4",
+    "jest-styled-components": "^4.9.0",
     "lint-staged": "3.5.1",
     "ngrok": "2.2.9",
     "node-plop": "0.7.0",
