@@ -9,6 +9,10 @@ pipeline {
         }
     }
 
+    environment {
+        CI_PULL_REQUEST = $ghprbPullId
+    }
+
     stages {
         stage('Install') {
             steps {
