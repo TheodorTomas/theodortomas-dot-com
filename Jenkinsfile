@@ -32,5 +32,13 @@ pipeline {
                 sh 'npm run build'
             }
         }
+        stage('Coverage') {
+            steps {
+                echo 'Setting coverage...'
+                currentBuild.result = 'SUCCESS'
+                step([$class: 'MasterCoverageAction'])
+                step([$class: 'CompareCoverageAction'])
+            }
+        }
     }
 }
