@@ -11,7 +11,7 @@ const Photo = styled(Img)`
   height: auto;
   min-width: 200px;
   min-height: 200px;
-  max-width: 90%;
+  max-width: 350px;
   margin: auto;
   
   /* Misc */
