@@ -7,10 +7,6 @@ injectGlobal`
   #app {
     background-color: rgba(74, 74, 74, 0.5);
   }
-
-  #app {
-    overflow: scroll;
-  }
   
   .cc-window {
     font-family: 'Lato', sans-serif !important;
