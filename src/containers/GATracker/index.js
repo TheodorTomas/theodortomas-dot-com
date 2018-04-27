@@ -7,7 +7,7 @@ import getTrackerId from './trackerId';
 
 export class GATracker extends React.Component {
   componentDidMount() {
-    ReactGA.initialize(getTrackerId(), { debug: true });
+    ReactGA.initialize(getTrackerId(), { debug: false });
     ReactGA.set({ pathname: '/' });
     ReactGA.pageview('/');
   }
