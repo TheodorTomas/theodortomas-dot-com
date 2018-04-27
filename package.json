@@ -15,7 +15,7 @@
     "lint": "run-s test:lint:**",
     "test:lint:js": "eslint --ext=js --ext=jsx --ignore-path .gitignore .",
     "test:lint:css": "stylelint --config=.stylelintrc './src/**/*.js'",
-    "test:unit": "react-scripts test --env=jsdom --colors"
+    "test:unit": "CI=true react-scripts test --env=jsdom"
   },
   "dependencies": {
     "cookieconsent": "^3.0.6",
