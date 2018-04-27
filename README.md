@@ -16,10 +16,7 @@ purposes. See deployment for notes on how to deploy the project on a live system
 git clone https://github.com/TheodorTomas/theodortomas.com.git 
 ```
 
-## Installing
-
-
-#### Prerequisites
+#### Installing Prerequisites
 
 Install homebrew(OS X) to enable installing npm via brew.
 ```
@@ -39,15 +36,32 @@ apt-get install npm
 ln -s /usr/bin/nodejs /usr/bin/node
 ```
 
+Install Yarn along with Node.js
+```
+brew install yarn
+```
+
+Install Yarn without Node.js
+```
+brew install yarn --without-node
+```
+
+Install Yarn (Ubuntu)
+```
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+sudo apt-get update && sudo apt-get install yarn
+```
+
 ##### Install application dependencies.
 ```
-npm install
+yarn install
 ```
 
 ## Running the application
 ##### Run application on: http://localhost:3000
 ```
-npm run start
+yarn start
 ```
 
 Open in browser.
@@ -55,40 +69,35 @@ Open in browser.
 open http://localhost:3000
 ```
 
-Deploy ngrok tunnel.
-```
-npm run start:tunnel
-```
-
-Run in production mode.
-```
-npm run start:production
-```
-
 ## Running the tests
-##### Runs all tests' using enzyme, jest, sinon, eslint and stylelint.
+Run all tests' using enzyme, jest, eslint and stylelint.
 ```
-npm test
+yarn test
+```
+
+Run unit tests'
+```
+yarn run test:unit
+```
+
+Run lint testing for javascript and css styling.
+```
+yarn run lint
+```
+
+Run eslint testing for javascript styles - see [package.json](/package.json) for config.
+```
+yarn run test:lint:js
+```
+
+Run stylelint testing for css styles - see [stylelintrc](/.stylelintrc) for config.
+```
+yarn run test:lint:css
 ```
 
 Navigate to test coverage.
 ```
 open coverage/lcov-report/index.html
-```
-
-Run lint testing javascript and css styling.
-```
-npm run lint
-```
-
-Run eslint testing javascript styling - see [package.json](/package.json) for config.
-```
-npm run lint:eslint
-```
-
-Run stylelint testing css styling - see [stylelintrc](/.stylelintrc) for config.
-```
-npm run lint:css
 ```
 
 ## Deployment
@@ -102,9 +111,9 @@ The build is described in [Jenkinsfile](/Jenkinsfile). Website can be located at
 
 ## License
 
-This project has been built using react-boilerplate - see the [LICENSE.md](LICENSE.md) file for details.
+This project has been bootstrapped with create-react-app - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
-* [react-boilerplate](https://github.com/react-boilerplate/react-boilerplate)
+* [create-react-app](https://github.com/facebook/create-react-app)
 * [CI/CD jenkins tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-continuous-integration-pipelines-in-jenkins-on-ubuntu-16-04)

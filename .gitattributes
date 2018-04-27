@@ -48,6 +48,7 @@
 *.phtml text
 
 # server config
+.htaccess text
 .nginx.conf text
 
 # git config
