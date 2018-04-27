@@ -1,4 +1,4 @@
-// move to styled component theme.
+// TODO: move to styled-component theme.
 export const COLORS = {
   darkGrey: {
     hex: '#4a4a4a',
