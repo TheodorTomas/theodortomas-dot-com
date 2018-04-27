@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="rgba(74, 74, 74, 0.75)">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Lato:300" rel="stylesheet">
+    <!-- Dot canvas animation dependencies -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.4/easing/EasePack.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js"></script>
+    <script>
+      if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+      }
+    </script>
+    <script>
+      window.addEventListener("load", function(){
+        window.cookieconsent.initialise({
+          "palette": {
+            "popup": {
+              "background": "#D8D8D8",
+              "text": "#939291"
+            },
+            "button": {
+              "background": "#fff",
+              "text": "#939291"
+            }
+          },
+          "theme": "classic"
+      })});
+    </script>
+    <title>Theodór Tómas | Software Engineer</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <!--[if lt IE 9 ]>
+      We regret to inform you but we do not currently support Internet Explorer version 8 and below. Please update your browser to view this page.
+    <![endif]-->
+    <canvas id="dot-canvas" style="position:absolute;"></canvas>
+    <div id="root"></div>
+  </body>
+</html>
