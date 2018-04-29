@@ -85,7 +85,7 @@ Run lint testing for javascript and css styling.
 yarn run lint
 ```
 
-Run eslint testing for javascript styles - see [package.json](/package.json) for config.
+Run eslint testing for javascript styles - see [eslintrc.js](/.eslintrc.js) for config.
 ```
 yarn run test:lint:js
 ```
