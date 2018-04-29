@@ -2,9 +2,9 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Header from 'components/Header';
 import Bio from 'components/Bio';
-import IconBar from 'components/IconBar';
+import Icons from 'components/Icons';
 import EmailLink from 'components/EmailLink';
-import Photo from '../Photo';
+import Photo from 'components/Photo';
 import Profile from '../index';
 
 describe('<Profile />', () => {
@@ -31,9 +31,9 @@ describe('<Profile />', () => {
     expect(renderedComponent.find(Bio).length).toEqual(1);
   });
 
-  it('should contain a <IconBar>', () => {
+  it('should contain a <Icons>', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.find(IconBar).length).toEqual(1);
+    expect(renderedComponent.find(Icons).length).toEqual(1);
   });
 
   it('should contain a <EmailLink>', () => {

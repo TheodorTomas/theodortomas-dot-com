@@ -1,24 +1,18 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import * as ReactGA from 'react-ga'; // Google analytics
-import IconLink from 'components/IconLink';
+import IconLink from '../IconLink';
 
 describe('<IconLink />', () => {
   const defaultProps = {
-    className: 'test-class-name',
+    svg: <svg></svg>,
     href: 'www.theodortomas.com',
     title: 'test title',
-    hoverColor: '#ffffff',
   };
   const renderComponent = (props = defaultProps) => shallow(<IconLink {...props} />);
   const mountComponent = (props = defaultProps) => mount(<IconLink {...props} />);
 
   it('should render with prop: ', () => {
-    it('className', () => {
-      const renderedComponent = renderComponent();
-      expect(renderedComponent.prop('className')).toBeDefined();
-    });
-
     it('href', () => {
       const renderedComponent = renderComponent();
       expect(renderedComponent.prop('href')).toBeDefined();
@@ -29,19 +23,21 @@ describe('<IconLink />', () => {
       expect(renderedComponent.prop('title')).toBeDefined();
     });
 
-    it('hoverColor', () => {
+    it('svg', () => {
       const renderedComponent = renderComponent();
-      expect(renderedComponent.prop('hoverColor')).toBeDefined();
+      expect(renderedComponent.prop('svg')).toBeDefined();
     });
 
     it('target', () => {
       const renderedComponent = renderComponent();
       expect(renderedComponent.prop('target')).toBeDefined();
+      expect(renderedComponent.prop('target')).toBe('_blank');
     });
 
     it('rel', () => {
       const renderedComponent = renderComponent();
-      expect(renderedComponent.prop('target')).toBeDefined();
+      expect(renderedComponent.prop('rel')).toBeDefined();
+      expect(renderedComponent.prop('rel')).toBe('noreferrer noopener');
     });
 
     it('onClick', () => {
@@ -52,7 +48,7 @@ describe('<IconLink />', () => {
 
   it('should render a i with a className attribute', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(<i className={defaultProps.className} />)).toEqual(true);
+    expect(renderedComponent.contains(defaultProps.svg)).toEqual(true);
   });
 
   it('should send Google Analytics event on click', () => {

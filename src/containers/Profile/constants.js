@@ -1,10 +1,22 @@
-export const bio = ['JavaScript', 'HTML5', 'CSS3', 'React', 'Angular', 'Ionic', 'Node'];
+import linkedin from './images/linkedin';
+import github from './images/github';
+import twitter from './images/twitter';
 
-export const icons = [
-  { href: 'https://linkedin.com/in/TheodorTomas', title: 'www.linkedin.com/TheodorTomas', className: 'fa fa-linkedin', hoverColor: '#0077b5' },
-  { href: 'https://github.com/TheodorTomas', title: 'www.github.com/TheodorTomas', className: 'fa fa-github', hoverColor: '#6cc644' },
-  { href: 'https://twitter.com/TheodorTomas', title: 'www.twitter.com/TheodorTomas', className: 'fa fa-twitter', hoverColor: '#1da1f2' },
-];
+export const icons = [{
+  svg: linkedin,
+  href: 'https://linkedin.com/in/TheodorTomas',
+  title: 'www.linkedin.com/TheodorTomas',
+}, {
+  svg: github,
+  href: 'https://github.com/TheodorTomas',
+  title: 'www.github.com/TheodorTomas',
+}, {
+  svg: twitter,
+  href: 'https://twitter.com/TheodorTomas',
+  title: 'www.twitter.com/TheodorTomas',
+}];
+
+export const bio = ['JavaScript', 'HTML5', 'CSS3', 'React', 'Angular', 'Ionic', 'Node'];
 
 export const contactInfo = {
   href: 'mailto:theodortomas@gmail.com',

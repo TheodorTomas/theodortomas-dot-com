@@ -3,14 +3,14 @@
  */
 import React from 'react';
 import Styled from 'styled-components';
-import IconBar from 'components/IconBar';
+import Icons from 'components/Icons';
 import Bio from 'components/Bio';
 import Header from 'components/Header';
 import EmailLink from 'components/EmailLink';
+import Photo from 'components/Photo';
 import { COLORS } from 'containers/App/constants';
-import Photo from './Photo';
 import messages from './messages';
-import photo from './photo.jpg';
+import photo from './images/photo.jpg';
 import { bio, icons, contactInfo } from './constants';
 
 const Wrapper = Styled.article`
@@ -48,7 +48,7 @@ const Wrapper = Styled.article`
     }
   }
 
-  ${({ animateIn }) => (animateIn ? 'animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;' : '')};
+  ${({ animateIn }) => (animateIn ? 'animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;' : '')}
 `;
 
 export class Profile extends React.Component {
@@ -81,7 +81,7 @@ export class Profile extends React.Component {
         <Photo src={photo} alt="Profile Photo" />
         <Header h1={messages.h1} h2={messages.h2} />
         <Bio bio={bio} />
-        <IconBar icons={icons} />
+        <Icons icons={icons} />
         <EmailLink {...contactInfo} />
       </Wrapper>
     );

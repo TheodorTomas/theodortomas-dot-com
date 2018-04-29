@@ -1,6 +1,6 @@
 /**
- * Renders a IconLink(<i> wrapped in a <a> tag, enforcing the usage of the className,
- * href and title attributes with a default target of _blank. Also uses the hoverColor to set
+ * Renders a IconLink(<svg> wrapped in a <a> tag, enforcing the usage of the
+ * href and title attributes with a default target of _blank. Also uses the className to set
  * the icon hover and active color.
  */
 import React from 'react';
@@ -10,43 +10,47 @@ import * as ReactGA from 'react-ga'; // Google analytics
 import { COLORS } from 'containers/App/constants';
 
 const Wrapper = styled.a`
-  /* Font */
-  color: ${COLORS.blueGrey.hex};
-  font-size: 1.75em;
-  
-  i,
-  i:link,
-  i:visited {
+  .icon {
+    color: ${COLORS.blueGrey.hex};
     cursor: pointer;
-    transition: color 0.25s ease-in-out;
+    transition: color 0.5s ease-in-out;
+    margin: 0.5em;
   }
 
-  i:hover,
-  i:active {
-    ${({ hoverColor }) => `color: ${hoverColor};`};
+  .linkedin:hover,
+  .linkedin:active {
+    color: #0077b5;
+  }
+    
+  .github:hover,
+  .github:active {
+    color: #6cc644;
+  }
+
+  .twitter:hover,
+  .twitter:active {
+    color: #1da1f2;
   }
 `;
 
 const trackAnalytics = title => ReactGA.event({ category: 'Icon Link', action: 'Click', label: title });
 
-const IconLink = ({ className, href, title, hoverColor }) => (
+const IconLink = ({ svg, href, title }) => (
   <Wrapper
     href={href}
     title={title}
-    hoverColor={hoverColor}
     target="_blank"
     rel="noreferrer noopener"
     onClick={() => trackAnalytics(title)}
   >
-    <i className={className} />
+    {svg}
   </Wrapper>
 );
 
 IconLink.propTypes = {
-  className: PropTypes.string.isRequired,
+  svg: PropTypes.object.isRequired,
   href: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  hoverColor: PropTypes.string.isRequired,
 };
 
 export default IconLink;
