@@ -15,11 +15,10 @@
     "lint": "run-s test:lint:**",
     "test:lint:js": "eslint --ext=js --ext=jsx --ignore-path .gitignore .",
     "test:lint:css": "stylelint --config=.stylelintrc './src/**/*.js'",
-    "test:unit": "CI=true react-scripts test --env=jsdom"
+    "test:unit": "CI=true react-scripts test --env=jsdom --coverage"
   },
   "dependencies": {
     "cookieconsent": "^3.0.6",
-    "font-awesome": "^4.7.0",
     "fontfaceobserver": "^2.0.13",
     "prop-types": "^15.6.1",
     "react": "^16.3.1",
@@ -55,5 +54,25 @@
       "stylelint --config=.stylelintrc --fix",
       "git add"
     ]
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js}",
+      "!src/**/*.test.{js,jsx}",
+      "!src/BackgroundEffect/*.js",
+      "!src/index.js",
+      "!src/setupTests.js",
+      "!src/global-styles.js",
+      "!src/registerServiceWorker.js",
+      "!src/*/*/trackerId.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "statements": 95,
+        "branches": 95,
+        "functions": 95,
+        "lines": 95
+      }
+    }
   }
 }

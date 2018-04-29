@@ -12,7 +12,7 @@ injectGlobal`
   body {
     background-color: ${COLORS.darkGrey.rgba(0.95)};
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
-    
+
     h1 {
       font-family: "Times New Roman", Times, serif;
     }

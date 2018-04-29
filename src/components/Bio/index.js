@@ -18,7 +18,7 @@ const Wrapper = styled.div`
   font-size: 1em;
   
   span {
-    padding: 0.25em;
+    margin: 0.25em;
   }
 `;
 
