@@ -4,9 +4,13 @@ import { COLORS } from 'containers/App/constants';
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
   html,
-  body,
-  #app {
-    background-color: ${COLORS.darkGrey.rgba(0.75)};
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  body {
+    background-color: ${COLORS.darkGrey.rgba(0.95)};
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
     
     h1 {
@@ -25,6 +29,11 @@ injectGlobal`
     .cc-window {
       font-family: 'Lato', Helvetica, 'Helvetica Neue', Arial, sans-serif;
     } 
+  }
+  
+  #root {
+    min-height: 100%;
+    min-width: 100%;
   }
   
   .cc-compliance a,

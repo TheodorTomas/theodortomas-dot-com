@@ -121,12 +121,10 @@
   }
 
   function resize() {
-    setTimeout(function() {
-      width = document.getElementById('root').offsetWidth || window.innerWidth;
-      height = document.getElementById('root').offsetHeight || window.innerHeight;
-      canvas.width = width;
-      canvas.height = height;
-    }, 0);
+    width = document.getElementById('root').offsetWidth || window.innerWidth;
+    height = document.getElementById('root').offsetHeight || window.innerHeight;
+    canvas.width = width;
+    canvas.height = height;
   }
 
   // animation
