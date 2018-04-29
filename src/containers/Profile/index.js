@@ -74,7 +74,6 @@ export class Profile extends React.Component {
 
   handleLoad() {
     this.setState({ animateIn: true });
-    this.removeListeners(); // this is just to ensure the listener is removed.
   }
 
   removeListeners() {

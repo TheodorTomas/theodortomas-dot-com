@@ -13,10 +13,9 @@ const Wrapper = styled.a`
   .icon {
     color: ${COLORS.blueGrey.hex};
     cursor: pointer;
-    transition: color 0.5s ease-in-out;
     margin: 0 1em;
     
-    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
   
     @media only screen and (max-width: 600px) {
       width: 2em;

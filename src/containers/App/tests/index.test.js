@@ -7,13 +7,15 @@ import App from '../index';
 describe('<App />', () => {
   const renderComponent = (props = {}) => shallow(<App {...props} />);
 
-  it('should contain a <GATracker> component', () => {
+  it('should contain a <GATracker> ', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(<GATracker />)).toBe(true);
+    // hack since enzyme doesn't support React fragments
+    expect(renderedComponent.at(0).find(GATracker).length).toBe(1);
   });
 
-  it('should contain a <Route> component to the profile component', () => {
+  it('should contain a <Profile> ', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(<Profile />)).toBe(true);
+    // hack since enzyme doesn't support React fragments
+    expect(renderedComponent.at(0).find(Profile).length).toBe(1);
   });
 });
