@@ -28,7 +28,7 @@ injectGlobal`
     &,
     .cc-window {
       font-family: 'Lato', Helvetica, 'Helvetica Neue', Arial, sans-serif;
-    } 
+    }
   }
   
   #root {
