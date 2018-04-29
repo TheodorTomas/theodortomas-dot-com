@@ -7,10 +7,24 @@ injectGlobal`
   body,
   #app {
     background-color: ${COLORS.darkGrey.rgba(0.75)};
+    font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+    
+    h1 {
+      font-family: "Times New Roman", Times, serif;
+    }
   }
   
-  .cc-window {
-    font-family: 'Lato', sans-serif !important;
+  body.lobster {
+    h1 {
+      font-family: 'Lobster', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+    }
+  }
+  
+  body.lato {
+    &,
+    .cc-window {
+      font-family: 'Lato', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+    } 
   }
   
   .cc-compliance a,

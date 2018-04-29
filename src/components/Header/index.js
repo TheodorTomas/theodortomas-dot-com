@@ -21,13 +21,11 @@ const Wrapper = styled.header`
   }
   
   h1 {
-    font-family: 'Lobster', sans-serif;
     font-size: 2em;
     line-height: 1.25em;
   }
   
   h2 {
-    font-family: 'Lato', sans-serif;
     font-size: 1.25em;
     line-height: 1.25em;
   }

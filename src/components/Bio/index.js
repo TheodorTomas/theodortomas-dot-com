@@ -16,7 +16,6 @@ const Wrapper = styled.div`
   color: ${COLORS.lightGrey.hex};
   line-height: 1em;
   font-size: 1em;
-  font-family: 'Lato', sans-serif;
   
   span {
     padding: 0.25em;

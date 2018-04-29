@@ -12,7 +12,6 @@ const Wrapper = Styled.a`
   &:link,
   &:visited {
     /* Font */
-    font-family: 'Lato', sans-serif;
     font-size: 1em;
     color: ${COLORS.blueGrey.hex};
     transition: color 0.25s ease-in-out;
