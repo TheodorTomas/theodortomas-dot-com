@@ -7,6 +7,7 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
+    overflow: hidden;
   }
   
   body {
@@ -14,32 +15,33 @@ injectGlobal`
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
 
     h1 {
-      font-family: "Times New Roman", Times, serif;
+      font-family: 'Times New Roman', Times, serif;
     }
   }
   
   body.lobster {
     h1 {
-      font-family: 'Lobster', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+      font-family: Lobster, Helvetica, 'Helvetica Neue', Arial, sans-serif;
     }
   }
   
   body.lato {
     &,
     .cc-window {
-      font-family: 'Lato', Helvetica, 'Helvetica Neue', Arial, sans-serif;
+      font-family: Lato, Helvetica, 'Helvetica Neue', Arial, sans-serif;
     }
   }
   
   #root {
-    min-height: 100%;
+    display: inline-flex;
     min-width: 100%;
+    min-height: 100%;
   }
   
   .cc-compliance a,
   .cc-compliance a:link,
   .cc-compliance a:visited {
-    transition: background-color 0.25s ease-in-out;
+    transition: background-color 0.5s ease-in-out;
     color: ${COLORS.lightGrey.hex};
   }
   
@@ -52,7 +54,7 @@ injectGlobal`
   .cc-link,
   .cc-link:link,
   .cc-link:visited {
-    transition: color 0.25s ease-in-out;
+    transition: color 0.5s ease-in-out;
     cursor: pointer;
     color: ${COLORS.blueGrey.hex} !important;
   }

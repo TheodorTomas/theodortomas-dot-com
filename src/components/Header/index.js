@@ -12,22 +12,12 @@ const Wrapper = styled.header`
   font-weight: normal;
   
   /* Sizing */
-  padding: 1em 0;
+  margin: 1em 0;
   
   h1,
   h2 {
     color: ${COLORS.green.hex};
     margin: 0;
-  }
-  
-  h1 {
-    font-size: 2em;
-    line-height: 1.25em;
-  }
-  
-  h2 {
-    font-size: 1.25em;
-    line-height: 1.25em;
   }
 `;
 

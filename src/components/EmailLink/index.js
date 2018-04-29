@@ -9,12 +9,10 @@ import * as ReactGA from 'react-ga';
 import { COLORS } from 'containers/App/constants';
 
 const Wrapper = Styled.a`
-  &:link,
-  &:visited {
+  &:link {
     /* Font */
-    font-size: 1em;
     color: ${COLORS.blueGrey.hex};
-    transition: color 0.25s ease-in-out;
+    transition: color 0.5s ease-in-out;
     
     /* Sizing */
     margin: auto;
@@ -23,6 +21,7 @@ const Wrapper = Styled.a`
     cursor: pointer;
   }
 
+  &:visited,
   &:hover,
   &:active {
     color: ${COLORS.green.hex};

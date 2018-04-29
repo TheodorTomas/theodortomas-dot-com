@@ -14,8 +14,6 @@ const Wrapper = styled.div`
   
   /* Font */
   color: ${COLORS.lightGrey.hex};
-  line-height: 1em;
-  font-size: 1em;
   
   span {
     margin: 0.25em;

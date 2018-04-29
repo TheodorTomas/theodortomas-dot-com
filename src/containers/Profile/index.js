@@ -17,21 +17,27 @@ const Wrapper = Styled.article`
   /* Flex-box */
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  justify-content: center;
   
   /* Sizing */
-  width: 50%;
-  min-width: calc(200px + (2 * 2em) + 10vw);
   margin: auto;
   padding: 2em;
+  width: 50%;
+  min-width: calc(150px + (2 * 2em) + 10vw);
   
   /* Misc */
   position: relative;
   z-index: 1;
   background-color: ${COLORS.darkGrey.rgba(0.75)};
   border: 1px solid ${COLORS.darkGrey.rgba(0.75)};
-  border-radius: 0.25em;
+  border-radius: 4px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  
+  transition: font 0.5s ease-in-out;
+  
+  @media only screen and (max-width: 600px) {
+    font-size: 75%;
+  }
   
   opacity: 0;
   

@@ -12,6 +12,8 @@ const Wrapper = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
+  
+  margin: 1em 0;
 `;
 
 const IconBar = ({ icons }) => (

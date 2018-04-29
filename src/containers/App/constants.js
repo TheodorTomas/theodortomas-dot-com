@@ -6,6 +6,7 @@ export const COLORS = {
   },
   blueGrey: {
     hex: '#95a3b3',
+    rgba: alpha => `rgba(149, 163, 179, ${alpha})`,
   },
   lightGrey: {
     hex: '#d3d3d3',

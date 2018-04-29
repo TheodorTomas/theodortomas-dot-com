@@ -14,19 +14,29 @@ const Wrapper = styled.a`
     color: ${COLORS.blueGrey.hex};
     cursor: pointer;
     transition: color 0.5s ease-in-out;
-    margin: 0.5em;
+    margin: 0 1em;
+    
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+  
+    @media only screen and (max-width: 600px) {
+      width: 2em;
+      height: 2em;
+    }
   }
-
+  
+  .linkedin:visited,
   .linkedin:hover,
   .linkedin:active {
     color: #0077b5;
   }
     
+  .github:visited,
   .github:hover,
   .github:active {
     color: #6cc644;
   }
 
+  .twitter:visited,
   .twitter:hover,
   .twitter:active {
     color: #1da1f2;
