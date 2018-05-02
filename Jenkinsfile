@@ -13,19 +13,19 @@ pipeline {
         stage('Install') {
             steps {
                 echo 'Installing...'
-                sh 'yarn install'
+                sh 'npm install'
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing...'
-                sh 'yarn test'
+                sh 'npm test'
             }
         }
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh 'yarn build'
+                sh 'npm build'
             }
         }
     }
