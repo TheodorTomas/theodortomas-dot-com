@@ -24,9 +24,9 @@ describe('<Header />', () => {
     expect(renderedComponent.contains(defaultProps.h1)).toEqual(true);
   });
 
-  it('should render a h1 text in a h1 element', () => {
+  it('should render a h1 text in a span element', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(<h1>{defaultProps.h1}</h1>)).toEqual(true);
+    expect(renderedComponent.contains(<span>{defaultProps.h1}</span>)).toEqual(true);
   });
 
   it('should render a h2 element', () => {
@@ -39,8 +39,8 @@ describe('<Header />', () => {
     expect(renderedComponent.contains(defaultProps.h2)).toEqual(true);
   });
 
-  it('should render a h2 text in a h2 element', () => {
+  it('should render a h2 text in a span element', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(<h2>{defaultProps.h2}</h2>)).toEqual(true);
+    expect(renderedComponent.contains(<span>{defaultProps.h2}</span>)).toEqual(true);
   });
 });
