@@ -18,19 +18,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js"></script>
     <script>
       window.addEventListener("load", function(){
-        window.cookieconsent.initialise({
-          "palette": {
-            "popup": {
-              "background": "rgba(74, 74, 74, 0.75)",
-              "text": "#d3d3d3"
+        if (window.cookieconsent) {
+          window.cookieconsent.initialise({
+            "palette": {
+              "popup": {
+                "background": "rgba(74, 74, 74, 0.75)",
+                "text": "#d3d3d3"
+              },
+              "button": {
+                "background": "#95a3b3",
+                "text": "#d3d3d3"
+              }
             },
-            "button": {
-              "background": "#95a3b3",
-              "text": "#d3d3d3"
-            }
-          },
-          "theme": "classic"
-      })});
+            "theme": "classic"
+          })
+        }
+      });
     </script>
     <title>Theodor Tomas | Software Engineer</title>
   </head>
@@ -39,7 +42,7 @@
       You need to enable JavaScript to run this app.
     </noscript>
     <!--[if lt IE 9 ]>
-      We regret to inform you but we do not currently support Internet Explorer version 8 and below. Please update your browser to view this page.
+      We regret to inform you but we do not currently support Internet Explorer version 9 and below. Please update your browser to view this page.
     <![endif]-->
     <canvas id="dot-canvas" style="position:absolute;"></canvas>
     <div id="root"></div>

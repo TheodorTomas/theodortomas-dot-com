@@ -1,3 +1,4 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -26,7 +27,6 @@ fontLobster.load(null, 5000).then(() => {
 fontLato.load(null, 5000).then(() => {
   document.body.classList.add('lato');
 });
-
 
 ReactDOM.render(React.createElement(App), document.getElementById('root'));
 registerServiceWorker();
