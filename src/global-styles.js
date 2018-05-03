@@ -31,9 +31,10 @@ injectGlobal`
   }
   
   span,
-  a, 
+  a,
   .cc-compliance a {
     transition: font 0.5s ease-in-out;
+    
     @media only screen and (max-width: 450px) {
       font-size: 80%;
     }

@@ -17,7 +17,7 @@ const Wrapper = Styled.a`
   /* Sizing */
   width: 100%;
 
-  /* Misc */  
+  /* Misc */
   color: ${COLORS.blueGrey.hex};
   transition: color 0.5s ease-in-out, font 0.5s ease-in-out;
   cursor: pointer;
