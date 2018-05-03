@@ -9,14 +9,16 @@ import * as ReactGA from 'react-ga';
 import { COLORS } from 'containers/App/constants';
 
 const Wrapper = Styled.a`
+  /* Sizing */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  
   &:link {
-    /* Font */
     color: ${COLORS.blueGrey.hex};
-    transition: color 0.5s ease-in-out;
-    
-    /* Sizing */
-    margin: auto;
-    
+    transition: color 0.5s ease-in-out, font 0.5s ease-in-out;
+  
     /* Misc */
     cursor: pointer;
   }
