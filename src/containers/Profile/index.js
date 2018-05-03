@@ -47,45 +47,18 @@ const Wrapper = Styled.article`
       opacity: 1;
     }
   }
-
-  ${({ animateIn }) => (animateIn ? 'animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;' : '')}
+  
+  animation: popIn 1s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards 250ms;
 `;
 
-export class Profile extends React.Component {
-  constructor() {
-    super();
-    this.state = { animateIn: false };
-    this.handleLoad = this.handleLoad.bind(this);
-  }
-
-  componentDidMount() {
-    window.addEventListener('load', this.handleLoad, { once: true });
-  }
-
-  componentWillUnmount() {
-    // ensure event listeners are removed on unmounting in case load has not finished.
-    this.removeListeners();
-  }
-
-  handleLoad() {
-    this.setState({ animateIn: true });
-  }
-
-  removeListeners() {
-    window.removeEventListener('load', this.handleLoad);
-  }
-
-  render() {
-    return (
-      <Wrapper animateIn={this.state.animateIn}>
-        <Photo src={photo} alt="Profile Photo" />
-        <Header h1={messages.h1} h2={messages.h2} />
-        <Bio bio={bio} />
-        <Icons icons={icons} />
-        <EmailLink {...contactInfo} />
-      </Wrapper>
-    );
-  }
-}
+const Profile = () => (
+  <Wrapper>
+    <Photo src={photo} alt="Profile Photo" />
+    <Header h1={messages.h1} h2={messages.h2} />
+    <Bio bio={bio} />
+    <Icons icons={icons} />
+    <EmailLink {...contactInfo} />
+  </Wrapper>
+);
 
 export default Profile;

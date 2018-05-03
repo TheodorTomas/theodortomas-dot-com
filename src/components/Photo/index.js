@@ -21,9 +21,21 @@ const Img = styled.img`
   border: 1px solid ${COLORS.blueGrey.rgba(0.5)};
   border-radius: 50%;
   overflow: hidden;
+  
+  transition: opacity 0.5s ease-in-out;
+  
+  opacity: 0;
 `;
 
-const Photo = ({ src, alt }) => <Img src={src} alt={alt} />;
+export const showImg = (el) => { el.target.style.opacity = 1; }; // eslint-disable-line no-param-reassign
+
+const Photo = ({ src, alt }) => (
+  <Img
+    src={src}
+    alt={alt}
+    onLoad={showImg}
+  />
+);
 
 Photo.propTypes = {
   src: PropTypes.oneOfType([

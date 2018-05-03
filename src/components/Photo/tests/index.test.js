@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Photo from '../index';
+import Photo, { showImg } from '../index';
 
 describe('<Photo />', () => {
   const defaultProps = {
@@ -22,5 +22,28 @@ describe('<Photo />', () => {
   it('should have an alt attribute', () => {
     const renderedComponent = renderComponent();
     expect(renderedComponent.prop('alt')).toEqual(defaultProps.alt);
+  });
+
+  it('should have an onLoad function', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.prop('onLoad')).toEqual(expect.any(Function));
+  });
+
+  describe('showImg()', () => {
+    let el;
+    beforeEach(() => {
+      el = {
+        target: {
+          style: {
+            opacity: 1,
+          },
+        },
+      };
+    });
+
+    it('should add opacity 1 to target on load', () => {
+      showImg(el);
+      expect(el.target.style.opacity).toBe(1);
+    });
   });
 });
