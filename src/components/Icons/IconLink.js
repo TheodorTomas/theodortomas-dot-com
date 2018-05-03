@@ -17,7 +17,7 @@ const Wrapper = styled.a`
     
     transition: color 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
   
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 450px) {
       width: 2em;
       height: 2em;
     }
