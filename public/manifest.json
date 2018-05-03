@@ -1,8 +1,8 @@
 {
-  "short_name": "Theodór Tómas",
-  "name": "Theodór Tómas | Software Engineer",
-  "theme_color": "rgba(74, 74, 74, 0.75)",
-  "background_color": "rgba(74, 74, 74, 0.5)",
+  "short_name": "T. Tómas",
+  "name": "Theodor Tomas | Software Engineer",
+  "theme_color": "rgba(74, 74, 74, 0.9)",
+  "background_color": "rgba(74, 74, 74, 0.9)",
   "start_url": "./index.html",
   "display": "standalone",
   "orientation": "portrait",
