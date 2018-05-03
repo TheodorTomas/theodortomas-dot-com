@@ -23,12 +23,15 @@ const Img = styled.img`
   border-radius: 50%;
   overflow: hidden;
   
-  transition: opacity 0.5s ease-in-out;
+  opacity: 0;
+  border: 2px solid;
+  border-color: ${COLORS.blueGrey.rgba(0)};
+  transition: opacity 0.5s ease-in-out, border-color 0.5s ease-in-out;
   
-  ${({ showImg }) => showImg
+  ${({ isShowImg }) => isShowImg
     ? `
-    border: 1px solid ${COLORS.blueGrey.rgba(0.5)};
     opacity: 1;
+    border-color: ${COLORS.blueGrey.rgba(0.5)};
     ` : ''}
 `;
 

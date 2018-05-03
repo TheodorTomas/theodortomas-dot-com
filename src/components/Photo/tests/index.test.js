@@ -1,6 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Photo, { showImg } from '../index';
+import { COLORS } from 'containers/App/constants';
+import Photo from '../index';
 
 describe('<Photo />', () => {
   const defaultProps = {
@@ -29,21 +30,26 @@ describe('<Photo />', () => {
     expect(renderedComponent.prop('onLoad')).toEqual(expect.any(Function));
   });
 
-  describe('showImg()', () => {
-    let el;
-    beforeEach(() => {
-      el = {
-        target: {
-          style: {
-            opacity: 1,
-          },
-        },
-      };
-    });
+  it('should initially be hidden with no border', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent).toHaveStyleRule('opacity', '0');
+    expect(renderedComponent).toHaveStyleRule('border-color', COLORS.blueGrey.rgba(0));
+  });
 
-    it('should add opacity 1 to target on load', () => {
-      showImg(el);
-      expect(el.target.style.opacity).toBe(1);
+  it('should show image and border on isShowImg = true', () => {
+    const renderedComponent = renderComponent();
+    renderedComponent.setState({ isShowImg: true });
+    renderedComponent.update();
+    expect(renderedComponent).toHaveStyleRule('opacity', '1');
+    expect(renderedComponent).toHaveStyleRule('border-color', COLORS.blueGrey.rgba(0.5));
+  });
+
+  describe('showImg()', () => {
+    it('should change isShowImg, false => true ', () => {
+      const renderedComponent = renderComponent();
+      expect(renderedComponent.state('isShowImg')).toBe(false);
+      renderedComponent.instance().showImg();
+      expect(renderedComponent.state('isShowImg')).toBe(true);
     });
   });
 });

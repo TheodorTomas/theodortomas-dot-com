@@ -8,7 +8,7 @@ import { COLORS } from 'containers/App/constants';
 
 const Wrapper = styled.header`
   /* Sizing */
-  margin: 1em 0 0.75em 0;
+  margin: 1em 0 0.75em;
   
   /* Font */
   color: ${COLORS.green.hex};
