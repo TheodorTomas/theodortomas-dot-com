@@ -12,10 +12,10 @@ const Wrapper = Styled.a`
   /* Flex */
   display: flex;
   justify-content: center;
-  text-align: center;
 
   /* Sizing */
   width: 100%;
+  line-height: 100%;
 
   /* Misc */
   color: ${COLORS.blueGrey.hex};

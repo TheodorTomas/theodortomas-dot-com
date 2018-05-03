@@ -13,15 +13,26 @@ injectGlobal`
   body {
     background-color: ${COLORS.darkGrey.rgba(0.95)};
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
+    text-align: center;
 
     h1 {
       font-family: 'Times New Roman', Times, serif;
+      font-weight: bolder;
+    }
+    
+    h2 {
+      font-weight: normal;
     }
   }
   
   body.fontLoaded {
     h1 {
       font-family: Lobster, Helvetica, 'Helvetica Neue', Arial, sans-serif;
+    }
+    
+    h1,
+    h2 {
+      font-weight: normal;
     }
     
     &,

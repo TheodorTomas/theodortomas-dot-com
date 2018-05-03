@@ -7,17 +7,20 @@ import styled from 'styled-components';
 import { COLORS } from 'containers/App/constants';
 
 const Wrapper = styled.header`
-  /* Font */
-  text-align: center;
-  font-weight: normal;
-  
   /* Sizing */
-  margin: 1em 0;
+  margin: 1em 0 0.75em 0;
+  
+  /* Font */
+  color: ${COLORS.green.hex};
   
   h1,
   h2 {
-    color: ${COLORS.green.hex};
     margin: 0;
+    line-height: 100%;
+  }
+  
+  h2 {
+    margin-top: 0.25em;
   }
 `;
 

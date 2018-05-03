@@ -16,6 +16,7 @@ const Wrapper = styled.div`
   color: ${COLORS.lightGrey.hex};
   
   span {
+    line-height: 100%;
     margin: 0.25em;
   }
 `;
