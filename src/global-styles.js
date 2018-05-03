@@ -33,7 +33,8 @@ injectGlobal`
   }
   
   span,
-  a {
+  a, 
+  .cc-compliance a {
     transition: font 0.5s ease-in-out;
     @media only screen and (max-width: 450px) {
       font-size: 80%;
@@ -52,8 +53,8 @@ injectGlobal`
     font-size: 1em !important;
   }
   
-  .cc-compliance a {
-    margin-left: 0.25em;
+  .cc-compliance {
+    font-size: 1em !important;
   }
   
   .cc-compliance a,
@@ -71,6 +72,7 @@ injectGlobal`
   
   .cc-link,
   .cc-link:link {
+    font-size: 1em !important;
     transition: color 0.5s ease-in-out;
     cursor: pointer;
     color: ${COLORS.blueGrey.hex} !important;
