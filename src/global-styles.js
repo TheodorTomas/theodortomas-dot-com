@@ -19,13 +19,11 @@ injectGlobal`
     }
   }
   
-  body.lobster {
+  body.fontLoaded {
     h1 {
       font-family: Lobster, Helvetica, 'Helvetica Neue', Arial, sans-serif;
     }
-  }
-  
-  body.lato {
+    
     &,
     .cc-window {
       font-family: Lato, Helvetica, 'Helvetica Neue', Arial, sans-serif;

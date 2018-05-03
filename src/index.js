@@ -20,12 +20,8 @@ import registerServiceWorker from './registerServiceWorker';
 const fontLobster = new FontFaceObserver('Lobster');
 const fontLato = new FontFaceObserver('Lato');
 
-fontLobster.load(null, 5000).then(() => {
-  document.body.classList.add('lobster');
-});
-
-fontLato.load(null, 5000).then(() => {
-  document.body.classList.add('lato');
+Promise.all([fontLobster.load(), fontLato.load()]).then(() => {
+  document.body.classList.add('fontLoaded');
 });
 
 ReactDOM.render(React.createElement(App), document.getElementById('root'));
