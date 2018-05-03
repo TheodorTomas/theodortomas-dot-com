@@ -47,6 +47,7 @@ injectGlobal`
     min-height: 100%;
   }
   
+  /* ----------- Cookie consent popup ----------- */
   .cc-window {
     display: flex;
     justify-content: space-between;
@@ -58,7 +59,6 @@ injectGlobal`
   }
   
   .cc-compliance a,
-  .cc-compliance a:link,
   .cc-compliance a:visited {
     transition: background-color 0.5s ease-in-out;
     color: ${COLORS.lightGrey.hex};
@@ -70,8 +70,7 @@ injectGlobal`
     background-color: ${COLORS.green.hex} !important;
   }
   
-  .cc-link,
-  .cc-link:link {
+  .cc-link {
     font-size: 1em !important;
     transition: color 0.5s ease-in-out;
     cursor: pointer;
