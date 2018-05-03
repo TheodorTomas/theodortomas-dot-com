@@ -7,7 +7,7 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    font-size: 1em;
   }
   
   body {
@@ -32,10 +32,28 @@ injectGlobal`
     }
   }
   
+  span,
+  a {
+    transition: font 0.5s ease-in-out;
+    @media only screen and (max-width: 450px) {
+      font-size: 80%;
+    }
+  }
+  
   #root {
-    display: inline-flex;
+    display: flex;
     min-width: 100%;
     min-height: 100%;
+  }
+  
+  .cc-window {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1em !important;
+  }
+  
+  .cc-compliance a {
+    margin-left: 0.25em;
   }
   
   .cc-compliance a,
@@ -52,13 +70,13 @@ injectGlobal`
   }
   
   .cc-link,
-  .cc-link:link,
-  .cc-link:visited {
+  .cc-link:link {
     transition: color 0.5s ease-in-out;
     cursor: pointer;
     color: ${COLORS.blueGrey.hex} !important;
   }
   
+  .cc-link:visited,
   .cc-link:hover,
   .cc-link:active {
     color: ${COLORS.green.hex} !important;

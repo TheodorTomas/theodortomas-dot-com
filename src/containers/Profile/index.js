@@ -33,12 +33,6 @@ const Wrapper = Styled.article`
   border-radius: 4px;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   
-  transition: font 0.5s ease-in-out;
-  
-  @media only screen and (max-width: 600px) {
-    font-size: 75%;
-  }
-  
   opacity: 0;
   
   /* Animations */
@@ -69,6 +63,7 @@ export class Profile extends React.Component {
   }
 
   componentWillUnmount() {
+    // ensure event listeners are removed on unmounting in case load has not finished.
     this.removeListeners();
   }
 

@@ -24,10 +24,10 @@ const Wrapper = styled.header`
 const Header = ({ h1, h2 }) => (
   <Wrapper>
     <h1>
-      {h1}
+      <span>{h1}</span>
     </h1>
     <h2>
-      {h2}
+      <span>{h2}</span>
     </h2>
   </Wrapper>
 );
