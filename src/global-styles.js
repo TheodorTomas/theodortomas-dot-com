@@ -50,12 +50,6 @@ injectGlobal`
     }
   }
   
-  #root {
-    display: flex;
-    min-width: 100%;
-    min-height: 100%;
-  }
-  
   /* ----------- Cookie consent popup ----------- */
   .cc-window {
     display: flex;
