@@ -10,6 +10,7 @@ injectGlobal`
   }
   
   body {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); // mobile specific: removes highlight when tapping buttons/links
     font-size: 1em;
     background-color: ${COLORS.darkGrey.rgba(0.95)};
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;

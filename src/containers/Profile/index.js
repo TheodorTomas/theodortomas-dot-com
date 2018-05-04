@@ -21,9 +21,9 @@ const Wrapper = Styled.article`
   
   /* Sizing */
   margin: auto;
-  padding: 2em;
+  padding: 32px;
   width: 50%;
-  min-width: calc(150px + (2 * 2em) + 10vw);
+  min-width: calc(150px + (2 * 32px) + 10vw);
   
   /* Misc */
   position: relative;
