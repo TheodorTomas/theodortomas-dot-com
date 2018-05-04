@@ -18,6 +18,7 @@ const Wrapper = Styled.a`
   line-height: 100%;
 
   /* Misc */
+  text-align: center;
   color: ${COLORS.blueGrey.hex};
   transition: color 0.5s ease-in-out, font 0.5s ease-in-out;
   cursor: pointer;

@@ -11,6 +11,7 @@ const Wrapper = styled.header`
   margin: 1em 0 0.75em;
   
   /* Font */
+  text-align: center;
   color: ${COLORS.green.hex};
   
   h1,
