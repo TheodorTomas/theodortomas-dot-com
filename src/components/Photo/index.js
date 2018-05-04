@@ -26,7 +26,7 @@ const Img = styled.img`
   opacity: 0;
   border: 2px solid;
   border-color: ${COLORS.blueGrey.rgba(0)};
-  transition: opacity 0.5s ease-in-out, border-color 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out 0.05s, border-color 0.5s ease-in-out 0.05s;
   
   ${({ isShowImg }) => isShowImg ? `
     opacity: 1;
