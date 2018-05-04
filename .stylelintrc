@@ -2,7 +2,7 @@
   "processors": ["stylelint-processor-styled-components"],
   "extends": [
     "stylelint-config-standard",
-    "stylelint-config-styled-components-processor"
+    "stylelint-config-styled-components"
   ],
   "rules": {
     "declaration-empty-line-before": null,
