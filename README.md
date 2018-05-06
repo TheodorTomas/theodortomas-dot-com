@@ -2,7 +2,7 @@
 ======
 [![Build Status](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com&.png?style=flat)](https://jenkins.theodortomas.com/job/theodortomas.com/)
 
-Professional website containing a small bio, links and contact info. Written using ES6, React, Redux, Webpack, Babel 
+Professional website containing a small bio, links and contact info. Written using ES6, React, Webpack, Babel 
 amongst other technologies. Powered by Nginx, Node.js and NPM. Continuous deployment implemented with Jenkins and Docker.
 
 ## Getting Started
