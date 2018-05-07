@@ -30,7 +30,13 @@ const IconBar = ({ icons }) => (
 );
 
 IconBar.propTypes = {
-  icons: PropTypes.array.isRequired,
+  icons: PropTypes.arrayOf(
+    PropTypes.shape({
+      svg: PropTypes.object.isRequired,
+      href: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default IconBar;

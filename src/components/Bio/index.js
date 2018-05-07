@@ -30,7 +30,9 @@ const Bio = ({ bio }) => (
 );
 
 Bio.propTypes = {
-  bio: PropTypes.array.isRequired,
+  bio: PropTypes.arrayOf(
+    PropTypes.string.isRequired
+  ).isRequired,
 };
 
 export default Bio;
