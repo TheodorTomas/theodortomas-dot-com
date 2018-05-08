@@ -169,7 +169,7 @@
               shiftPoint(p);
             }
           })
-        } else console.log('missing tween');
+        }
       }, 0)
 
   }
