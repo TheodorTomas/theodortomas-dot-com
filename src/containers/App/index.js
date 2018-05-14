@@ -5,6 +5,7 @@
  *
  */
 import React from 'react';
+import Profile from 'containers/Profile';
 import GATracker from 'containers/GATracker';
 
 const style = {
@@ -15,35 +16,11 @@ const style = {
   overflow: 'auto',
 };
 
-let LazyProfile = null;
-
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { isReady: LazyProfile !== null };
-  }
-
-  componentDidMount() {
-    import('containers/Profile').then((Profile) => {
-      LazyProfile = Profile.default;
-      if (!this.hasUnmounted) {
-        this.setState({ isReady: true });
-      }
-    });
-  }
-
-  componentWillUnmount() {
-    this.hasUnmounted = true;
-  }
-
-  render() {
-    return (
-      <div style={style}>
-        <GATracker key="ga-tracker" />
-        {this.state.isReady ? <LazyProfile key="profile" /> : null}
-      </div>
-    );
-  }
-}
+export const App = () => (
+  <div style={style}>
+    <GATracker key="ga-tracker" />
+    <Profile key="profile" />
+  </div>
+);
 
 export default App;
