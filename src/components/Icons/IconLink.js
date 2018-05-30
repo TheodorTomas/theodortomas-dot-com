@@ -11,11 +11,11 @@ import { COLORS } from 'containers/App/constants';
 
 const Wrapper = styled.a`
   .icon {
-    color: ${COLORS.blueGrey.hex};
+    fill: ${COLORS.blueGrey.hex};
     cursor: pointer;
     margin: 0 1em;
     
-    transition: color 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: fill 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
   
     @media only screen and (max-width: 450px) {
       width: 2em;
@@ -26,19 +26,19 @@ const Wrapper = styled.a`
   .linkedin:visited,
   .linkedin:hover,
   .linkedin:active {
-    color: #0077b5;
+    fill: #0077b5;
   }
     
   .github:visited,
   .github:hover,
   .github:active {
-    color: #6cc644;
+    fill: #6cc644;
   }
 
   .twitter:visited,
   .twitter:hover,
   .twitter:active {
-    color: #1da1f2;
+    fill: #1da1f2;
   }
 `;
 
