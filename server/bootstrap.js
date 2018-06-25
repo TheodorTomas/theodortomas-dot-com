@@ -1,3 +1,4 @@
+#!/usr/bin/env nodejs
 const register = require('ignore-styles').default;
 const path = require('path');
 const fs = require('fs');
