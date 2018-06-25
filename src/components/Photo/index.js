@@ -7,7 +7,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { COLORS } from 'containers/App/constants';
+import { COLORS } from '../../containers/App/constants';
 
 const Img = styled.img`
   /* Sizing */
@@ -35,11 +35,20 @@ const Img = styled.img`
 `;
 
 export class Photo extends React.PureComponent {
-  constructor() {
-    super();
-    this.state = { isShowImg: false };
-
+  constructor(props) {
+    super(props);
+    this.state = { isShowImg: true };
     this.showImg = this.showImg.bind(this);
+  }
+
+  componentDidMount() {
+    this.loadImage(new Image());
+  }
+
+  // need to create new Image to attach onload event since ReactDom.hydrate breaks onLoad in returned <img /> element.
+  loadImage(image) {
+    image.onload = this.showImg; // eslint-disable-line no-param-reassign
+    image.src = this.props.src; // eslint-disable-line no-param-reassign
   }
 
   showImg() {
@@ -53,7 +62,6 @@ export class Photo extends React.PureComponent {
       <Img
         src={src}
         alt={alt}
-        onLoad={this.showImg}
         isShowImg={isShowImg}
       />
     );

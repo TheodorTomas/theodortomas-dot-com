@@ -3,14 +3,14 @@
  */
 import React from 'react';
 import Styled from 'styled-components';
-import Icons from 'components/Icons';
-import Bio from 'components/Bio';
-import Header from 'components/Header';
-import EmailLink from 'components/EmailLink';
-import Photo from 'components/Photo';
-import { COLORS } from 'containers/App/constants';
-import messages from './messages';
+import Icons from '../../components/Icons';
+import Bio from '../../components/Bio';
+import Header from '../../components/Header';
+import EmailLink from '../../components/EmailLink';
+import Photo from '../../components/Photo';
+import { COLORS } from '../../containers/App/constants';
 import photo from './images/photo.jpg';
+import messages from './messages';
 import { bio, icons, contactInfo } from './constants';
 
 const Wrapper = Styled.article`

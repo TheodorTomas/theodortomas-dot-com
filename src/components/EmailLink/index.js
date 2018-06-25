@@ -6,7 +6,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Styled from 'styled-components';
 import * as ReactGA from 'react-ga';
-import { COLORS } from 'containers/App/constants';
+import { COLORS } from '../../containers/App/constants';
 
 const Wrapper = Styled.a`
   /* Flex */

@@ -7,7 +7,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import * as ReactGA from 'react-ga'; // Google analytics
-import { COLORS } from 'containers/App/constants';
+import { COLORS } from '../../containers/App/constants';
 
 const Wrapper = styled.a`
   .icon {

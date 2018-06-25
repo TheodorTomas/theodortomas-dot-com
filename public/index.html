@@ -25,10 +25,6 @@
     <!-- Google Font -->
     <link rel="preload" href="https://fonts.googleapis.com/css?family=Lobster|Lato:300" as="style" onload="this.rel='stylesheet'">
 
-    <!-- Dot canvas animation dependencies -->
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.4/easing/EasePack.min.js"></script>
-    <script async src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js"></script>
-
     <!-- Initialise cookie consent popup -->
     <script>
       window.addEventListener("load", function(){
@@ -49,8 +45,11 @@
         }
       });
     </script>
+
+    <!-- Placeholder for injecting SSR styles -->
+    <style ssr-styles></style>
   </head>
-  <body>
+  <body style="margin: 0;">
     <noscript>
       You <strong>need</strong> to enable <strong>JavaScript</strong> to run this app.
     </noscript>
@@ -60,5 +59,9 @@
     <![endif]-->
     <canvas id="dot-canvas" style="position:absolute;"></canvas>
     <div id="root"></div>
+
+    <!-- Dot canvas animation dependencies -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.9.4/easing/EasePack.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.13.1/TweenLite.min.js"></script>
   </body>
 </html>

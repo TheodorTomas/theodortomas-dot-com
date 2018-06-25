@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import { COLORS } from 'containers/App/constants';
+import { COLORS } from '../../../containers/App/constants';
 import Photo from '../index';
 
 describe('<Photo />', () => {
@@ -25,13 +25,9 @@ describe('<Photo />', () => {
     expect(renderedComponent.prop('alt')).toEqual(defaultProps.alt);
   });
 
-  it('should have an onLoad function', () => {
+  it('should be hidden with no border if isShowImg = false', () => {
     const renderedComponent = renderComponent();
-    expect(renderedComponent.prop('onLoad')).toEqual(expect.any(Function));
-  });
-
-  it('should initially be hidden with no border', () => {
-    const renderedComponent = renderComponent();
+    renderedComponent.setState({ isShowImg: false });
     expect(renderedComponent).toHaveStyleRule('opacity', '0');
     expect(renderedComponent).toHaveStyleRule('border-color', COLORS.blueGrey.rgba(0));
   });
@@ -44,9 +40,26 @@ describe('<Photo />', () => {
     expect(renderedComponent).toHaveStyleRule('border-color', COLORS.blueGrey.rgba(0.5));
   });
 
+  describe('loadImage()', () => {
+    it('should loadImage() on mount ', () => {
+      const spy = jest.spyOn(Photo.prototype, 'loadImage');
+      renderComponent();
+      expect(spy).toHaveBeenCalled();
+    });
+
+    it('should set src and onload of given object ', () => {
+      const renderedComponent = renderComponent();
+      const image = { onload: null, src: null };
+      renderedComponent.instance().loadImage(image);
+      expect(image.src).toBe(defaultProps.src);
+      expect(image.onload).toEqual(expect.any(Function));
+    });
+  });
+
   describe('showImg()', () => {
     it('should change isShowImg, false => true ', () => {
       const renderedComponent = renderComponent();
+      renderedComponent.setState({ isShowImg: false });
       expect(renderedComponent.state('isShowImg')).toBe(false);
       renderedComponent.instance().showImg();
       expect(renderedComponent.state('isShowImg')).toBe(true);

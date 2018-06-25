@@ -8,11 +8,8 @@ import 'cookieconsent/build/cookieconsent.min';
 import 'sanitize.css/sanitize.css';
 import FontFaceObserver from 'fontfaceobserver';
 
-// import Background canvas animation
+// Background canvas animation
 import 'BackgroundEffect/BackgroundEffect';
-
-// Import Global Styles
-import './global-styles';
 
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
@@ -24,5 +21,5 @@ Promise.all([fontLobster.load(), fontLato.load()]).then(() => {
   document.body.classList.add('fontLoaded');
 });
 
-ReactDOM.render(React.createElement(App), document.getElementById('root'));
+ReactDOM.hydrate(React.createElement(App), document.getElementById('root'));
 registerServiceWorker();

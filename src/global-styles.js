@@ -1,5 +1,5 @@
 import { injectGlobal } from 'styled-components';
-import { COLORS } from 'containers/App/constants';
+import { COLORS } from './containers/App/constants';
 
 /* eslint no-unused-expressions: 0 */
 injectGlobal`
@@ -10,6 +10,7 @@ injectGlobal`
   }
   
   body {
+    display: table;
     font-size: 1em;
     background-color: ${COLORS.darkGrey.rgba(0.95)};
     font-family: Helvetica, 'Helvetica Neue', Arial, sans-serif;
@@ -18,8 +19,9 @@ injectGlobal`
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     h1 {
-      font-family: 'Times New Roman', Times, serif;
-      font-weight: bolder;
+      font-family: Times, serif;
+      font-size: 2em;
+      margin: 0.67em 0;
     }
     
     h2 {
@@ -43,6 +45,11 @@ injectGlobal`
     }
   }
   
+  #root {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  
   span,
   a,
   .cc-compliance a {
@@ -56,8 +63,18 @@ injectGlobal`
   /* ----------- Cookie consent popup ----------- */
   .cc-window {
     display: flex;
+    flex-flow: row !important;
+    align-items: center !important;
     justify-content: space-between;
     font-size: 1em !important;
+    
+    min-width: 100vw;
+    border-radius: 0 !important;
+    bottom: 0;
+  }
+  
+  .cc-message {
+    margin: auto 0 !important;
   }
   
   .cc-compliance {
