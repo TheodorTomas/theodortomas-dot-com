@@ -7,6 +7,8 @@
 Professional website containing a small bio, links and contact info. Written using ES6, React, Webpack, Babel 
 amongst other technologies. Powered by Nginx, Node.js and NPM. Continuous deployment implemented with Jenkins and Docker.
 
+Server Side Rendering implemented with Node, Express and PM2.
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing 
@@ -61,10 +63,27 @@ yarn install
 ```
 
 ## Running the application
-##### Run application on: http://localhost:3000
+Run client application on: http://localhost:3000
 ```
 yarn start
 ```
+
+Open in browser.
+```
+open http://localhost:3000
+```
+
+## Running SSR implementation
+Build application on changes.
+```
+yarn start:build
+```
+
+Run SSR Express server
+```
+yarn start:server:dev
+```
+
 
 Open in browser.
 ```
@@ -119,3 +138,4 @@ This project has been bootstrapped with create-react-app - see the [LICENSE.md](
 
 * [create-react-app](https://github.com/facebook/create-react-app)
 * [CI/CD jenkins tutorial](https://www.digitalocean.com/community/tutorials/how-to-set-up-continuous-integration-pipelines-in-jenkins-on-ubuntu-16-04)
+* [SSR with Express](https://github.com/ayroblu/ssr-cra-v2.1)
