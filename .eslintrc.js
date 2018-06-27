@@ -1,15 +1,15 @@
 module.exports = {
-  'env': {
-    'browser': true,
-    'jest': true,
-    'es6': true,
-    'node': true,
+  "env": {
+    "browser": true,
+    "jest": true,
+    "es6": true,
+    "node": true,
   },
-  'extends': [
-    'airbnb',
+  "extends": [
+    "airbnb",
   ],
-  'parser': 'babel-eslint',
-  'rules': {
+  "parser": "babel-eslint",
+  "rules": {
     "arrow-body-style": [
       2,
       "as-needed"
@@ -18,9 +18,9 @@ module.exports = {
       2,
       "always-multiline"
     ],
-    'function-paren-newline': 0,
-    'import/extensions': 0,
-    'import/imports-first': 0,
+    "function-paren-newline": 0,
+    "import/extensions": 0,
+    "import/imports-first": 0,
     "import/newline-after-import": 0,
     "import/no-dynamic-require": 0,
     "import/no-extraneous-dependencies": 0,
@@ -45,7 +45,7 @@ module.exports = {
     "no-confusing-arrow": 0,
     "no-console": 1,
     "no-use-before-define": 0,
-    'object-curly-newline': 0,
+    "object-curly-newline": 0,
     "prefer-template": 2,
     "class-methods-use-this": 0,
     "react/forbid-prop-types": 0,
@@ -55,15 +55,15 @@ module.exports = {
     ],
     "react/jsx-filename-extension": 0,
     "react/jsx-no-target-blank": 0,
-    'react/require-default-props': 0,
+    "react/require-default-props": 0,
     "react/require-extension": 0,
     "react/self-closing-comp": 0,
     "require-yield": 0,
     "import/no-webpack-loader-syntax": 0
   },
-  'parserOptions': {
-    'ecmaFeatures': {
-      'jsx': true,
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
     }
   }
 };
