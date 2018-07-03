@@ -9,7 +9,7 @@ import 'sanitize.css/sanitize.css';
 import FontFaceObserver from 'fontfaceobserver';
 
 // Background canvas animation
-import 'BackgroundEffect/BackgroundEffect';
+import './BackgroundEffect/BackgroundEffect';
 
 import App from './containers/App';
 import registerServiceWorker from './registerServiceWorker';
