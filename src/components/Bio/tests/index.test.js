@@ -1,31 +1,30 @@
 import React from 'react';
-import { configure, shallow } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
+import { mount } from 'enzyme';
+import { enzymeFind } from 'styled-components/test-utils';
 import { bio } from 'containers/Profile/constants';
-import Bio from '../index';
-
-configure({ adapter: new Adapter() }); // configure Enzyme with ES16 Adapter
+import Bio, { Wrapper } from '../index';
 
 describe('<Bio />', () => {
   const defaultProps = { bio };
-  const renderComponent = (props = defaultProps) => shallow(<Bio {...props} />).dive();
+  const mountComponent = (props = defaultProps) => mount(<Bio {...props} />);
 
   it('should render all bio items inside a div element<div>', () => {
-    const renderedComponent = renderComponent();
+    const component = mountComponent();
+    const renderedComponent = enzymeFind(component, Wrapper);
     expect(renderedComponent.type()).toEqual('div');
   });
 
-  it('should render all bio items in bio to <span>', () => {
-    const renderedComponent = renderComponent();
+  it('should render all individual bio items in a <span>', () => {
+    const renderedComponent = mountComponent();
     expect(renderedComponent.find('span').length).toEqual(7);
   });
 
   it('should render the item with correct keys as a <span> adding "~/" to each', () => {
-    const renderedComponent = renderComponent();
+    const renderedComponent = mountComponent();
     const expectedKey = `bio-${bio[0]}`;
     const expectedItem = bio[0];
     expect(renderedComponent.contains(
-      <span key={expectedKey}>~/{expectedItem}</span>)
+      <span key={expectedKey}>{`~/${expectedItem}`}</span>)
     ).toEqual(true);
   });
 });

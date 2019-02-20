@@ -8,12 +8,12 @@ import Bio from '../../components/Bio';
 import Header from '../../components/Header';
 import EmailLink from '../../components/EmailLink';
 import Photo from '../../components/Photo';
-import { COLORS } from '../../containers/App/constants';
+import { COLORS } from '../App/constants';
 import photo from './images/photo.jpg';
 import messages from './messages';
 import { bio, icons, contactInfo } from './constants';
 
-const Wrapper = Styled.article`
+export const Wrapper = Styled.article`
   /* Flex-box */
   display: flex;
   flex-flow: column nowrap;

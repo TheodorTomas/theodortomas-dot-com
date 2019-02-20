@@ -59,13 +59,13 @@ sudo apt-get update && sudo apt-get install yarn
 
 ##### Install application dependencies.
 ```
-yarn install
+npm install
 ```
 
 ## Running the application
 Run client application on: http://localhost:3000
 ```
-yarn start
+npm start
 ```
 
 Open in browser.
@@ -76,12 +76,12 @@ open http://localhost:3000
 ## Running SSR implementation
 Build application on changes.
 ```
-yarn start:build
+npm run start:build
 ```
 
 Run SSR Express server
 ```
-yarn start:server:dev
+npm run start:server:dev
 ```
 
 
@@ -93,27 +93,32 @@ open http://localhost:3000
 ## Running the tests
 Run all tests' using enzyme, jest, eslint and stylelint.
 ```
-yarn test
+npm test
 ```
 
 Run unit tests'
 ```
-yarn run test:unit
+npm run test:unit
+```
+
+Run unit tests with watcher'
+```
+npm run test:watch
 ```
 
 Run lint testing for javascript and css styling.
 ```
-yarn run lint
+npm run lint
 ```
 
 Run eslint testing for javascript styles - see [eslintrc.js](/.eslintrc.js) for config.
 ```
-yarn run test:lint:js
+npm run test:lint:js
 ```
 
 Run stylelint testing for css styles - see [stylelintrc](/.stylelintrc) for config.
 ```
-yarn run test:lint:css
+npm run test:lint:css
 ```
 
 Navigate to test coverage.

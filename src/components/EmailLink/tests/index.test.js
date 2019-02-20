@@ -1,19 +1,21 @@
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import * as ReactGA from 'react-ga'; // Google analytics
+import { enzymeFind } from 'styled-components/test-utils';
 import { contactInfo } from 'containers/Profile/constants';
-import EmailLink from '../index';
+import EmailLink, { Wrapper } from '../index';
 
 describe('<EmailLink />', () => {
   const renderComponent = (props = contactInfo) => shallow(<EmailLink {...props} />);
   const mountComponent = (props = contactInfo) => mount(<EmailLink {...props} />);
 
-  it('should render an <a> tag', () => {
-    const renderedComponent = renderComponent().dive();
-    expect(renderedComponent.type()).toEqual('a');
+  it('should render a <a> tag', () => {
+    const component = mountComponent();
+    const mountedComponent = enzymeFind(component, Wrapper);
+    expect(mountedComponent.type()).toEqual('a');
   });
 
-  it('should render with prop: ', () => {
+  describe('should render with prop: ', () => {
     it('href', () => {
       const renderedComponent = renderComponent();
       expect(renderedComponent.prop('href')).toBeDefined();
@@ -22,11 +24,6 @@ describe('<EmailLink />', () => {
     it('title', () => {
       const renderedComponent = renderComponent();
       expect(renderedComponent.prop('title')).toBeDefined();
-    });
-
-    it('text', () => {
-      const renderedComponent = renderComponent();
-      expect(renderedComponent.prop('text')).toBeDefined();
     });
 
     it('target', () => {
@@ -38,6 +35,11 @@ describe('<EmailLink />', () => {
       const renderedComponent = renderComponent();
       expect(renderedComponent.prop('onClick')).toBeDefined();
     });
+  });
+
+  it('should contain text prop', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.contains(contactInfo.text)).toBe(true);
   });
 
   it('should send Google Analytics event on click', () => {

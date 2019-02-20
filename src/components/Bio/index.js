@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { COLORS } from '../../containers/App/constants';
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   /* Flex-box */
   display: flex;
   flex-flow: row wrap;
@@ -23,8 +23,12 @@ const Wrapper = styled.div`
 
 const Bio = ({ bio }) => (
   <Wrapper>
-    {bio.map(item =>
-      <span key={`bio-${item}`}>~/{item}</span>
+    {bio.map(item => (
+      <span key={`bio-${item}`}>
+        ~/
+        {item}
+      </span>
+    )
     )}
   </Wrapper>
 );

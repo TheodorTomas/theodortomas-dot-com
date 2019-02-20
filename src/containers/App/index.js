@@ -6,12 +6,13 @@
 import React from 'react';
 
 // // Import Global Styles
-import '../../global-styles';
+import GlobalStyles from '../../global-styles';
 
 import Profile from '../Profile';
 import GATracker from '../GATracker';
 
 export const App = () => ([
+  <GlobalStyles key="global-styles" />,
   <GATracker key="ga-tracker" />,
   <Profile key="profile" />,
 ]);

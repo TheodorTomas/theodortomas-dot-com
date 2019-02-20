@@ -9,7 +9,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { COLORS } from '../../containers/App/constants';
 
-const Img = styled.img`
+export const Img = styled.img`
   /* Sizing */
   width: 50%;
   height: auto;
@@ -47,8 +47,9 @@ export class Photo extends React.PureComponent {
 
   // need to create new Image to attach onload event since ReactDom.hydrate breaks onLoad in returned <img /> element.
   loadImage(image) {
+    const { src } = this.props;
     image.onload = this.showImg; // eslint-disable-line no-param-reassign
-    image.src = this.props.src; // eslint-disable-line no-param-reassign
+    image.src = src; // eslint-disable-line no-param-reassign
   }
 
   showImg() {

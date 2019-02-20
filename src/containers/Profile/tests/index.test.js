@@ -1,17 +1,19 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
+import { enzymeFind } from 'styled-components/test-utils';
 import Header from 'components/Header';
 import Bio from 'components/Bio';
 import Icons from 'components/Icons';
 import EmailLink from 'components/EmailLink';
 import Photo from 'components/Photo';
-import Profile from '../index';
+import Profile, { Wrapper } from '../index';
 
 describe('<Profile />', () => {
-  const renderComponent = (props = {}) => shallow(<Profile {...props} />);
+  const renderComponent = (props = {}) => mount(<Profile {...props} />);
 
   it('should contain a <article>', () => {
-    const renderedComponent = renderComponent().dive(); // do deep render to find type
+    const component = renderComponent();
+    const renderedComponent = enzymeFind(component, Wrapper);
     expect(renderedComponent.type()).toEqual('article');
   });
 

@@ -1,17 +1,19 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
+import { enzymeFind } from 'styled-components/test-utils';
 import { COLORS } from '../../../containers/App/constants';
-import Photo from '../index';
+import Photo, { Img } from '../index';
 
 describe('<Photo />', () => {
   const defaultProps = {
     src: 'test.png',
     alt: 'test',
   };
-  const renderComponent = (props = defaultProps) => shallow(<Photo {...props} />);
+  const renderComponent = (props = defaultProps) => mount(<Photo {...props} />);
 
   it('should render an <img> tag', () => {
-    const renderedComponent = renderComponent().dive();
+    const component = renderComponent();
+    const renderedComponent = enzymeFind(component, Img);
     expect(renderedComponent.type()).toEqual('img');
   });
 

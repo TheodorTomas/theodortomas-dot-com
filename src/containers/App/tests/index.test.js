@@ -1,21 +1,13 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import GATracker from 'containers/GATracker';
-import Profile from 'containers/Profile';
+import renderer from 'react-test-renderer';
 import App from '../index';
 
 describe('<App />', () => {
-  const renderComponent = (props = {}) => shallow(<App {...props} />);
+  const tree = renderer
+    .create(<App />)
+    .toJSON();
 
-  it('should contain a <GATracker> ', () => {
-    const renderedComponent = renderComponent();
-    // hack since enzyme doesn't support React fragments
-    expect(renderedComponent.at(0).find(GATracker).length).toBe(1);
-  });
-
-  it('should contain a <Profile> ', () => {
-    const renderedComponent = renderComponent();
-    // hack since enzyme doesn't support React fragments
-    expect(renderedComponent.at(0).find(Profile).length).toBe(1);
+  it('should render matching snapshot', () => {
+    expect(tree).toMatchSnapshot();
   });
 });

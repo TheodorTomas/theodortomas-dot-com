@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { COLORS } from '../../containers/App/constants';
 
-const Wrapper = styled.header`
+export const Wrapper = styled.header`
   /* Sizing */
   margin: 1em 0 0.75em;
   

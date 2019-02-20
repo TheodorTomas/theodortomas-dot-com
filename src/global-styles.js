@@ -1,8 +1,8 @@
-import { injectGlobal } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 import { COLORS } from './containers/App/constants';
 
 /* eslint no-unused-expressions: 0 */
-injectGlobal`
+export default createGlobalStyle`
   html,
   body {
     height: 100%;
@@ -27,6 +27,18 @@ injectGlobal`
     h2 {
       font-weight: normal;
     }
+  }
+  
+  .cc-window {
+    display: flex;
+    flex-flow: row !important;
+    align-items: center !important;
+    justify-content: space-between;
+    font-size: 1em !important;
+    
+    min-width: 100vw;
+    border-radius: 0 !important;
+    bottom: 0;
   }
   
   body.fontLoaded {
@@ -61,17 +73,6 @@ injectGlobal`
   }
   
   /* ----------- Cookie consent popup ----------- */
-  .cc-window {
-    display: flex;
-    flex-flow: row !important;
-    align-items: center !important;
-    justify-content: space-between;
-    font-size: 1em !important;
-    
-    min-width: 100vw;
-    border-radius: 0 !important;
-    bottom: 0;
-  }
   
   .cc-message {
     margin: auto 0 !important;

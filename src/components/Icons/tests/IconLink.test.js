@@ -5,14 +5,14 @@ import IconLink from '../IconLink';
 
 describe('<IconLink />', () => {
   const defaultProps = {
-    svg: <svg></svg>,
+    svg: <svg />,
     href: 'www.theodortomas.com',
     title: 'test title',
   };
   const renderComponent = (props = defaultProps) => shallow(<IconLink {...props} />);
   const mountComponent = (props = defaultProps) => mount(<IconLink {...props} />);
 
-  it('should render with prop: ', () => {
+  describe('should render with prop: ', () => {
     it('href', () => {
       const renderedComponent = renderComponent();
       expect(renderedComponent.prop('href')).toBeDefined();
@@ -21,11 +21,6 @@ describe('<IconLink />', () => {
     it('title', () => {
       const renderedComponent = renderComponent();
       expect(renderedComponent.prop('title')).toBeDefined();
-    });
-
-    it('svg', () => {
-      const renderedComponent = renderComponent();
-      expect(renderedComponent.prop('svg')).toBeDefined();
     });
 
     it('target', () => {
@@ -44,6 +39,11 @@ describe('<IconLink />', () => {
       const renderedComponent = renderComponent();
       expect(renderedComponent.prop('onClick')).toBeDefined();
     });
+  });
+
+  it('should contain a svg', () => {
+    const renderedComponent = renderComponent();
+    expect(renderedComponent.contains(defaultProps.svg)).toBe(true);
   });
 
   it('should render a i with a className attribute', () => {

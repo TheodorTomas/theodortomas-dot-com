@@ -1,16 +1,18 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import Header from '../index';
+import { mount } from 'enzyme';
+import { enzymeFind } from 'styled-components/test-utils';
+import Header, { Wrapper } from '../index';
 
 describe('<Header />', () => {
   const defaultProps = {
     h1: 'Hello! My name is Theodór Tómas',
     h2: 'Software Engineer',
   };
-  const renderComponent = (props = defaultProps) => shallow(<Header {...props} />);
+  const renderComponent = (props = defaultProps) => mount(<Header {...props} />);
 
   it('should render a <header> tag', () => {
-    const renderedComponent = renderComponent().dive();
+    const component = renderComponent();
+    const renderedComponent = enzymeFind(component, Wrapper);
     expect(renderedComponent.type()).toEqual('header');
   });
 

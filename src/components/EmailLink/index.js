@@ -8,7 +8,7 @@ import Styled from 'styled-components';
 import * as ReactGA from 'react-ga';
 import { COLORS } from '../../containers/App/constants';
 
-const Wrapper = Styled.a`
+export const Wrapper = Styled.a`
   /* Flex */
   display: flex;
   justify-content: center;
