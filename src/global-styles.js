@@ -42,11 +42,6 @@ export default createGlobalStyle`
     .cc-window {
       font-family: Lato, Helvetica, 'Helvetica Neue', Arial, sans-serif;
     }
-    
-    h1,
-    h2 {
-      font-weight: normal;
-    }
   }
   
   #root {
