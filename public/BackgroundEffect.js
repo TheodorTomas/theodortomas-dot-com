@@ -1,5 +1,4 @@
 // Note this animation was taken from a public source. link coming in readme.md
-// TODO: Rewrite as react component
 /* eslint-disable */
 (function() {
   var lastTime = 0;
@@ -41,10 +40,14 @@
   }, 0);
 
   function initHeader() {
+    width = window.innerWidth;
+    height = window.innerHeight;
+    var offsetWidth = document.body.scrollLeft + document.documentElement.scrollLeft;
+    var offsetHeight = document.body.scrollTop + document.documentElement.scrollTop;
+    target = {x: width/2 + offsetWidth, y: height/2 + offsetHeight};
+
     width = document.getElementById('root').offsetWidth || window.innerWidth;
     height = document.getElementById('root').offsetHeight || window.innerHeight;
-    target = {x: width/2, y: height/2};
-
     canvas = document.getElementById('dot-canvas');
     canvas.width = width;
     canvas.height = height;
@@ -98,16 +101,61 @@
     }
   }
 
+  var randomInterval;
+
   // Event handling
   function addListeners() {
     if(!('ontouchstart' in window)) {
       window.addEventListener('mousemove', mouseMove);
+    } else {
+      randomInterval = setInterval(randomMovement, 1);
     }
     window.addEventListener('resize', resize);
   }
 
+  var left = Math.round(Math.random());
+  var up = Math.round(Math.random());
+
+  var verticleOrHorizontol = Math.round(Math.random());
+
+  function randomMovement() {
+    var modifier = 1;
+    var offsetWidth = document.body.scrollLeft + document.documentElement.scrollLeft;
+    var offsetHeight = document.body.scrollTop + document.documentElement.scrollTop;
+
+    if (verticleOrHorizontol) {
+      if (left) {
+        if (target.x - offsetWidth > 0) {
+          if (target.x - offsetWidth > window.innerWidth) target.x = offsetWidth + window.innerWidth;
+          else target.x = target.x - modifier;
+        } else left = false;
+      } else {
+        if (target.x - offsetWidth < window.innerWidth) {
+          if (target.x - offsetWidth < 0) target.x = offsetWidth;
+          else target.x = target.x + modifier;
+        } else left = true;
+      }
+    } else {
+
+
+      if (up) {
+        if (target.y - offsetHeight > 0) {
+          if (target.y - offsetHeight > window.innerHeight) target.y = offsetHeight + window.innerHeight;
+          else target.y = target.y - modifier;
+        } else up = false;
+      } else {
+        if (target.y - offsetHeight < window.innerHeight) {
+          if (target.y - offsetHeight < 0) target.y = offsetHeight;
+          else target.y = target.y + modifier;
+        } else up = true;
+      }
+    }
+    verticleOrHorizontol = Math.round(Math.random());
+  }
+
   function mouseMove(e) {
     var posx = posy = 0;
+
     if (e.pageX || e.pageY) {
       posx = e.pageX;
       posy = e.pageY;
