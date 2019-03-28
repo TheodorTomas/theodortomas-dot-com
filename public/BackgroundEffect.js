@@ -101,11 +101,15 @@
     }
   }
 
+  function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+  };
+
   var randomInterval;
 
   // Event handling
   function addListeners() {
-    if(!('ontouchstart' in window)) {
+    if(!isMobileDevice()) {
       window.addEventListener('mousemove', mouseMove);
     } else {
       randomInterval = setInterval(randomMovement, 1);
