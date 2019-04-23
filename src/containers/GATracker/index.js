@@ -3,11 +3,11 @@
  */
 import React from 'react';
 import * as ReactGA from 'react-ga';
-import getTrackerId from './trackerId';
+import { TRACKER_ID } from '../../constants/analytics';
 
 export class GATracker extends React.Component {
   componentDidMount() {
-    ReactGA.initialize(getTrackerId(), { debug: false });
+    ReactGA.initialize(TRACKER_ID, { debug: false });
     ReactGA.set({ pathname: '/' });
     ReactGA.pageview('/');
   }

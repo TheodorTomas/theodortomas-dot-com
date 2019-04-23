@@ -1,7 +1,8 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
+import { enzymeFind } from 'styled-components/test-utils';
 import IconLink from '../IconLink';
-import IconBar from '../index';
+import IconBar, { StyledDiv } from '../index';
 
 describe('<IconBar />', () => {
   const defaultProps = {
@@ -12,10 +13,17 @@ describe('<IconBar />', () => {
     }],
   };
   const renderComponent = (props = defaultProps) => shallow(<IconBar {...props} />);
+  const mountComponent = (props = defaultProps) => mount(<IconBar {...props} />);
+
+  it('should render a <div> tag', () => {
+    const component = mountComponent();
+    const styledDiv = enzymeFind(component, StyledDiv);
+    expect(styledDiv.type()).toEqual('div');
+  });
 
   it('should render the given icon in props as a <IconLink>', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.contains(
+    const component = renderComponent();
+    expect(component.contains(
       <IconLink
         href={defaultProps.icons[0].href}
         title={defaultProps.icons[0].title}

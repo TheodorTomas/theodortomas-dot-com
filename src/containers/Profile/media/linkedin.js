@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Svg = (
+export default (
   <svg
     className="icon linkedin"
     width="32"
@@ -13,5 +13,3 @@ const Svg = (
     />
   </svg>
 );
-
-export default Svg;

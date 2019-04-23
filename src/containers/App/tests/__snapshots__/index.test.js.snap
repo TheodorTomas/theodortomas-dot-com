@@ -5,8 +5,8 @@ exports[`<App /> should render matching snapshot 1`] = `
   fill: #95a3b3;
   cursor: pointer;
   margin: 0 1em;
-  -webkit-transition: fill 0.5s ease-in-out,width 0.5s ease-in-out,height 0.5s ease-in-out;
-  transition: fill 0.5s ease-in-out,width 0.5s ease-in-out,height 0.5s ease-in-out;
+  -webkit-transition: fill 0.25s ease-in-out,width 0.25s ease-in-out,height 0.25s ease-in-out;
+  transition: fill 0.25s ease-in-out,width 0.25s ease-in-out,height 0.25s ease-in-out;
 }
 
 .c5 .linkedin:visited,
@@ -91,8 +91,8 @@ exports[`<App /> should render matching snapshot 1`] = `
   line-height: 100%;
   text-align: center;
   color: #95a3b3;
-  -webkit-transition: color 0.5s ease-in-out,font 0.5s ease-in-out;
-  transition: color 0.5s ease-in-out,font 0.5s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out,font 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out,font 0.25s ease-in-out;
   cursor: pointer;
 }
 
@@ -103,22 +103,18 @@ exports[`<App /> should render matching snapshot 1`] = `
 }
 
 .c1 {
-  width: 50%;
-  height: auto;
-  min-width: 150px;
-  min-height: 150px;
-  max-width: 350px;
-  max-height: 100%;
+  width: 150px;
+  height: 150px;
   margin: auto;
-  border-radius: 50%;
+  background-color: #8f8c86;
   overflow: hidden;
-  opacity: 0;
+  -webkit-transition: border-color 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out;
+  -webkit-transition: border-color 0.25s ease-in-out,transform 0.25s ease-in-out;
+  transition: border-color 0.25s ease-in-out,transform 0.25s ease-in-out;
+  border-radius: 50%;
   border: 2px solid;
-  border-color: rgba(149,163,179,0);
-  -webkit-transition: opacity 0.5s ease-in-out 0.05s,border-color 0.5s ease-in-out 0.05s;
-  transition: opacity 0.5s ease-in-out 0.05s,border-color 0.5s ease-in-out 0.05s;
-  opacity: 1;
-  border-color: rgba(149,163,179,0.5);
+  border-color: rgba(74,74,74,0.5);
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
 }
 
 .c0 {
@@ -137,6 +133,7 @@ exports[`<App /> should render matching snapshot 1`] = `
   padding: 32px;
   width: 50%;
   min-width: calc(150px + (2 * 32px) + 10vw);
+  max-width: 500px;
   position: relative;
   z-index: 1;
   background-color: rgba(74,74,74,0.75);
@@ -158,11 +155,18 @@ exports[`<App /> should render matching snapshot 1`] = `
 <article
   className="c0"
 >
-  <img
-    alt="Profile Photo"
+  <video
+    autoPlay={true}
     className="c1"
-    src="photo.jpg"
-  />
+    muted={true}
+    onClick={[Function]}
+    title=""
+  >
+    <source
+      src="profile.mp4"
+      type="video/mp4"
+    />
+  </video>
   <header
     className="c2"
   >
@@ -186,11 +190,11 @@ exports[`<App /> should render matching snapshot 1`] = `
     </span>
     <span>
       ~/
-      HTML5
+      HTML
     </span>
     <span>
       ~/
-      CSS3
+      CSS
     </span>
     <span>
       ~/
@@ -207,6 +211,10 @@ exports[`<App /> should render matching snapshot 1`] = `
     <span>
       ~/
       Node
+    </span>
+    <span>
+      ~/
+      Webpack
     </span>
   </div>
   <div

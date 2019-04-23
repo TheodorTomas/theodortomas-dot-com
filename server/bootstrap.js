@@ -7,10 +7,11 @@ const md5File = require('md5-file');
 const mimeTypes = {
   '.jpg': 'image/jpeg',
   '.png': 'image/png',
+  '.mp4': 'video/mp4',
 };
 
 register(undefined, (mod, filename) => {
-  const ext = ['.png', '.jpg'].find(f => filename.endsWith(f));
+  const ext = ['.png', '.jpg', '.mp4'].find(f => filename.endsWith(f));
   if (!ext) return;
 
   if (fs.statSync(filename).size < 10000) {
@@ -24,8 +25,9 @@ register(undefined, (mod, filename) => {
   }
 });
 
-require('babel-register')({
+require('@babel/register')({
   ignore: [/(node_modules)/],
-  presets: ['es2015', 'react-app'],
+  presets: ['@babel/preset-env', '@babel/preset-react'],
+  plugins: ['@babel/plugin-proposal-class-properties'],
 });
 require('./index');

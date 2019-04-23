@@ -6,16 +6,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import * as ReactGA from 'react-ga'; // Google analytics
-import { COLORS } from '../../containers/App/constants';
+import { COLORS } from '../../containers/App/theme';
+import { CTAAnalytics } from '../../utils/analytics';
 
-const Wrapper = styled.a`
+export const StyledA = styled.a`
   .icon {
     fill: ${COLORS.blueGrey.hex};
     cursor: pointer;
     margin: 0 1em;
     
-    transition: fill 0.5s ease-in-out, width 0.5s ease-in-out, height 0.5s ease-in-out;
+    transition: fill 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
   
     @media only screen and (max-width: 450px) {
       width: 2em;
@@ -42,18 +42,16 @@ const Wrapper = styled.a`
   }
 `;
 
-const trackAnalytics = title => ReactGA.event({ category: 'Icon Link', action: 'Click', label: title });
-
 const IconLink = ({ svg, href, title }) => (
-  <Wrapper
+  <StyledA
     href={href}
     title={title}
     target="_blank"
     rel="noreferrer noopener"
-    onClick={() => trackAnalytics(title)}
+    onClick={() => CTAAnalytics({ category: 'Icon Link', title })}
   >
     {svg}
-  </Wrapper>
+  </StyledA>
 );
 
 IconLink.propTypes = {

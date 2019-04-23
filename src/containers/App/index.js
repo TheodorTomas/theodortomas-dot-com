@@ -1,15 +1,12 @@
 /**
  * App
  *
- * Returns an array of components as in Helmet, Google analytics and react router handling the Profile container.
+ * Returns an array of components.
  */
 import React from 'react';
-
-// // Import Global Styles
-import GlobalStyles from '../../global-styles';
-
 import Profile from '../Profile';
 import GATracker from '../GATracker';
+import GlobalStyles from '../../global-styles';
 
 export const App = () => ([
   <GlobalStyles key="global-styles" />,

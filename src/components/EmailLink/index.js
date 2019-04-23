@@ -5,10 +5,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Styled from 'styled-components';
-import * as ReactGA from 'react-ga';
-import { COLORS } from '../../containers/App/constants';
+import { COLORS } from '../../containers/App/theme';
+import { CTAAnalytics } from '../../utils/analytics';
 
-export const Wrapper = Styled.a`
+export const StyledA = Styled.a`
   /* Flex */
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ export const Wrapper = Styled.a`
   /* Misc */
   text-align: center;
   color: ${COLORS.blueGrey.hex};
-  transition: color 0.5s ease-in-out, font 0.5s ease-in-out;
+  transition: color 0.25s ease-in-out, font 0.25s ease-in-out;
   cursor: pointer;
 
   &:visited,
@@ -30,12 +30,10 @@ export const Wrapper = Styled.a`
   }
 `;
 
-const trackAnalytics = () => ReactGA.event({ category: 'Email Link', action: 'Click' });
-
 const EmailLink = ({ href, title, text }) => (
-  <Wrapper href={href} title={title} target="_self" onClick={trackAnalytics}>
+  <StyledA href={href} title={title} target="_self" onClick={() => CTAAnalytics({ category: 'Email Link' })}>
     {text}
-  </Wrapper>
+  </StyledA>
 );
 
 EmailLink.propTypes = {

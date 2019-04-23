@@ -1,12 +1,12 @@
 /**
- * Text renders the messages passed to H1, H2 and H3.
+ * Text renders the messages passed to H1 and H2.
  */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { COLORS } from '../../containers/App/constants';
+import { COLORS } from '../../containers/App/theme';
 
-export const Wrapper = styled.header`
+export const StyledHeader = styled.header`
   /* Sizing */
   margin: 1em 0 0.75em;
   
@@ -26,14 +26,14 @@ export const Wrapper = styled.header`
 `;
 
 const Header = ({ h1, h2 }) => (
-  <Wrapper>
+  <StyledHeader>
     <h1>
       <span>{h1}</span>
     </h1>
     <h2>
       <span>{h2}</span>
     </h2>
-  </Wrapper>
+  </StyledHeader>
 );
 
 Header.propTypes = {

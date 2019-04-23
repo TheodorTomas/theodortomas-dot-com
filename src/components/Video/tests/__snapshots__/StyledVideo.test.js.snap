@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render() should render component matching the snapshot when isClickable = false 1`] = `
+.c0 {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background-color: #8f8c86;
+  overflow: hidden;
+  -webkit-transition: border-color 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out;
+  -webkit-transition: border-color 0.25s ease-in-out,transform 0.25s ease-in-out;
+  transition: border-color 0.25s ease-in-out,transform 0.25s ease-in-out;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: rgba(74,74,74,0.5);
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+<video
+  className="c0"
+/>
+`;
+
+exports[`render() should render component matching the snapshot when isClickable = true 1`] = `
+.c0 {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  background-color: #8f8c86;
+  overflow: hidden;
+  -webkit-transition: border-color 0.25s ease-in-out,-webkit-transform 0.25s ease-in-out;
+  -webkit-transition: border-color 0.25s ease-in-out,transform 0.25s ease-in-out;
+  transition: border-color 0.25s ease-in-out,transform 0.25s ease-in-out;
+  border-radius: 50%;
+  border: 2px solid;
+  border-color: rgba(74,74,74,0.5);
+  box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
+}
+
+.c0:hover {
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
+  cursor: pointer;
+  border-color: rgba(149,163,179,0.5);
+}
+
+<video
+  className="c0"
+/>
+`;

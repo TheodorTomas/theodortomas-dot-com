@@ -14,4 +14,11 @@ export const COLORS = {
   green: {
     hex: '#78c8b4',
   },
+  videoBgColor: {
+    hex: '#8f8c86',
+  },
+};
+
+export default {
+  COLORS,
 };

@@ -7,8 +7,8 @@ describe('<GATracker />', () => {
   const renderComponent = (props = {}) => shallow(<GATracker {...props} />);
 
   it('should return null', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.equals(null)).toBe(true);
+    const component = renderComponent();
+    expect(component.equals(null)).toBe(true);
   });
 
   describe('componentDidMount()', () => {

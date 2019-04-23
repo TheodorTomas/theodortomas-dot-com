@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import IconLink from './IconLink';
 
-const Wrapper = styled.div`
+export const StyledDiv = styled.div`
   /* Flex-box */
   display: flex;
   flex-flow: row nowrap;
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
 `;
 
 const IconBar = ({ icons }) => (
-  <Wrapper>
+  <StyledDiv>
     {icons.map(icon => (
       <IconLink
         key={`icon-link-${icon.title}`}
@@ -26,7 +26,7 @@ const IconBar = ({ icons }) => (
         title={icon.title}
       />
     ))}
-  </Wrapper>
+  </StyledDiv>
 );
 
 IconBar.propTypes = {

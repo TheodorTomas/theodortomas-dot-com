@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import { COLORS } from './containers/App/constants';
+import { COLORS } from './containers/App/theme';
 
 /* eslint no-unused-expressions: 0 */
 export default createGlobalStyle`
@@ -23,11 +23,6 @@ export default createGlobalStyle`
       font-family: Lobster, Helvetica, 'Helvetica Neue', Arial, sans-serif;
     }
     
-    h1,
-    h2 {
-      font-weight: normal;
-    }
-    
     &,
     .cc-window {
       font-family: Lato, Helvetica, 'Helvetica Neue', Arial, sans-serif;
@@ -42,7 +37,7 @@ export default createGlobalStyle`
   span,
   a,
   .cc-compliance a {
-    transition: font 0.5s ease-in-out;
+    transition: font 0.25s ease-in-out;
     
     @media only screen and (max-width: 450px) {
       font-size: 80%;
@@ -61,7 +56,7 @@ export default createGlobalStyle`
   
   .cc-compliance a,
   .cc-compliance a:visited {
-    transition: background-color 0.5s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
     color: ${COLORS.lightGrey.hex};
   }
   
@@ -73,7 +68,7 @@ export default createGlobalStyle`
   
   .cc-link {
     font-size: 1em !important;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.25s ease-in-out;
     cursor: pointer;
     color: ${COLORS.blueGrey.hex} !important;
   }

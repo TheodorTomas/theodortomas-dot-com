@@ -3,42 +3,42 @@ import { mount } from 'enzyme';
 import { enzymeFind } from 'styled-components/test-utils';
 import Header from 'components/Header';
 import Bio from 'components/Bio';
-import Icons from 'components/Icons';
+import Icons from 'components/IconBar';
 import EmailLink from 'components/EmailLink';
-import Photo from 'components/Photo';
-import Profile, { Wrapper } from '../index';
+import Photo from 'components/Video';
+import Profile, { StyledArticle } from '../index';
 
 describe('<Profile />', () => {
   const renderComponent = (props = {}) => mount(<Profile {...props} />);
 
   it('should contain a <article>', () => {
     const component = renderComponent();
-    const renderedComponent = enzymeFind(component, Wrapper);
-    expect(renderedComponent.type()).toEqual('article');
+    const styledArticle = enzymeFind(component, StyledArticle);
+    expect(styledArticle.type()).toEqual('article');
   });
 
-  it('should contain a <Photo>', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.find(Photo).length).toEqual(1);
+  it('should contain a <Video>', () => {
+    const component = renderComponent();
+    expect(component.find(Photo).length).toEqual(1);
   });
 
   it('should contain a <Header>', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.find(Header).length).toEqual(1);
+    const component = renderComponent();
+    expect(component.find(Header).length).toEqual(1);
   });
 
   it('should contain a <Bio>', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.find(Bio).length).toEqual(1);
+    const component = renderComponent();
+    expect(component.find(Bio).length).toEqual(1);
   });
 
-  it('should contain a <Icons>', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.find(Icons).length).toEqual(1);
+  it('should contain a <IconBar>', () => {
+    const component = renderComponent();
+    expect(component.find(Icons).length).toEqual(1);
   });
 
   it('should contain a <EmailLink>', () => {
-    const renderedComponent = renderComponent();
-    expect(renderedComponent.find(EmailLink).length).toEqual(1);
+    const component = renderComponent();
+    expect(component.find(EmailLink).length).toEqual(1);
   });
 });

@@ -3,17 +3,19 @@
  */
 import React from 'react';
 import Styled from 'styled-components';
-import Icons from '../../components/Icons';
+import Icons from '../../components/IconBar';
 import Bio from '../../components/Bio';
 import Header from '../../components/Header';
 import EmailLink from '../../components/EmailLink';
-import Photo from '../../components/Photo';
-import { COLORS } from '../App/constants';
-import photo from './images/photo.jpg';
+import Video from '../../components/Video';
+import { COLORS } from '../App/theme';
 import messages from './messages';
-import { bio, icons, contactInfo } from './constants';
+import { bio, icons, contactInfo } from './data';
 
-export const Wrapper = Styled.article`
+// media files
+import profileVideo from './media/profile.mp4';
+
+export const StyledArticle = Styled.article`
   /* Flex-box */
   display: flex;
   flex-flow: column nowrap;
@@ -24,6 +26,7 @@ export const Wrapper = Styled.article`
   padding: 32px;
   width: 50%;
   min-width: calc(150px + (2 * 32px) + 10vw);
+  max-width: 500px;
   
   /* Misc */
   position: relative;
@@ -52,13 +55,13 @@ export const Wrapper = Styled.article`
 `;
 
 const Profile = () => (
-  <Wrapper>
-    <Photo src={photo} alt="Profile Photo" />
+  <StyledArticle>
+    <Video vidSrc={profileVideo} />
     <Header h1={messages.h1} h2={messages.h2} />
     <Bio bio={bio} />
     <Icons icons={icons} />
     <EmailLink {...contactInfo} />
-  </Wrapper>
+  </StyledArticle>
 );
 
 export default Profile;

@@ -16,7 +16,7 @@ export const icons = [{
   title: 'www.twitter.com/TheodorTomas',
 }];
 
-export const bio = ['JavaScript', 'HTML5', 'CSS3', 'React', 'Angular', 'Ionic', 'Node'];
+export const bio = ['JavaScript', 'HTML', 'CSS', 'React', 'Angular', 'Ionic', 'Node', 'Webpack'];
 
 export const contactInfo = {
   href: 'mailto:theodortomas@gmail.com',

@@ -4,9 +4,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { COLORS } from '../../containers/App/constants';
+import { COLORS } from '../../containers/App/theme';
 
-export const Wrapper = styled.div`
+export const StyledDiv = styled.div`
   /* Flex-box */
   display: flex;
   flex-flow: row wrap;
@@ -22,7 +22,7 @@ export const Wrapper = styled.div`
 `;
 
 const Bio = ({ bio }) => (
-  <Wrapper>
+  <StyledDiv>
     {bio.map(item => (
       <span key={`bio-${item}`}>
         ~/
@@ -30,7 +30,7 @@ const Bio = ({ bio }) => (
       </span>
     )
     )}
-  </Wrapper>
+  </StyledDiv>
 );
 
 Bio.propTypes = {
