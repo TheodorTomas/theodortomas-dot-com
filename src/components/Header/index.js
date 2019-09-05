@@ -9,17 +9,17 @@ import { COLORS } from '../../containers/App/theme';
 export const StyledHeader = styled.header`
   /* Sizing */
   margin: 1em 0 0.75em;
-  
+
   /* Font */
   text-align: center;
   color: ${COLORS.green.hex};
-  
+
   h1,
   h2 {
     margin: 0;
     line-height: 100%;
   }
-  
+
   h2 {
     margin-top: 0.25em;
   }

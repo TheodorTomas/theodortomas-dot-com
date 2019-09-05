@@ -61,7 +61,11 @@ describe('<Video />', () => {
       const mockAddEventListener = jest.fn();
       component.instance().video.current.addEventListener = mockAddEventListener;
       component.instance().handleMount();
-      expect(mockAddEventListener).toHaveBeenCalledWith('ended', component.instance().handleVideoEnding, false);
+      expect(mockAddEventListener).toHaveBeenCalledWith(
+        'ended',
+        component.instance().handleVideoEnding,
+        false,
+      );
     });
   });
 
@@ -71,7 +75,10 @@ describe('<Video />', () => {
       const mockRemoveEventListener = jest.fn();
       component.instance().video.current.removeEventListener = mockRemoveEventListener;
       component.instance().handleUnmount();
-      expect(mockRemoveEventListener).toHaveBeenCalledWith('ended', component.instance().handleVideoEnding);
+      expect(mockRemoveEventListener).toHaveBeenCalledWith(
+        'ended',
+        component.instance().handleVideoEnding,
+      );
       expect(clearInterval).toHaveBeenCalledWith(component.instance().intervalRewind);
     });
   });

@@ -16,11 +16,10 @@ describe('utils/analytics', () => {
 
     CTAAnalytics({ category, label });
 
-    expect(ReactGA.event)
-      .toHaveBeenCalledWith({
-        action: 'Click',
-        category,
-        label,
-      });
+    expect(ReactGA.event).toHaveBeenCalledWith({
+      action: 'Click',
+      category,
+      label,
+    });
   });
 });

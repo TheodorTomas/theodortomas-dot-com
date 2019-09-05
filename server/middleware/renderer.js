@@ -19,14 +19,8 @@ export default (req, res) => {
     // inject the rendered app into our html and send it
     return res.send(
       htmlData
-        .replace(
-          '<style ssr-styles></style>',
-          css
-        )
-        .replace(
-          '<div id="root"></div>',
-          `<div id="root">${html}</div>`
-        )
+        .replace('<style ssr-styles></style>', css)
+        .replace('<div id="root"></div>', `<div id="root">${html}</div>`),
     );
   });
 };

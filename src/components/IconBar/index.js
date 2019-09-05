@@ -12,7 +12,7 @@ export const StyledDiv = styled.div`
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
-  
+
   margin: 0.75em 0 1em;
 `;
 
@@ -35,7 +35,7 @@ IconBar.propTypes = {
       svg: PropTypes.object.isRequired,
       href: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-    })
+    }),
   ).isRequired,
 };
 

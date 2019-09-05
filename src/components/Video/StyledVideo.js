@@ -6,7 +6,7 @@ export const StyledVideo = styled.video`
   width: 150px;
   height: 150px;
   margin: auto;
-  
+
   /* Misc */
   background-color: ${COLORS.videoBgColor.hex};
   overflow: hidden;
@@ -15,8 +15,8 @@ export const StyledVideo = styled.video`
   border: 2px solid;
   border-color: ${COLORS.darkGrey.rgba(0.5)};
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
-  
-  ${({ isClickable }) => (
+
+  ${({ isClickable }) =>
     isClickable
       ? `
         &:hover {
@@ -25,6 +25,5 @@ export const StyledVideo = styled.video`
           border-color: ${COLORS.blueGrey.rgba(0.5)};
         }
         `
-      : ''
-  )}
+      : ''}
 `;

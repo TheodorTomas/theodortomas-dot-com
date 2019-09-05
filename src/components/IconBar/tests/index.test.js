@@ -6,11 +6,13 @@ import IconBar, { StyledDiv } from '../index';
 
 describe('<IconBar />', () => {
   const defaultProps = {
-    icons: [{
-      href: 'test-icon-href',
-      title: 'test-title',
-      svg: <svg></svg>,
-    }],
+    icons: [
+      {
+        href: 'test-icon-href',
+        title: 'test-title',
+        svg: <svg></svg>,
+      },
+    ],
   };
   const renderComponent = (props = defaultProps) => shallow(<IconBar {...props} />);
   const mountComponent = (props = defaultProps) => mount(<IconBar {...props} />);
@@ -23,11 +25,14 @@ describe('<IconBar />', () => {
 
   it('should render the given icon in props as a <IconLink>', () => {
     const component = renderComponent();
-    expect(component.contains(
-      <IconLink
-        href={defaultProps.icons[0].href}
-        title={defaultProps.icons[0].title}
-        svg={defaultProps.icons[0].svg}
-      />)).toBe(true);
+    expect(
+      component.contains(
+        <IconLink
+          href={defaultProps.icons[0].href}
+          title={defaultProps.icons[0].title}
+          svg={defaultProps.icons[0].svg}
+        />,
+      ),
+    ).toBe(true);
   });
 });

@@ -11,10 +11,10 @@ export const StyledDiv = styled.div`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  
+
   /* Font */
   color: ${COLORS.lightGrey.hex};
-  
+
   span {
     line-height: 100%;
     margin: 0.25em;
@@ -28,15 +28,12 @@ const Bio = ({ bio }) => (
         ~/
         {item}
       </span>
-    )
-    )}
+    ))}
   </StyledDiv>
 );
 
 Bio.propTypes = {
-  bio: PropTypes.arrayOf(
-    PropTypes.string.isRequired
-  ).isRequired,
+  bio: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default Bio;

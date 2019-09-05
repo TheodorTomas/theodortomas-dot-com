@@ -11,6 +11,7 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "precommit": "lint-staged",
+    "prettify": "prettier --write -l info \"**/*.{md,css,scss,yaml,yml,ts,js}\"",
     "start": "react-scripts start",
     "start:build": "NODE_ENV=development webpack --config node_modules/react-scripts/config/webpack.config.dev.js --output-path build --watch",
     "start:server:dev": "NODE_ENV=development nodemon server/bootstrap.js",
@@ -47,6 +48,7 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.4.0",
     "express": "^4.16.3",
     "fs": "^0.0.1-security",
@@ -59,6 +61,8 @@
     "nodemon": "^1.17.5",
     "npm-run-all": "^4.1.2",
     "path": "^0.12.7",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1",
     "react-test-renderer": "^16.8.2",
     "stylelint": "^9.9.0",
     "stylelint-config-standard": "^18.2.0",
@@ -102,5 +106,10 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
+  }
 }

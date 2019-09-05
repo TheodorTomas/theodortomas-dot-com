@@ -23,8 +23,6 @@ describe('<Bio />', () => {
     const component = mountComponent();
     const expectedKey = `bio-${bio[0]}`;
     const expectedItem = bio[0];
-    expect(component.contains(
-      <span key={expectedKey}>{`~/${expectedItem}`}</span>)
-    ).toEqual(true);
+    expect(component.contains(<span key={expectedKey}>{`~/${expectedItem}`}</span>)).toEqual(true);
   });
 });

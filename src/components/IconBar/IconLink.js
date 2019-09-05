@@ -14,21 +14,21 @@ export const StyledA = styled.a`
     fill: ${COLORS.blueGrey.hex};
     cursor: pointer;
     margin: 0 1em;
-    
+
     transition: fill 0.25s ease-in-out, width 0.25s ease-in-out, height 0.25s ease-in-out;
-  
+
     @media only screen and (max-width: 450px) {
       width: 2em;
       height: 2em;
     }
   }
-  
+
   .linkedin:visited,
   .linkedin:hover,
   .linkedin:active {
     fill: #0077b5;
   }
-    
+
   .github:visited,
   .github:hover,
   .github:active {

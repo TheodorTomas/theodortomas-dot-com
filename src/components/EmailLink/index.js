@@ -31,7 +31,12 @@ export const StyledA = Styled.a`
 `;
 
 const EmailLink = ({ href, title, text }) => (
-  <StyledA href={href} title={title} target="_self" onClick={() => CTAAnalytics({ category: 'Email Link' })}>
+  <StyledA
+    href={href}
+    title={title}
+    target="_self"
+    onClick={() => CTAAnalytics({ category: 'Email Link' })}
+  >
     {text}
   </StyledA>
 );

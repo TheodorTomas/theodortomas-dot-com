@@ -3,20 +3,19 @@
 (function() {
   var lastTime = 0;
   var vendors = ['ms', 'moz', 'webkit', 'o'];
-  for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
-    window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-    window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame']
-      || window[vendors[x]+'CancelRequestAnimationFrame'];
+  for (var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
+    window.requestAnimationFrame = window[vendors[x] + 'RequestAnimationFrame'];
+    window.cancelAnimationFrame =
+      window[vendors[x] + 'CancelAnimationFrame'] ||
+      window[vendors[x] + 'CancelRequestAnimationFrame'];
   }
   if (!window.requestAnimationFrame) {
-    window.requestAnimationFrame = function (callback, element) {
+    window.requestAnimationFrame = function(callback, element) {
       var currTime = new Date().getTime();
       var timeToCall = Math.max(0, 16 - (currTime - lastTime));
-      var id = window.setTimeout(function () {
-          callback(currTime + timeToCall);
-        },
-        timeToCall
-      );
+      var id = window.setTimeout(function() {
+        callback(currTime + timeToCall);
+      }, timeToCall);
       lastTime = currTime + timeToCall;
       return id;
     };
@@ -27,13 +26,18 @@
       clearTimeout(id);
     };
   }
-}());
+})();
 
 (function() {
-  var width, height, canvas, ctx, points, target = true;
+  var width,
+    height,
+    canvas,
+    ctx,
+    points,
+    target = true;
 
   // Main
-  setTimeout(function () {
+  setTimeout(function() {
     initHeader();
     initAnimation();
     addListeners();
@@ -44,7 +48,7 @@
     height = window.innerHeight;
     var offsetWidth = document.body.scrollLeft + document.documentElement.scrollLeft;
     var offsetHeight = document.body.scrollTop + document.documentElement.scrollTop;
-    target = {x: width/2 + offsetWidth, y: height/2 + offsetHeight};
+    target = { x: width / 2 + offsetWidth, y: height / 2 + offsetHeight };
 
     width = document.getElementById('root').offsetWidth || window.innerWidth;
     height = document.getElementById('root').offsetHeight || window.innerHeight;
@@ -55,35 +59,35 @@
 
     // create points
     points = [];
-    for(var x = 0; x < width; x = x + width/20) {
-      for(var y = 0; y < height; y = y + height/20) {
-        var px = x + Math.random()*width/20;
-        var py = y + Math.random()*height/20;
-        var p = {x: px, originX: px, y: py, originY: py };
+    for (var x = 0; x < width; x = x + width / 20) {
+      for (var y = 0; y < height; y = y + height / 20) {
+        var px = x + (Math.random() * width) / 20;
+        var py = y + (Math.random() * height) / 20;
+        var p = { x: px, originX: px, y: py, originY: py };
         points.push(p);
       }
     }
 
     // for each point find the 5 closest points
-    for(var i = 0; i < points.length; i++) {
+    for (var i = 0; i < points.length; i++) {
       var closest = [];
       var p1 = points[i];
-      for(var j = 0; j < points.length; j++) {
-        var p2 = points[j]
-        if(!(p1 == p2)) {
+      for (var j = 0; j < points.length; j++) {
+        var p2 = points[j];
+        if (!(p1 == p2)) {
           var placed = false;
-          for(var k = 0; k < 5; k++) {
-            if(!placed) {
-              if(closest[k] == undefined) {
+          for (var k = 0; k < 5; k++) {
+            if (!placed) {
+              if (closest[k] == undefined) {
                 closest[k] = p2;
                 placed = true;
               }
             }
           }
 
-          for(var k = 0; k < 5; k++) {
-            if(!placed) {
-              if(getDistance(p1, p2) < getDistance(p1, closest[k])) {
+          for (var k = 0; k < 5; k++) {
+            if (!placed) {
+              if (getDistance(p1, p2) < getDistance(p1, closest[k])) {
                 closest[k] = p2;
                 placed = true;
               }
@@ -95,21 +99,23 @@
     }
 
     // assign a circle to each point
-    for(var i in points) {
-      var c = new Circle(points[i], 2+Math.random()*2, 'rgba(255,255,255,0.3)');
+    for (var i in points) {
+      var c = new Circle(points[i], 2 + Math.random() * 2, 'rgba(255,255,255,0.3)');
       points[i].circle = c;
     }
   }
 
   function isMobileDevice() {
-    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-  };
+    return (
+      typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1
+    );
+  }
 
   var randomInterval;
 
   // Event handling
   function addListeners() {
-    if(!isMobileDevice()) {
+    if (!isMobileDevice()) {
       window.addEventListener('mousemove', mouseMove);
     } else {
       randomInterval = setInterval(randomMovement, 1);
@@ -130,7 +136,8 @@
     if (verticleOrHorizontol) {
       if (left) {
         if (target.x - offsetWidth > 0) {
-          if (target.x - offsetWidth > window.innerWidth) target.x = offsetWidth + window.innerWidth;
+          if (target.x - offsetWidth > window.innerWidth)
+            target.x = offsetWidth + window.innerWidth;
           else target.x = target.x - modifier;
         } else left = false;
       } else {
@@ -140,11 +147,10 @@
         } else left = true;
       }
     } else {
-
-
       if (up) {
         if (target.y - offsetHeight > 0) {
-          if (target.y - offsetHeight > window.innerHeight) target.y = offsetHeight + window.innerHeight;
+          if (target.y - offsetHeight > window.innerHeight)
+            target.y = offsetHeight + window.innerHeight;
           else target.y = target.y - modifier;
         } else up = false;
       } else {
@@ -158,13 +164,12 @@
   }
 
   function mouseMove(e) {
-    var posx = posy = 0;
+    var posx = (posy = 0);
 
     if (e.pageX || e.pageY) {
       posx = e.pageX;
       posy = e.pageY;
-    }
-    else if (e.clientX || e.clientY)    {
+    } else if (e.clientX || e.clientY) {
       posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
       posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
     }
@@ -182,22 +187,22 @@
   // animation
   function initAnimation() {
     animate();
-    for(var i in points) {
+    for (var i in points) {
       shiftPoint(points[i]);
     }
   }
 
   function animate() {
-    ctx.clearRect(0,0,width,height);
-    for(var i in points) {
+    ctx.clearRect(0, 0, width, height);
+    for (var i in points) {
       // detect points in range
-      if(Math.abs(getDistance(target, points[i])) < 4000) {
+      if (Math.abs(getDistance(target, points[i])) < 4000) {
         points[i].active = 0.3;
         points[i].circle.active = 0.6;
-      } else if(Math.abs(getDistance(target, points[i])) < 20000) {
+      } else if (Math.abs(getDistance(target, points[i])) < 20000) {
         points[i].active = 0.1;
         points[i].circle.active = 0.3;
-      } else if(Math.abs(getDistance(target, points[i])) < 40000) {
+      } else if (Math.abs(getDistance(target, points[i])) < 40000) {
         points[i].active = 0.02;
         points[i].circle.active = 0.1;
       } else {
@@ -212,33 +217,33 @@
   }
 
   function shiftPoint(p) {
-    setTimeout(
-      function() {
-        if (TweenLite) {
-          TweenLite.to(p, 1+1*Math.random(), {x:p.originX-50+Math.random()*100,
-            y: p.originY-50+Math.random()*100, ease:Circ.easeInOut,
-            onComplete: function() {
-              shiftPoint(p);
-            }
-          })
-        }
-      }, 0)
-
+    setTimeout(function() {
+      if (TweenLite) {
+        TweenLite.to(p, 1 + 1 * Math.random(), {
+          x: p.originX - 50 + Math.random() * 100,
+          y: p.originY - 50 + Math.random() * 100,
+          ease: Circ.easeInOut,
+          onComplete: function() {
+            shiftPoint(p);
+          },
+        });
+      }
+    }, 0);
   }
 
   // Canvas manipulation
   function drawLines(p) {
-    if(!p.active) return;
-    for(var i in p.closest) {
+    if (!p.active) return;
+    for (var i in p.closest) {
       ctx.beginPath();
       ctx.moveTo(p.x, p.y);
       ctx.lineTo(p.closest[i].x, p.closest[i].y);
-      ctx.strokeStyle = 'rgba(120, 200, 180, '+ (p.active * 0.5) + ')';
+      ctx.strokeStyle = 'rgba(120, 200, 180, ' + p.active * 0.5 + ')';
       ctx.stroke();
     }
   }
 
-  function Circle(pos,rad,color) {
+  function Circle(pos, rad, color) {
     var _this = this;
 
     // constructor
@@ -249,10 +254,10 @@
     })();
 
     this.draw = function() {
-      if(!_this.active) return;
+      if (!_this.active) return;
       ctx.beginPath();
       ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
-      ctx.fillStyle = 'rgba(120, 200, 180,'+ (_this.active * 0.75 ) + ')';
+      ctx.fillStyle = 'rgba(120, 200, 180,' + _this.active * 0.75 + ')';
       ctx.fill();
     };
   }
