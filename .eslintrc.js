@@ -10,7 +10,8 @@ module.exports = {
     es6: true,
     node: true,
   },
-  extends: ['airbnb'],
+  plugins: ['prettier'],
+  extends: ['airbnb', 'prettier'],
   parser: 'babel-eslint',
   rules: {
     'prettier/prettier': ['error', prettierOptions],
