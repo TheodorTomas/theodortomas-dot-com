@@ -20,7 +20,7 @@
     "test:lint": "run-s test:lint:**",
     "test:lint:js": "eslint --ext=js --ext=jsx --ignore-path .gitignore .",
     "test:lint:css": "stylelint --config=.stylelintrc './src/**/*.js'",
-    "test:unit": "react-scripts test --env=jsdom --coverage",
+    "test:unit": "react-scripts test --env=jsdom --coverage --watchAll=false",
     "test:watch": "react-scripts test --env=jsdom --coverage --watch"
   },
   "resolutions": {
