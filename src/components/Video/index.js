@@ -8,6 +8,8 @@ import PropTypes from 'prop-types';
 import { StyledVideo } from './StyledVideo';
 
 export default class Video extends React.PureComponent {
+  video = React.createRef();
+
   static propTypes = {
     vidSrc: PropTypes.string.isRequired,
   };
@@ -15,8 +17,6 @@ export default class Video extends React.PureComponent {
   state = {
     isClickable: false,
   };
-
-  video = React.createRef();
 
   componentDidMount() {
     this.handleMount();
