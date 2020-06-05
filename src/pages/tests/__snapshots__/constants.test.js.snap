@@ -3,12 +3,13 @@
 exports[`constants should render matching bio snapshot 1`] = `
 Array [
   "JavaScript",
-  "HTML5",
-  "CSS3",
+  "HTML",
+  "CSS",
   "React",
   "Angular",
   "Ionic",
   "Node",
+  "Webpack",
 ]
 `;
 
@@ -23,6 +24,7 @@ Object {
 exports[`constants should render matching icons snapshot 1`] = `
 Array [
   Object {
+    "color": "#0077b5",
     "href": "https://linkedin.com/in/TheodorTomas",
     "svg": <svg
       className="icon linkedin"
@@ -38,6 +40,7 @@ Array [
     "title": "www.linkedin.com/TheodorTomas",
   },
   Object {
+    "color": "#6cc644",
     "href": "https://github.com/TheodorTomas",
     "svg": <svg
       className="icon github"
@@ -53,6 +56,7 @@ Array [
     "title": "www.github.com/TheodorTomas",
   },
   Object {
+    "color": "#1da1f2",
     "href": "https://twitter.com/TheodorTomas",
     "svg": <svg
       className="icon twitter"

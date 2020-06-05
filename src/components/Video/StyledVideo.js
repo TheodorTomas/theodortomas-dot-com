@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import { COLORS } from '../../containers/App/theme';
+import { COLORS } from '../../theme';
 
-export const StyledVideo = styled.video`
+export default styled.video`
   /* Sizing */
   width: 150px;
   height: 150px;

@@ -18,12 +18,13 @@ export const StyledDiv = styled.div`
 
 const IconBar = ({ icons }) => (
   <StyledDiv>
-    {icons.map(icon => (
+    {icons.map(({ svg, href, title, color }) => (
       <IconLink
-        key={`icon-link-${icon.title}`}
-        svg={icon.svg}
-        href={icon.href}
-        title={icon.title}
+        key={`icon-link-${title}`}
+        svg={svg}
+        href={href}
+        title={title}
+        alternateFill={color}
       />
     ))}
   </StyledDiv>
@@ -31,11 +32,12 @@ const IconBar = ({ icons }) => (
 
 IconBar.propTypes = {
   icons: PropTypes.arrayOf(
-    PropTypes.shape({
+    PropTypes.exact({
       svg: PropTypes.object.isRequired,
       href: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
-    }),
+      color: PropTypes.string.isRequired,
+    }).isRequired,
   ).isRequired,
 };
 

@@ -5,7 +5,7 @@
  */
 import React from 'react';
 import PropTypes from 'prop-types';
-import { StyledVideo } from './StyledVideo';
+import StyledVideo from './StyledVideo';
 
 export default class Video extends React.PureComponent {
   video = React.createRef();

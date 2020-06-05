@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 import { enzymeFind } from 'styled-components/test-utils';
-import { bio } from '../../../containers/Profile/data';
+import { bio } from '../../../data';
 import Bio, { StyledDiv } from '../index';
 
 describe('<Bio />', () => {

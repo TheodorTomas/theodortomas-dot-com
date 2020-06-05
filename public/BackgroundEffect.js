@@ -44,14 +44,13 @@
   }, 0);
 
   function initHeader() {
-    width = window.innerWidth;
-    height = window.innerHeight;
     var offsetWidth = document.body.scrollLeft + document.documentElement.scrollLeft;
     var offsetHeight = document.body.scrollTop + document.documentElement.scrollTop;
+
+    width = window.innerWidth || document.body.offsetWidth;
+    height = window.innerHeight || document.body.offsetHeight;
     target = { x: width / 2 + offsetWidth, y: height / 2 + offsetHeight };
 
-    width = document.getElementById('root').offsetWidth || window.innerWidth;
-    height = document.getElementById('root').offsetHeight || window.innerHeight;
     canvas = document.getElementById('dot-canvas');
     canvas.width = width;
     canvas.height = height;

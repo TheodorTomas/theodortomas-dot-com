@@ -3,7 +3,9 @@
 [![Build Status](https://jenkins.theodortomas.com/buildStatus/icon?job=theodortomas.com&.png?style=flat)](https://jenkins.theodortomas.com/job/theodortomas.com/)
 [![codecov coverage](https://img.shields.io/codecov/c/github/TheodorTomas/theodortomas-dot-com.svg?style=flat)](https://codecov.io/gh/TheodorTomas/theodortomas-dot-com)
 
-Professional website containing a small bio, links and contact info. Written using ES6, React, Webpack, Babel
+### **_ NOTE: This is under maintenance and is in a transition phase _**
+
+My digital business card containing a small bio, links and contact info. Written using ES6, React, Webpack, Babel
 amongst other technologies. Powered by Nginx, Node.js and NPM. Continuous deployment implemented with Jenkins and Docker.
 
 Server Side Rendering implemented with Node, Express and PM2.

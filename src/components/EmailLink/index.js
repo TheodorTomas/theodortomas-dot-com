@@ -5,7 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Styled from 'styled-components';
-import { COLORS } from '../../containers/App/theme';
+import { COLORS } from '../../theme';
 import { CTAAnalytics } from '../../utils/analytics';
 
 export const StyledA = Styled.a`

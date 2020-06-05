@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow, mount } from 'enzyme';
 import { enzymeFind } from 'styled-components/test-utils';
 import { CTAAnalytics } from '../../../utils/analytics';
-import { contactInfo } from '../../../containers/Profile/data';
+import { contactInfo } from '../../../data';
 import EmailLink, { StyledA } from '../index';
 
 jest.mock('utils/analytics', () => ({
