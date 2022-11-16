@@ -24,9 +24,3 @@ export const icons = [
 ];
 
 export const bio = ['JavaScript', 'HTML', 'CSS', 'React', 'Angular', 'Ionic', 'Node', 'Webpack'];
-
-export const contactInfo = {
-  href: 'mailto:theodortomas@gmail.com',
-  title: 'Contact me',
-  text: 'theodortomas@gmail.com',
-};

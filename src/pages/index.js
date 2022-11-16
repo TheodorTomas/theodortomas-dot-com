@@ -6,14 +6,13 @@ import styled from 'styled-components';
 import Icons from '../components/IconBar';
 import Bio from '../components/Bio';
 import Header from '../components/Header';
-import EmailLink from '../components/EmailLink';
 import Video from '../components/Video';
 import { COLORS } from '../theme';
 import messages from '../messages';
 
 // media files
 import profileVideo from '../../public/media/profile.mp4';
-import { bio, contactInfo, icons } from '../data';
+import { bio, icons } from '../data';
 
 export const StyledArticle = styled.article`
   /* Flex-box */
@@ -60,7 +59,6 @@ const Profile = () => (
     <Header h1={messages.h1} h2={messages.h2} />
     <Bio bio={bio} />
     <Icons icons={icons} />
-    <EmailLink {...contactInfo} />
   </StyledArticle>
 );
 
